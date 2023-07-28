@@ -1,18 +1,22 @@
 .HeaderWrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     width: 100wv;
     height: 3rem;
-    padding: 1rem 2rem 0 2rem;
+    padding: 0rem 2rem 0 2rem;
+   
 }
 
 .HeaderLogoWrapper {
     width: 5rem;
+    margin-right: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .HeaderLogo {
-    width: 9rem;
+    width: 5rem;
     object-fit: cover;
 }
 
@@ -20,29 +24,65 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
+    margin: 0 2rem 0 0;
     padding: 0;
+    width: 35%;
+   min-width: 15rem;
+   
 }
 
 .HeaderNavbarListItem1 {
     list-style-type: none;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.8rem;
 }
 
 .HeaderNavbarListItem {
     list-style-type: none;
     margin-left: 0.5rem;
+    font-family: 'Comfortaa', cursive;
+    font-size: 0.8rem;
 }
 
 .HeaderSearchWarpper {
     display: flex;
     justify-content: right;
     align-items: center;
+    
 }
 
 .HeaderSearchInput {
     /* border: none; */
+    width: 5rem;
+    
 }
 
 .HeaderSearchIcon{
     width: 1rem;
+}
+
+.HeaderNavbarMobile {
+    display: none;
+    width: 5rem;
+}
+
+.HeaderNavbarMobileButton {
+    background-color: transparent;
+    border: none;
+}
+
+.HeaderNavbarMobileButtonImage {
+    width: 1.5rem
+}
+
+@media screen and (max-width: 500px) {
+    .HeaderNavbar {
+        display: none
+    }
+    .HeaderNavbarMobile {
+        display: flex;
+    }
+    .HeaderWrapper {
+        align-items: center;
+    }
 }
