@@ -1,9 +1,10 @@
-import './App.css';
+import "./App.css";
+import MainPage from "./Pages/MainPage/MainPage";
 
 function App() {
   return (
     <div>
-      E-commerce store loading...
+      <MainPage />
     </div>
   );
 }
