@@ -1,0 +1,48 @@
+.HeaderWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100wv;
+    height: 3rem;
+    padding: 1rem 2rem 0 2rem;
+}
+
+.HeaderLogoWrapper {
+    width: 5rem;
+}
+
+.HeaderLogo {
+    width: 9rem;
+    object-fit: cover;
+}
+
+.HeaderNavbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.HeaderNavbarListItem1 {
+    list-style-type: none;
+}
+
+.HeaderNavbarListItem {
+    list-style-type: none;
+    margin-left: 0.5rem;
+}
+
+.HeaderSearchWarpper {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.HeaderSearchInput {
+    /* border: none; */
+}
+
+.HeaderSearchIcon{
+    width: 1rem;
+}
