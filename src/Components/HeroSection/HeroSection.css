@@ -1,0 +1,55 @@
+.HeroSectionWrapper {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    padding-top: 5rem;
+    justify-content: space-between;
+}
+
+.HeroSectionImage{
+    width: 20rem;
+}
+
+.HeroSectionHeadingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    width: 50%;
+
+}
+
+.HeroSectionImageWrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.HeroSectionImage {
+    object-fit: cover;
+    padding-right: 3rem;
+}
+
+.HeroSectionHeading {
+    font-family: "Comfortaa", cursive;
+    text-transform: capitalize;
+}
+
+.HeroSectionParagraph {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+
+.HeroSectionButton {
+    font-family: "Comfortaa", cursive;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+
+
+
