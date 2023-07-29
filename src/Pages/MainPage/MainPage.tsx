@@ -3,7 +3,7 @@ import "./MainPage.css";
 
 const MainPage = () => {
   return (
-    <div>
+    <div className="MainPageWrapper">
       <Header />
     </div>
   );
