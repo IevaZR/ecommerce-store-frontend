@@ -109,7 +109,7 @@
     padding: 0;
     top: -20rem;
     margin: auto;
-    transition: all 0.7s ease;
+    transition: all 1s ease;
     background-color: white;
     z-index: 10;
   }
@@ -122,7 +122,7 @@
     padding: 0;
     top: 3rem;
     margin: auto;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
     background-color: white;
   }
 
