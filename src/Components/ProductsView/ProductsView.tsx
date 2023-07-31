@@ -8,21 +8,11 @@ import { FurnitureData } from "../../data/data";
 const ProductsView = () => {
     const {activeSearch, searchQuery} = useActiveSearchContext()
 
-    const filteredFurnitureList = FurnitureData.filter((item) =>
-        item.title.toLowerCase().includes(searchQuery.toLocaleLowerCase()))
-
   return (
     <div id="ProductView">
       {activeSearch
-      ?(<div>
-        {filteredFurnitureList.map((item) => (
-            <div key={item.id}>
-              {/* Display the filtered data */}
-              {item.title} - {item.price}
-              </div>
-          ))}
-      </div>)
-      :(<ProductList/>) }
+      ?(<ProductList searchQuery={searchQuery}/>)
+      :(<ProductList searchQuery=""/>) }
     </div>
   );
 };

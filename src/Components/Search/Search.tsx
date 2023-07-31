@@ -19,6 +19,7 @@ const Search = () => {
     const showSearchResults = () => {
         updateActiveSearch(true);
         updateSearchQuery(input)
+        setInput("")
     }
   return (
     <div className="SearchWarpper">
@@ -30,7 +31,6 @@ const Search = () => {
             className="SearchIcon"
           />
         </button></a>
-        {/* <div>{activeSearch}</div> */}
     </div>
   )
 }
