@@ -1,0 +1,30 @@
+.ProductListWrapper {
+    background-color: #c0bbbb37;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+
+}
+
+@media screen and (max-width: 850px) {
+    .ProductListWrapper {
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .ProductListWrapper {
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .ProductListWrapper {
+        padding: 3rem 2rem;
+
+    }
+}
