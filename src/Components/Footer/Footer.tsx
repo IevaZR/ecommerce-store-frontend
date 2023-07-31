@@ -14,6 +14,8 @@ import LocationIcon from "./../../Assets/location-icon.png";
 import PhoneIcon from "./../../Assets/telephone-icon.png";
 // @ts-ignore
 import EmailIcon from "./../../Assets/email-icon.png";
+// @ts-ignore
+import ArrowIcon from "./../../Assets/arrow-icon.png";
 
 const Footer = () => {
   return (
@@ -46,30 +48,45 @@ const Footer = () => {
         <div className="FooterContactsWrapper">
           <h3 className="FooterContactsHeading">Contacts</h3>
           <div className="FooterAddressWrapper">
-          <img
+            <img
               src={LocationIcon}
               alt="location-icon"
               className="FooterContactIcon"
-            /> </div>
+            />
+            <p className="FooterContactText">
+              2517 Charles Street, Michigan, MI 48150
+            </p>
+          </div>
           <div className="FooterPhoneWrapper">
-          <img
+            <img
               src={PhoneIcon}
               alt="phone-icon"
               className="FooterContactIcon"
             />
+            <p className="FooterContactText">
+              +351 2862186319
+            </p>
           </div>
           <div className="FooterEmailWrapper">
-          <img
+            <img
               src={EmailIcon}
               alt="email-icon"
               className="FooterContactIcon"
             />
+            <p className="FooterContactText">
+              accent@accent.com
+            </p>
           </div>
         </div>
         <div className="FotterNewsLetterWrapper">
           <h3 className="FooterNewsletterHeading">Join To Newsletter</h3>
-          <p className="FooterNewsletterAnnouncement"></p>
-          <div className="FooterNewsletterFormWrapper"></div>
+          <p className="FooterNewsletterAnnouncement">Subscribe to our newsletter</p>
+          <div className="FooterNewsletterFormWrapper">
+            <input type="text" className="FooterNewsletterFormInput" />
+            <button className="FooterNewltetterFormButton">
+                <img src={ArrowIcon} alt="arrow-icon" className="FooterNewsletterButtonArrow" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
