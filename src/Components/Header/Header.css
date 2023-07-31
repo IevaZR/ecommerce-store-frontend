@@ -36,6 +36,12 @@
   font-family: "Comfortaa", cursive;
   font-size: 0.8rem;
   cursor: pointer;
+  text-decoration: none;
+}
+
+.HeaderNavbarAnchor {
+    text-decoration: none;
+    color: black;
 }
 
 .HeaderNavbarListItem:hover{

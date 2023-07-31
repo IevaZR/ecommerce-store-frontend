@@ -45,7 +45,7 @@ const Footer = () => {
             />
           </div>
         </div>
-        <div className="FooterContactsWrapper">
+        <div className="FooterContactsWrapper" id="contacts">
           <h3 className="FooterContactsHeading">Contacts</h3>
           <div className="FooterAddressWrapper">
             <img
