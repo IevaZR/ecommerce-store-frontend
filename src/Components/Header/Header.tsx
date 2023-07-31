@@ -24,7 +24,7 @@ const Header = () => {
         <li className="HeaderNavbarListItem">Shop</li>
         <li className="HeaderNavbarListItem">About</li>
         <li className="HeaderNavbarListItem">Blog</li>
-        <li className="HeaderNavbarListItem">Contact</li>
+        <li className="HeaderNavbarListItem"><a href="#contacts" className="HeaderNavbarAnchor">Contact</a></li>
       </ul>
       <div className="HeaderNavbarMobileWrapper">
         <button className="HeaderNavbarMobileButton" onClick={showMobileNavbar}>
