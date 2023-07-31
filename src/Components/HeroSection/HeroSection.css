@@ -50,6 +50,10 @@
     cursor: pointer;
 }
 
+.HeroSectionButton:hover{
+    box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
+}
+
 @media screen and (max-width: 800px) {
     .HeroSectionButton {
         margin-top: 1rem;
@@ -78,6 +82,8 @@
     .HeroSectionButton {
         padding: 0.5rem 1rem 0.5rem 1rem;
     }
+    
+    
     
     .HeroSectionImageWrapper {
         width: 100%;
