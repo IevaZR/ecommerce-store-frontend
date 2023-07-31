@@ -110,6 +110,8 @@
     top: -20rem;
     margin: auto;
     transition: all 0.7s ease;
+    background-color: white;
+    z-index: 10;
   }
   .HeaderNavbarMobileActive {
     display: flex;
@@ -121,6 +123,7 @@
     top: 3rem;
     margin: auto;
     transition: all 0.5s ease;
+    background-color: white;
   }
 
   .HeaderNavbarListItem {

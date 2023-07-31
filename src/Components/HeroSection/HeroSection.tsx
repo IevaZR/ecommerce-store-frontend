@@ -1,7 +1,7 @@
 import React from 'react'
 import "./HeroSection.css"
 // @ts-ignore
-import Armchair from "./../../Assets/armchair.png"
+import HeroImage from "./../../Assets/heroImage.png"
 
 const HeroSection = () => {
   return (
@@ -12,7 +12,7 @@ const HeroSection = () => {
             <button className='HeroSectionButton'>Shop Now</button>
         </div>
         <div className='HeroSectionImageWrapper'>
-            <img src={Armchair} alt='armchair' className='HeroSectionImage'/>
+            <img src={HeroImage} alt='armchair' className='HeroSectionImage'/>
         </div>
     </div>
   )

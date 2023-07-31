@@ -2,12 +2,8 @@
     width: 90%;
     margin: auto;
     display: flex;
-    padding-top: 5rem;
+    padding-top: 3rem;
     justify-content: space-between;
-}
-
-.HeroSectionImage{
-    width: 20rem;
 }
 
 .HeroSectionHeadingWrapper {
@@ -15,7 +11,7 @@
     flex-direction: column;
     align-items:flex-start;
     width: 50%;
-
+    padding-right: 1rem;
 }
 
 .HeroSectionImageWrapper {
@@ -25,13 +21,16 @@
 }
 
 .HeroSectionImage {
+    width: 25rem;
+    max-width: 100%;
     object-fit: cover;
-    padding-right: 3rem;
+    border-radius: 5rem;
 }
 
 .HeroSectionHeading {
     font-family: "Comfortaa", cursive;
     text-transform: capitalize;
+    line-height: 2.5rem;
 }
 
 .HeroSectionParagraph {
@@ -51,5 +50,47 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 800px) {
+    .HeroSectionButton {
+        margin-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .HeroSectionWrapper {
+        padding-top: 0.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+    .HeroSectionHeadingWrapper {
+        width: 100%;
+        align-items: center;
+    }
+
+    .HeroSectionParagraph {
+        margin-bottom: 0.3rem;
+    }
+
+    .HeroSectionHeading {
+        margin-bottom: 0.3rem;
+    }
+
+    .HeroSectionButton {
+        padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+    
+    .HeroSectionImageWrapper {
+        width: 100%;
+        padding-top: 1rem;
+        justify-content: center;
+    }
+
+    .HeroSectionImage{
+        height: 10rem;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+    
+}
 
 
