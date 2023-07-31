@@ -3,7 +3,7 @@ import './ProducrList.css';
 
 const ProductList = () => {
   return (
-    <div className='ProductListWrapper' id="ProductListWrapper">
+    <div className='ProductListWrapper'>
         <ProductCard/>
         <ProductCard/>
         <ProductCard/>
