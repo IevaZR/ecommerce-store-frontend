@@ -8,7 +8,7 @@ import {useState} from 'react';
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 
 const Search = () => {
-    const {activeSearch, updateActiveSearch, searchQuery, updateSearchQuery} = useActiveSearchContext()
+    const {updateActiveSearch, updateSearchQuery} = useActiveSearchContext()
     const [input, setInput] = useState("")
 
     const handleInputChange = (e) => {

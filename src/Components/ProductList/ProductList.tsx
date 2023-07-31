@@ -1,42 +1,53 @@
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProducrList.css";
 import { FurnitureData } from "../../data/data";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 const ProductList = ({ searchQuery }) => {
   const [products, setProducts] = useState(FurnitureData);
   // console.log(products);
   const [visibleProducts, setVisibleProducts] = useState(8);
 
+  
   //---FOR SEARCH BY SEARCH QUERY------
-
-const filterBySearchQuery = (data, query) => {
+  const filterBySearchQuery = (data, query) => {
     return data.filter((item) => {
-        for(const key in item) {
-            const value = item[key];
-            if (typeof value === "string" && value.toLowerCase().includes(query.toLowerCase())) {
-                return true
-            } else if (typeof value === "object" && value !== null) {
-                if(Array.isArray(value)) {
-                    if (value.some((element) => filterBySearchQuery([element], query).length > 0)) {
-                       return true 
-                    }
-                } else {
-                    if (filterBySearchQuery([value], query). length > 0) {
-                        return true
-                    }
-                }
+      for (const key in item) {
+        const value = item[key];
+        if (
+          typeof value === "string" &&
+          value.toLowerCase().includes(query.toLowerCase())
+        ) {
+          return true;
+        } else if (typeof value === "object" && value !== null) {
+          if (Array.isArray(value)) {
+            if (
+              value.some(
+                (element) => filterBySearchQuery([element], query).length > 0
+              )
+            ) {
+              return true;
             }
+          } else {
+            if (filterBySearchQuery([value], query).length > 0) {
+              return true;
+            }
+          }
         }
-        return false
-    })
-}
+      }
+      return false;
+    });
+  };
+
+  const filteredProducts = useMemo(
+    () => filterBySearchQuery(FurnitureData, searchQuery),
+    [FurnitureData, searchQuery]
+  );
 
   useEffect(() => {
-    const filteredProducts = filterBySearchQuery(FurnitureData, searchQuery)
     setProducts(filteredProducts);
-  }, [searchQuery]);
-  //------------------
+  }, [filteredProducts]);
+  //--------END OF SEARCH BY SEARCH QUERY----------
 
   const handleLoadMore = () => {
     setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 8);

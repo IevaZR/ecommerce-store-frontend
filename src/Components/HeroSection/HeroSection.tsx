@@ -5,7 +5,7 @@ import HeroImage from "./../../Assets/heroImage.png"
 import { useActiveSearchContext } from '../../HelperFunctions/ActiveSearchContext'
 
 const HeroSection = () => {
-  const {activeSearch, updateActiveSearch} = useActiveSearchContext()
+  const {updateActiveSearch} = useActiveSearchContext()
 
   const showProducts = () => {
     updateActiveSearch(false)

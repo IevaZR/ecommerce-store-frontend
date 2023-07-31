@@ -2,7 +2,6 @@ import React from "react";
 import "./ProductsView.css";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import ProductList from "../ProductList/ProductList";
-import { FurnitureData } from "../../data/data";
 
 
 const ProductsView = () => {

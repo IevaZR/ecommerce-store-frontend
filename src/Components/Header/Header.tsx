@@ -10,7 +10,7 @@ import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContex
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
-  const {activeSearch, updateActiveSearch} = useActiveSearchContext()
+  const {updateActiveSearch} = useActiveSearchContext()
 
   const showMobileNavbar = () => {
     setActiveMenu(!activeMenu);
