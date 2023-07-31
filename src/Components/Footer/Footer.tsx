@@ -1,31 +1,79 @@
-import React from 'react'
-import "./Footer.css"
+import React from "react";
+import "./Footer.css";
+// @ts-ignore
+import Logo from "./../../Assets/logo.png";
+// @ts-ignore
+import FacebookIcon from "./../../Assets/facebook-icon.png";
+// @ts-ignore
+import InstagramIcon from "./../../Assets/instagram-icon.png";
+// @ts-ignore
+import TwitterIcon from "./../../Assets/twitter-icon.png";
+// @ts-ignore
+import LocationIcon from "./../../Assets/location-icon.png";
+// @ts-ignore
+import PhoneIcon from "./../../Assets/telephone-icon.png";
+// @ts-ignore
+import EmailIcon from "./../../Assets/email-icon.png";
 
 const Footer = () => {
   return (
     <div>
-        <div className="FooterWrapper">
-            <div className="FooterAboutWrapper">
-            <img src="" alt="" className="FooterLogo" />
-            <p className="FooterAbout"></p>
-            <div className="FooterSocialIconsWrapper">
-
-            </div>
-            </div>
-            <h3 className="FooterContactsHeading">Contacts</h3>
-            <div className="FooterContactsWrapper">
-            <div className="FooterAddressWrapper"> </div>
-            <div className="FooterPhoneWrapper"></div>
-            <div className="FooterEmailWrapper"></div>
-            </div>
-            <div className="FotterNewsLetterWrapper">
-            <h3 className="FooterNewsletterHeading">Join To Newsletter</h3>
-            <p className="FooterNewsletterAnnouncement"></p>
-            <div className="FooterNewsletterFormWrapper"></div>
-            </div>
+      <div className="FooterWrapper">
+        <div className="FooterAboutWrapper">
+          <img src={Logo} alt="logo" className="FooterLogo" />
+          <p className="FooterAbout">
+            Follow us on social media to stay up to date with newest furniture
+            fashion
+          </p>
+          <div className="FooterSocialIconsWrapper">
+            <img
+              src={FacebookIcon}
+              alt="facebook-icon"
+              className="FooterSocialIcon"
+            />
+            <img
+              src={InstagramIcon}
+              alt="instagram-icon"
+              className="FooterSocialIcon"
+            />
+            <img
+              src={TwitterIcon}
+              alt="twitter-icon"
+              className="FooterSocialIcon"
+            />
+          </div>
         </div>
+        <div className="FooterContactsWrapper">
+          <h3 className="FooterContactsHeading">Contacts</h3>
+          <div className="FooterAddressWrapper">
+          <img
+              src={LocationIcon}
+              alt="location-icon"
+              className="FooterContactIcon"
+            /> </div>
+          <div className="FooterPhoneWrapper">
+          <img
+              src={PhoneIcon}
+              alt="phone-icon"
+              className="FooterContactIcon"
+            />
+          </div>
+          <div className="FooterEmailWrapper">
+          <img
+              src={EmailIcon}
+              alt="email-icon"
+              className="FooterContactIcon"
+            />
+          </div>
+        </div>
+        <div className="FotterNewsLetterWrapper">
+          <h3 className="FooterNewsletterHeading">Join To Newsletter</h3>
+          <p className="FooterNewsletterAnnouncement"></p>
+          <div className="FooterNewsletterFormWrapper"></div>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

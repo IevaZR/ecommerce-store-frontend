@@ -1,3 +1,63 @@
 .FooterWrapper {
     width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.FooterAboutWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterLogo {
+    width: 5rem;
+}
+
+.FooterAbout {
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+    max-width: 150px;
+}
+
+.FooterSocialIconsWrapper {
+    display: flex;
+}
+
+.FooterSocialIcon {
+    width: 1.3rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.FooterContactsWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterContactsHeading {
+    font-family: "Comfortaa", cursive;
+    color: rgb(63, 63, 63);
+    margin-top: 0;
+}
+
+.FooterAddressWrapper, .FooterPhoneWrapper, .FooterEmailWrapper {
+    display: flex;
+}
+
+.FooterContactIcon {
+    width: 1rem;
+}
+
+.FotterNewsLetterWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterNewsletterHeading {
+    font-family: "Comfortaa", cursive;
+    color: rgb(63, 63, 63);
+    margin-top: 0;
 }
