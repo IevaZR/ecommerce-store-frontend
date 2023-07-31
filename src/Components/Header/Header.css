@@ -1,88 +1,159 @@
 .HeaderWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    width: 100wv;
-    height: 3rem;
-    padding: 0rem 2rem 0 2rem;
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 90%;
+  height: 3rem;
+  margin: auto;
+  background-color: white;
+  z-index: 10;
 }
 
 .HeaderLogoWrapper {
-    width: 5rem;
-    margin-right: 2rem;
-    display: flex;
-    align-items: center;
+  width: 6rem;
+  display: flex;
+  align-items: center;
 }
 
 .HeaderLogo {
-    width: 5rem;
-    object-fit: cover;
+  width: 5rem;
+  object-fit: cover;
 }
 
 .HeaderNavbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 2rem 0 0;
-    padding: 0;
-    width: 35%;
-   min-width: 15rem;
-   
-}
-
-.HeaderNavbarListItem1 {
-    list-style-type: none;
-    font-family: 'Comfortaa', cursive;
-    font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 2rem 0 2rem;
+  padding: 0;
+  width: 35%;
+  min-width: 15rem;
 }
 
 .HeaderNavbarListItem {
-    list-style-type: none;
-    margin-left: 0.5rem;
-    font-family: 'Comfortaa', cursive;
-    font-size: 0.8rem;
+  list-style-type: none;
+  margin: 0 0.2rem 0 0.2rem;
+  font-family: "Comfortaa", cursive;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.HeaderNavbarAnchor {
+    text-decoration: none;
+    color: black;
+}
+
+.HeaderNavbarListItem:hover{
+    text-shadow:  0.5px 0.5px 0.5px gray;
+}
+
+.HeaderNavbarListItem:active {
+    font-weight: 800;
 }
 
 .HeaderSearchWarpper {
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 6rem;
+  position: relative;
 }
 
 .HeaderSearchInput {
-    /* border: none; */
-    width: 5rem;
-    
+  border: 0.5px solid;
+  border-radius: 10px;
+  width: 6rem;
+  padding: 0.3rem;
+  height: 1.3rem;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
 }
 
-.HeaderSearchIcon{
-    width: 1rem;
+.HeaderSearchInput:focus {
+    width: 9rem;
+    transition: all 0.5s ease;
 }
 
-.HeaderNavbarMobile {
-    display: none;
-    width: 5rem;
+.HeaderSearchButton {
+  height: 1.3rem;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.HeaderSearchIcon {
+  position: absolute;
+  width: 0.9rem;
+  right: 10px;
+}
+
+.HeaderNavbarMobileWrapper {
+  display: none;
+  width: 5rem;
+  background-color: white;
 }
 
 .HeaderNavbarMobileButton {
-    background-color: transparent;
-    border: none;
+  background-color: transparent;
+  border: none;
+  margin: 0 2rem 0 2rem;
+  cursor: pointer;
+  background-color: white;
 }
 
 .HeaderNavbarMobileButtonImage {
-    width: 1.5rem
+  width: 1.5rem;
 }
 
-@media screen and (max-width: 500px) {
-    .HeaderNavbar {
-        display: none
-    }
-    .HeaderNavbarMobile {
-        display: flex;
-    }
-    .HeaderWrapper {
-        align-items: center;
-    }
+@media screen and (max-width: 550px) {
+  .HeaderNavbar {
+    display: none;
+  }
+
+  .HeaderNavbarMobileWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+  }
+  .HeaderNavbarMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    padding: 0;
+    top: -20rem;
+    margin: auto;
+    transition: all 1s ease;
+    background-color: white;
+    z-index: 10;
+  }
+  .HeaderNavbarMobileActive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 90%;
+    padding: 0;
+    top: 3rem;
+    margin: auto;
+    transition: all 1s ease;
+    background-color: white;
+  }
+
+  .HeaderNavbarListItem {
+    margin: 0.2rem 0 0.2rem 0;
+  }
+  .HeaderNavbarMobile {
+    display: flex;
+    justify-content: center;
+  }
+  .HeaderWrapper {
+    align-items: center;
+  }
 }
