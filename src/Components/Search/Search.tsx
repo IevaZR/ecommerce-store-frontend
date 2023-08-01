@@ -10,6 +10,7 @@ import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContex
 const Search = () => {
     const {updateActiveSearch, updateSearchQuery} = useActiveSearchContext()
     const [input, setInput] = useState("")
+    const productViewRef = useRef(null)
 
     const handleInputChange = (e) => {
         const newInput = e.target.value;

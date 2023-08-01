@@ -1,11 +1,10 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useRef } from "react";
 
 const ActiveSearchContext = createContext({
     activeSearch: false,
     updateActiveSearch: (value: boolean) => {},
     searchQuery: "",
     updateSearchQuery: (query: string) => {},
-    
   });
 
 export const useActiveSearchContext = () => {
@@ -15,6 +14,7 @@ export const useActiveSearchContext = () => {
 export const ActiveSearchProvider = ({ children }) => {
   const [activeSearch, setActiveSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("")
+  
 
   const updateActiveSearch = (value: boolean) => {
     setActiveSearch(value);

@@ -1,18 +1,16 @@
 .ScrollToTopButton {
     display: none;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: rgb(218, 217, 217);
-    color: #fff;
+    bottom: 15px;
+    right: 15px;
+    background-color: rgb(168, 168, 168);
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     z-index: 999;
-    opacity: 0.8;
+    opacity: 0.6;
     transition: opacity 0.3s ease-in-out;
   }
   
