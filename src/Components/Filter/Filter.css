@@ -11,3 +11,17 @@
     column-gap: 0.5rem;
     row-gap: 0.5rem;
 }
+@media screen and (max-width: 850px) {
+    .Filter {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 470px) {
+    .Filter {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .FilterWrapper {
+        padding: 0.5rem;
+    }
+}
