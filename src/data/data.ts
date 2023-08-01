@@ -409,7 +409,7 @@ export const FurnitureData: Furniture[] = [
       "grey sofa",
     ],
     image:
-      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwa1dd06f6/images/designfeatures/1417892.jpg?sw=1000&sh=1250",
+      "https://aspiremetro.com/wp-content/uploads/2019/09/unnamed-2.jpg",
   },
   {
     id: "C01",
@@ -696,7 +696,7 @@ export const FurnitureData: Furniture[] = [
       "grey chair",
     ],
     image:
-      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd61582de/images/designfeatures/1417891.jpg?sw=1000&sh=1250",
+      "https://scontent.frix5-1.fna.fbcdn.net/v/t39.30808-6/285446501_5411810375518339_5766188421558145356_n.jpg?_nc_cat=100&cb=99be929b-3346023f&ccb=1-7&_nc_sid=730e14&_nc_ohc=xpZq8Vv3oYEAX-6Jw9t&_nc_ht=scontent.frix5-1.fna&oh=00_AfDYWtONmneh7BkZdzf2gLmS67oRhAQhpHwQLcr0IQE6Fg&oe=64CE0C78",
   },
   {
     id: "C08",
@@ -1002,7 +1002,7 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9090ad7f/images/designfeatures/823125.jpg?sw=1000&sh=1250",
+    image: "https://www.beyondfurniture.com.au/wp-content/uploads/2021/01/chiva1.jpg",
   },
   {
     id: "T06",
