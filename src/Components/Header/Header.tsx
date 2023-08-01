@@ -2,17 +2,23 @@ import { useState } from "react";
 import "./Header.css";
 // @ts-ignore
 import Logo from "./../../Assets/logo.png";
-// @ts-ignore
-import SearchIcon from "./../../Assets/search-icon.png";
+
 // @ts-ignore
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
+import Search from "../Search/Search";
+import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
+  const {updateActiveSearch} = useActiveSearchContext()
 
   const showMobileNavbar = () => {
     setActiveMenu(!activeMenu);
   };
+
+  const showMainPageProducts = () => {
+    updateActiveSearch(false)
+  }
 
   return (
     <div className="HeaderWrapper">
@@ -20,8 +26,8 @@ const Header = () => {
         <img src={Logo} alt="Accent logo" className="HeaderLogo" />
       </div>
       <ul className="HeaderNavbar">
-        <li className="HeaderNavbarListItem">Home</li>
-        <li className="HeaderNavbarListItem">Shop</li>
+        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>Home</li>
+        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}><a href="#ProductView" className="HeaderNavbarAnchor">Shop</a></li>
         <li className="HeaderNavbarListItem">About</li>
         <li className="HeaderNavbarListItem">Blog</li>
         <li className="HeaderNavbarListItem"><a href="#contacts" className="HeaderNavbarAnchor">Contact</a></li>
@@ -43,21 +49,14 @@ const Header = () => {
           <li className="HeaderNavbarListItem">Shop</li>
           <li className="HeaderNavbarListItem">About</li>
           <li className="HeaderNavbarListItem">Blog</li>
-          <li className="HeaderNavbarListItem">Contact</li>
+          <li className="HeaderNavbarListItem"><a href="#contacts" className="HeaderNavbarAnchor">Contact</a></li>
         </ul>
       </div>
-      <div className="HeaderSearchWarpper">
-        <input type="text" className="HeaderSearchInput"></input>
-        <button className="HeaderSearchButton">
-          <img
-            src={SearchIcon}
-            alt="search-icon"
-            className="HeaderSearchIcon"
-          />
-        </button>
-      </div>
+       <Search/>
     </div>
   );
 };
+
+//TODO Pamainīt header izkārtojumu
 
 export default Header;
