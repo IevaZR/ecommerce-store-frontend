@@ -6,7 +6,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({productList}: ProductCardProps) => (
-    <div className='ProductCardWrapper'>
+    <div className='ProductCardWrapper' >
         <div className="ProductImageContainer">
             <img
                 src={productList.image}
