@@ -26,7 +26,7 @@ const Header = () => {
         <img src={Logo} alt="Accent logo" className="HeaderLogo" />
       </div>
       <ul className="HeaderNavbar">
-        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>Home</li>
+        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}><a href="#MainPage" className="HeaderNavbarAnchor">Home</a></li>
         <li className="HeaderNavbarListItem" onClick={showMainPageProducts}><a href="#ProductView" className="HeaderNavbarAnchor">Shop</a></li>
         <li className="HeaderNavbarListItem">About</li>
         <li className="HeaderNavbarListItem">Blog</li>

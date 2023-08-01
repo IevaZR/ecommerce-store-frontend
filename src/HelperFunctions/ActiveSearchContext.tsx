@@ -5,6 +5,7 @@ const ActiveSearchContext = createContext({
     updateActiveSearch: (value: boolean) => {},
     searchQuery: "",
     updateSearchQuery: (query: string) => {},
+    
   });
 
 export const useActiveSearchContext = () => {

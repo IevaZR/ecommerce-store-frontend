@@ -7,7 +7,7 @@ import Filter from "../../Components/Filter/Filter";
 
 const MainPage = () => {
   return (
-    <div className="MainPageWrapper">
+    <div className="MainPageWrapper" id="MainPage">
       <div className="HeaderAndHeroSectionWrapper">
         <Header />
         <HeroSection />
