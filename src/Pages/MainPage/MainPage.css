@@ -1,6 +1,6 @@
 .MainPageWrapper {
     min-width: 320px;
-}
-.HeaderAndHeroSectionWrapper {
-    background-color: #c0bbbb37
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }

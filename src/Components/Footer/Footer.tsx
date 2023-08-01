@@ -19,7 +19,6 @@ import ArrowIcon from "./../../Assets/arrow-icon.png";
 
 const Footer = () => {
   return (
-    <div>
       <div className="FooterWrapper">
         <div className="FooterAboutWrapper">
           <img src={Logo} alt="logo" className="FooterLogo" />
@@ -89,7 +88,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -4,17 +4,17 @@ import "./MainPage.css";
 import Footer from "../../Components/Footer/Footer";
 import ProductsView from "../../Components/ProductsView/ProductsView";
 import Filter from "../../Components/Filter/Filter";
+import ScrollToTopButton from "../../Components/ScrollToTopButton/ScrollToTopButton";
 
 const MainPage = () => {
   return (
     <div className="MainPageWrapper" id="MainPage">
-      <div className="HeaderAndHeroSectionWrapper">
-        <Header />
-        <HeroSection />
-      </div>
+      <Header />
+      <HeroSection />
       <Filter />
-      <ProductsView/>
+      <ProductsView />
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 };
