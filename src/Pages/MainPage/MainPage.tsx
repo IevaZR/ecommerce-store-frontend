@@ -6,6 +6,7 @@ import ProductsView from "../../Components/ProductsView/ProductsView";
 import Filter from "../../Components/Filter/Filter";
 import ScrollToTopButton from "../../Components/ScrollToTopButton/ScrollToTopButton";
 
+
 const MainPage = () => {
   return (
     <div className="MainPageWrapper" id="MainPage">
@@ -14,7 +15,7 @@ const MainPage = () => {
       <Filter />
       <ProductsView />
       <Footer />
-      <ScrollToTopButton />
+      <ScrollToTopButton/>
     </div>
   );
 };
