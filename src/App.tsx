@@ -1,10 +1,13 @@
 import "./App.css";
 import MainPage from "./Pages/MainPage/MainPage";
+import { ActiveSearchProvider } from "./HelperFunctions/ActiveSearchContext";
 
 function App() {
   return (
     <div>
-      <MainPage />
+      <ActiveSearchProvider>
+        <MainPage />
+      </ActiveSearchProvider>
     </div>
   );
 }
