@@ -6,7 +6,6 @@ import { useState } from 'react';
 
 
 const ProductList = () => {
-
     const [products, setProducts] = useState(FurnitureData);
     // console.log(products);
     const [visibleProducts, setVisibleProducts] = useState(8);

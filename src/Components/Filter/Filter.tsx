@@ -10,7 +10,8 @@ import FilterSofas from '../../Assets/FilterSofas.jpeg'
 // @ts-ignore
 import FilterTables from '../../Assets/FilterTables.jpeg'
 
-const Filter = () => {
+
+const Filter: React.FC = () => {
   return (
     <div className="FilterWrapper">
       <div className="Filter">
