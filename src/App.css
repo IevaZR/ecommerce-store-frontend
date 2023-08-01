@@ -3,4 +3,5 @@ body {
   padding: 0;
   display: flex;
   justify-content: center;
+  min-width: 320px;
 }

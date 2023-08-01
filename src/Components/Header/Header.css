@@ -134,7 +134,6 @@
     width: 7rem;
     display: flex;
     align-items: center;
-    width: 80%;
   }
   
   .HeaderLogo {
@@ -147,4 +146,10 @@
   justify-content: center;
   
  }
+}
+
+@media screen and (max-width: 400px) {
+  .HeaderNavbarMobileWrapper {
+    width: 4rem;
+  }
 }
