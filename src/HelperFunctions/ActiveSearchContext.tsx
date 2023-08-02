@@ -14,6 +14,7 @@ export const useActiveSearchContext = () => {
 export const ActiveSearchProvider = ({ children }) => {
   const [activeSearch, setActiveSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("")
+  
 
   const updateActiveSearch = (value: boolean) => {
     setActiveSearch(value);

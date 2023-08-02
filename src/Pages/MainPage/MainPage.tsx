@@ -4,20 +4,21 @@ import "./MainPage.css";
 import Footer from "../../Components/Footer/Footer";
 import ProductsView from "../../Components/ProductsView/ProductsView";
 import Filter from "../../Components/Filter/Filter";
+import ScrollToTopButton from "../../Components/ScrollToTopButton/ScrollToTopButton";
+
 import { FilterProvider } from "../../HelperFunctions/FilterContext";
 
 const MainPage = () => {
   return (
     <FilterProvider>
-      <div className="MainPageWrapper">
-        <div className="HeaderAndHeroSectionWrapper">
-          <Header />
-          <HeroSection />
-        </div>
-        <Filter />
-        <ProductsView />
-        <Footer />
-      </div>
+    <div className="MainPageWrapper" id="MainPage">
+      <Header />
+      <HeroSection />
+      <Filter />
+      <ProductsView />
+      <Footer />
+      <ScrollToTopButton/>
+    </div>
     </FilterProvider>
   );
 };

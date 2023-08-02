@@ -10,15 +10,15 @@ import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContex
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
-  const {updateActiveSearch} = useActiveSearchContext()
+  const { updateActiveSearch } = useActiveSearchContext();
 
   const showMobileNavbar = () => {
     setActiveMenu(!activeMenu);
   };
 
   const showMainPageProducts = () => {
-    updateActiveSearch(false)
-  }
+    updateActiveSearch(false);
+  };
 
   return (
     <div className="HeaderWrapper">
@@ -26,11 +26,23 @@ const Header = () => {
         <img src={Logo} alt="Accent logo" className="HeaderLogo" />
       </div>
       <ul className="HeaderNavbar">
-        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>Home</li>
-        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}><a href="#ProductView" className="HeaderNavbarAnchor">Shop</a></li>
+        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+          <a href="#MainPage" className="HeaderNavbarAnchor">
+            Home
+          </a>
+        </li>
+        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+          <a href="#ProductView" className="HeaderNavbarAnchor">
+            Shop
+          </a>
+        </li>
         <li className="HeaderNavbarListItem">About</li>
         <li className="HeaderNavbarListItem">Blog</li>
-        <li className="HeaderNavbarListItem"><a href="#contacts" className="HeaderNavbarAnchor">Contact</a></li>
+        <li className="HeaderNavbarListItem">
+          <a href="#contacts" className="HeaderNavbarAnchor">
+            Contact
+          </a>
+        </li>
       </ul>
       <div className="HeaderNavbarMobileWrapper">
         <button className="HeaderNavbarMobileButton" onClick={showMobileNavbar}>
@@ -45,14 +57,28 @@ const Header = () => {
             activeMenu ? "HeaderNavbarMobileActive" : "HeaderNavbarMobile"
           }
         >
-          <li className="HeaderNavbarListItem">Home</li>
-          <li className="HeaderNavbarListItem">Shop</li>
-          <li className="HeaderNavbarListItem">About</li>
-          <li className="HeaderNavbarListItem">Blog</li>
-          <li className="HeaderNavbarListItem"><a href="#contacts" className="HeaderNavbarAnchor">Contact</a></li>
+          <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+          <a href="#MainPage" className="HeaderNavbarAnchor">
+            Home
+          </a>
+        </li>
+        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+          <a href="#ProductView" className="HeaderNavbarAnchor">
+            Shop
+          </a>
+        </li>
+        <li className="HeaderNavbarListItem">About</li>
+        <li className="HeaderNavbarListItem">Blog</li>
+        <li className="HeaderNavbarListItem">
+          <a href="#contacts" className="HeaderNavbarAnchor">
+            Contact
+          </a>
+        </li>
         </ul>
       </div>
-       <Search/>
+      <div className="HeaderSearchWrapper">
+        <Search />
+      </div>
     </div>
   );
 };
