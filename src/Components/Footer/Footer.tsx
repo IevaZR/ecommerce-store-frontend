@@ -19,7 +19,6 @@ import ArrowIcon from "./../../Assets/arrow-icon.png";
 
 const Footer = () => {
   return (
-    <div>
       <div className="FooterWrapper">
         <div className="FooterAboutWrapper">
           <img src={Logo} alt="logo" className="FooterLogo" />
@@ -28,21 +27,21 @@ const Footer = () => {
             fashion
           </p>
           <div className="FooterSocialIconsWrapper">
-            <img
+            <a href="https://www.facebook.com/" target="_blank" rel="noreferrer"><img
               src={FacebookIcon}
               alt="facebook-icon"
               className="FooterSocialIcon"
-            />
-            <img
+            /></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer"><img
               src={InstagramIcon}
               alt="instagram-icon"
               className="FooterSocialIcon"
-            />
-            <img
+            /></a>
+            <a href="https://www.twitter.com/" target="_blank" rel="noreferrer"><img
               src={TwitterIcon}
               alt="twitter-icon"
               className="FooterSocialIcon"
-            />
+            /></a>
           </div>
         </div>
         <div className="FooterContactsWrapper" id="contacts">
@@ -89,7 +88,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
