@@ -12,12 +12,12 @@ const ProductList = ({ searchQuery }) => {
 
     //---FOR SEARCH BY SEARCH QUERY------
     const filterBySearchQuery = (data, query) => {
+        const regex = new RegExp(`\\b${query}\\b`, 'i');
         return data.filter((item) => {
             for (const key in item) {
                 const value = item[key];
                 if (
-                    typeof value === "string" &&
-                    value.toLowerCase().includes(query.toLowerCase())
+                    typeof value === "string" && regex.test(value)
                 ) {
                     return true;
                 } else if (typeof value === "object" && value !== null) {
