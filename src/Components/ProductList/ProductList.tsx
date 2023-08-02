@@ -2,8 +2,12 @@ import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
 import { FurnitureData } from "../../data/data";
 import { useState, useEffect, useMemo } from "react";
+import { useFilterContext } from "../../HelperFunctions/FilterContext";
 
 const ProductList = ({ searchQuery }) => {
+    // START Filter
+    const { selectedFilter } = useFilterContext();
+    // END Filter
     const [products, setProducts] = useState(FurnitureData);
     // console.log(products);
     const [visibleProducts, setVisibleProducts] = useState(8);
@@ -55,11 +59,34 @@ const ProductList = ({ searchQuery }) => {
         }, [filteredProducts]);
     //--------END OF SEARCH BY SEARCH QUERY----------
 
+    //--------START OF FILTER------------------------
+    const filterByCategory = (data, category) => {
+        if (!category) {
+            return data;
+        }
+        return data.filter((item) => item.category.toLowerCase() === category);
+    };
+
+    useEffect(() => {
+        const filteredProductsByCategory = filterByCategory(FurnitureData, selectedFilter);
+        const filteredProducts = filterBySearchQuery(filteredProductsByCategory, searchQuery);
+        if (filteredProducts.length === 0) {
+            setProductsFound(false);
+        } else {
+            setProductsFound(true);
+            setProducts(filteredProducts);
+        }
+    }, [selectedFilter, searchQuery]);
+    //--------END OF FILTER--------------------------
+
+
     const handleLoadMore = () => {
         setVisibleProducts((prevVisibleProducts) => prevVisibleProducts + 8);
     };
 
     const productsToShow = products.slice(0, visibleProducts);
+
+
 
     return (
         <div className="ProductListWrapper">

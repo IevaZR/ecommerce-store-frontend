@@ -6,9 +6,11 @@ import ProductsView from "../../Components/ProductsView/ProductsView";
 import Filter from "../../Components/Filter/Filter";
 import ScrollToTopButton from "../../Components/ScrollToTopButton/ScrollToTopButton";
 
+import { FilterProvider } from "../../HelperFunctions/FilterContext";
 
 const MainPage = () => {
   return (
+    <FilterProvider>
     <div className="MainPageWrapper" id="MainPage">
       <Header />
       <HeroSection />
@@ -17,6 +19,7 @@ const MainPage = () => {
       <Footer />
       <ScrollToTopButton/>
     </div>
+    </FilterProvider>
   );
 };
 

@@ -13,26 +13,26 @@ import FilterTables from '../../Assets/FilterTables.jpeg'
 
 const Filter: React.FC = () => {
   return (
-    <div className="FilterWrapper">
-      <div className="Filter">
-        <FilterItem
-          filterBackgroundImage={FilterSofas}
-          filterName="Sofas"
-        />
-        <FilterItem
-          filterBackgroundImage={FilterChairs}
-          filterName="Chairs"
-        />
-        <FilterItem
-          filterBackgroundImage={FilterTables}
-          filterName="Tables"
-        />
-        <FilterItem
-          filterBackgroundImage={FilterBeds}
-          filterName="Beds"
-        />
+      <div className="FilterWrapper">
+        <div className="Filter">
+          <FilterItem
+            filterBackgroundImage={FilterSofas}
+            filterName="Sofas"
+          />
+          <FilterItem
+            filterBackgroundImage={FilterChairs}
+            filterName="Chairs"
+          />
+          <FilterItem
+            filterBackgroundImage={FilterTables}
+            filterName="Tables"
+          />
+          <FilterItem
+            filterBackgroundImage={FilterBeds}
+            filterName="Beds"
+          />
+        </div>
       </div>
-    </div>
   )
 }
 
