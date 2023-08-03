@@ -16,8 +16,9 @@ const Header = () => {
     setActiveMenu(!activeMenu);
   };
 
-  const showMainPageProducts = () => {
+  const showMainPage = () => {
     updateActiveSearch(false);
+    updateShowAllProducts(false)
   };
 
   const showAllProducts = () => {
@@ -27,10 +28,10 @@ const Header = () => {
   return (
     <div className="HeaderWrapper">
       <div className="HeaderLogoWrapper">
-      <Link to="/"><a href="#MainPage"><img src={Logo} alt="Accent logo" className="HeaderLogo" /></a></Link>
+      <Link to="/"><a href="#MainPage" onClick={showMainPage}><img src={Logo} alt="Accent logo" className="HeaderLogo" /></a></Link>
       </div>
       <ul className="HeaderNavbar">
-        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+        <li className="HeaderNavbarListItem" onClick={showMainPage}>
         <Link to="/" className="HeaderNavbarAnchor"><a href="#MainPage" className="HeaderNavbarAnchor">
             Home
           </a></Link>
@@ -61,12 +62,12 @@ const Header = () => {
             activeMenu ? "HeaderNavbarMobileActive" : "HeaderNavbarMobile"
           }
         >
-          <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+          <li className="HeaderNavbarListItem" onClick={showMainPage}>
           <a href="#MainPage" className="HeaderNavbarAnchor">
             Home
           </a>
         </li>
-        <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
+        <li className="HeaderNavbarListItem" onClick={showMainPage}>
           <a href="#ProductView" className="HeaderNavbarAnchor">
             Shop
           </a>

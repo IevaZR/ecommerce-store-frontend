@@ -5,7 +5,7 @@ const ActiveSearchContext = createContext({
     updateActiveSearch: (value: boolean) => {},
     searchQuery: "",
     updateSearchQuery: (query: string) => {},
-    showAllProducts: true,
+    showAllProducts: false,
     updateShowAllProducts: (value: boolean) => {},
   });
 
@@ -16,7 +16,7 @@ export const useActiveSearchContext = () => {
 export const ActiveSearchProvider = ({ children }) => {
   const [activeSearch, setActiveSearch] = useState(false);
   const [searchQuery, setSearchQuery] = useState("")
-  const [showAllProducts, setShowAllProducts] = useState(true)
+  const [showAllProducts, setShowAllProducts] = useState(false)
   
 
   const updateActiveSearch = (value: boolean) => {
