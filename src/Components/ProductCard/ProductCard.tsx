@@ -1,9 +1,8 @@
 import './ProductCard.css';
 import {Furniture} from '../../types/types';
 // import Button from '../ReusableComponents/Button/Button';
-
-import { useState } from 'react';
 import ProductPreviewModal from '../ProductPreviewModal/ProductPreviewModal';
+import { useState } from 'react';
 interface ProductCardProps {
     productList: Furniture;
 }

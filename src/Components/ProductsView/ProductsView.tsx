@@ -5,7 +5,7 @@ import ProductList from "../ProductList/ProductList";
 import { useRef, useEffect } from "react";
 
 const ProductsView = () => {
-  const { activeSearch, searchQuery } = useActiveSearchContext();
+  const { activeSearch, searchQuery, showAllProducts } = useActiveSearchContext();
 
   const productViewRef = useRef(null);
 
@@ -14,6 +14,12 @@ const ProductsView = () => {
       scrollToProductView();
     }
   }, [activeSearch]);
+
+  useEffect(() => {
+    if (showAllProducts) {
+      scrollToProductView();
+    }
+  }, [showAllProducts]);
 
   const scrollToProductView = () => {
     if (productViewRef.current) {
@@ -26,7 +32,7 @@ const ProductsView = () => {
       <div className="ProductViewHeadingWrapper">
         <h2 className="ProductViewHeading">Our Products</h2>
       </div>
-      {activeSearch ? (
+      {(activeSearch && !showAllProducts) ? (
         <ProductList searchQuery={searchQuery} />
       ) : (
         <ProductList searchQuery="" />
