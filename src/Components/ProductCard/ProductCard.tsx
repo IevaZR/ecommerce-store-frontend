@@ -11,15 +11,16 @@ const ProductCard = ({productList}: ProductCardProps) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {
+        console.log('click');
         setIsModalOpen(true);
     };
     const closeModal = () => {
         setIsModalOpen(false);
     }
-    
+   
     return (
-    
-        <div className='ProductCardWrapper'>
+    <>
+        <div className='ProductCardWrapper' >
             <div className="ProductImageContainer">
                 <img
                     src={productList.image}
@@ -30,7 +31,7 @@ const ProductCard = ({productList}: ProductCardProps) => {
                     {productList.title}
                 </div>
                 <div className="ProductPrice">
-                    {productList.price} EUR
+                &euro; {productList.price}
                 </div>
             </div>
             {/* <Button text='View' /> */}
@@ -40,13 +41,14 @@ const ProductCard = ({productList}: ProductCardProps) => {
                 >
                 Quickview
             </button>
+        </div>
             {isModalOpen && (
                 <ProductPreviewModal
                     onClose={closeModal}
                     productList={productList}
                 />
             )}
-        </div>
+    </>
     );
 }
 

@@ -13,19 +13,25 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
    
   const [activeTab, setActiveTab] = useState('dimensions');
 
-  const handleTabChange = (tab) => {
+  const handleTabChange = (tab:string) => {
     setActiveTab(tab);
-    console.log('click');
+    console.log('Tab clicked:', tab);
+  };
+
+  const handleModalClose = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent event propagation
+    console.log('click close modal');
+    onClose();
   };
 
   return (
-    <div className='ProductPreviewModalWrapper' >
-      <div className="ProductPreviewModalBody">
-        <div className="ModalCloseIcon">
-          <img 
-            src={IconClose} 
-            alt="icon-close" 
-            onClick={onClose}
+    <div className='ProductPreviewModalWrapper'>
+      <div className="ProductPreviewModalBody" onClick={(e) => e.stopPropagation()}>
+      <div className="ModalCloseIcon" onClick={handleModalClose}>
+          <img
+            src={IconClose}
+            alt="icon-close"
+            
           />
         </div>
         <div className="ModalProductDataSection">
@@ -50,7 +56,6 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
                 <div
                   className={`ModalProductTabButton ${activeTab === 'dimensions' ? 'active' : ''}`}
                   onClick={() => 
-                    // console.log('Tab clicked!')
                     handleTabChange('dimensions')
                   }
                 >
