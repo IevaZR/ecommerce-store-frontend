@@ -11,12 +11,13 @@ const ProductCard = ({productList}: ProductCardProps) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {
+        console.log('click');
         setIsModalOpen(true);
     };
     const closeModal = () => {
         setIsModalOpen(false);
     }
-    
+   
     return (
     <>
         <div className='ProductCardWrapper'>
@@ -31,7 +32,7 @@ const ProductCard = ({productList}: ProductCardProps) => {
                     {productList.title}
                 </div>
                 <div className="ProductPrice">
-                    {productList.price} EUR
+                &euro; {productList.price}
                 </div>
             </div>
             {/* <Button text='View' /> */}

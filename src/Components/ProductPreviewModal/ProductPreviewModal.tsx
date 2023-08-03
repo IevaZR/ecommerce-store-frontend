@@ -13,6 +13,17 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
    
   const [activeTab, setActiveTab] = useState('dimensions');
 
+  const handleTabChange = (tab: string) => {
+    setActiveTab(tab);
+    console.log('Tab clicked:', tab);
+  };
+
+  const handleModalClose = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent event propagation
+    console.log('click close modal');
+    onClose();
+  };
+
   useEffect(() => {
     const handleKeyDown = (event) => {
         if (event.key === 'Escape') {
@@ -24,28 +35,17 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
     return () => {
         document.removeEventListener('keydown', handleKeyDown);
     };
-}, [onClose]);
-
-  const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    console.log('click');
-  };
-
-  const handleCloseModal = (event) => {
-    if (event.target.classList.contains('ProductPreviewModalWrapper')) {
-        onClose();
-    }
-};
+  }, [onClose]);
 
 
   return (
-    <div className='ProductPreviewModalWrapper' onClick={handleCloseModal}>
+    <div className='ProductPreviewModalWrapper'>
       <div className="ProductPreviewModalBody" onClick={(e) => e.stopPropagation()}>
-        <div className="ModalCloseIcon">
-          <img 
-            src={IconClose} 
-            alt="icon-close" 
-            onClick={onClose}
+      <div className="ModalCloseIcon" onClick={handleModalClose}>
+          <img
+            src={IconClose}
+            alt="icon-close"
+            
           />
         </div>
         <div className="ModalProductDataSection">
@@ -70,7 +70,6 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
                 <div
                   className={`ModalProductTabButton ${activeTab === 'dimensions' ? 'active' : ''}`}
                   onClick={() => 
-                    // console.log('Tab clicked!')
                     handleTabChange('dimensions')
                   }
                 >
