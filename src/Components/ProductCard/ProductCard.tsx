@@ -19,12 +19,13 @@ const ProductCard = ({productList}: ProductCardProps) => {
     }
     
     return (
-    
+    <>
         <div className='ProductCardWrapper'>
             <div className="ProductImageContainer">
                 <img
                     src={productList.image}
-                    alt="product img" />
+                    alt="product img"
+                    />
             </div>
             <div className="ProductDataContainer">
                 <div className="ProductName">
@@ -41,13 +42,14 @@ const ProductCard = ({productList}: ProductCardProps) => {
                 >
                 Quickview
             </button>
-            {isModalOpen && (
+        </div>
+        {isModalOpen && (
                 <ProductPreviewModal
                     onClose={closeModal}
                     productList={productList}
                 />
             )}
-        </div>
+    </>
     );
 }
 
