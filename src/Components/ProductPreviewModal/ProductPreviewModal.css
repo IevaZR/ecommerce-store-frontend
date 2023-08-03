@@ -128,6 +128,10 @@
     margin-left: 1.5rem;
 }
 
+.ModalProductTabs div:hover {
+    cursor: pointer;
+}
+
 .ModalProductTabContent {
     border-top: solid 1px #32303035;
     width: 70%;
