@@ -6,7 +6,7 @@ import { useRef, useEffect } from "react";
 import Filter2 from "../Filter2/Filter2"
 
 const ProductsView = () => {
-  const { activeSearch, searchQuery } = useActiveSearchContext();
+  const { activeSearch, searchQuery, showAllProducts } = useActiveSearchContext();
 
   const productViewRef = useRef(null);
 
@@ -15,6 +15,12 @@ const ProductsView = () => {
       scrollToProductView();
     }
   }, [activeSearch]);
+
+  useEffect(() => {
+    if (showAllProducts) {
+      scrollToProductView();
+    }
+  }, [showAllProducts]);
 
   const scrollToProductView = () => {
     if (productViewRef.current) {
@@ -28,7 +34,7 @@ const ProductsView = () => {
         <h2 className="ProductViewHeading">Our Products</h2>
       </div>
       <Filter2 />
-      {activeSearch ? (
+      {(activeSearch && !showAllProducts) ? (
         <ProductList searchQuery={searchQuery} />
       ) : (
         <ProductList searchQuery="" />
