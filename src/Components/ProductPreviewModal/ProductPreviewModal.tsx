@@ -2,7 +2,7 @@ import './ProductPreviewModal.css';
 // @ts-ignore
 import IconClose from '../../Assets/close-icon.png';
 import {Furniture} from '../../types/types';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 interface ProductPreviewModalProps {
   productList: Furniture;
@@ -13,14 +13,34 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
    
   const [activeTab, setActiveTab] = useState('dimensions');
 
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+        if (event.key === 'Escape') {
+            onClose();
+        }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+    };
+}, [onClose]);
+
   const handleTabChange = (tab) => {
     setActiveTab(tab);
     console.log('click');
   };
 
+  const handleCloseModal = (event) => {
+    if (event.target.classList.contains('ProductPreviewModalWrapper')) {
+        onClose();
+    }
+};
+
+
   return (
-    <div className='ProductPreviewModalWrapper' >
-      <div className="ProductPreviewModalBody">
+    <div className='ProductPreviewModalWrapper' onClick={handleCloseModal}>
+      <div className="ProductPreviewModalBody" onClick={(e) => e.stopPropagation()}>
         <div className="ModalCloseIcon">
           <img 
             src={IconClose} 
