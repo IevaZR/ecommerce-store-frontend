@@ -1,0 +1,21 @@
+.Filter2ItemWrapper {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+}
+.Filter2ItemName {
+    width: 100%;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3d3d3d;
+    cursor: pointer;
+    padding-right: 1.5rem;
+}
+
+@media screen and (max-width: 470px) {
+    .Filter2ItemWrapper {
+        min-width: 50px;
+        height: 50px;
+        font-size: 0.2rem;
+    }
+}
