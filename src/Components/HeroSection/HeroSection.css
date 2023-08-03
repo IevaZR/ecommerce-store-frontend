@@ -1,104 +1,98 @@
 .HeroSectionWrapper {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    padding-top: 3rem;
-    justify-content: space-between;
-    padding-bottom: 2rem;
+  width: 90%;
+  display: flex;
+  padding-top: 3rem;
+  justify-content: space-between;
+  padding-bottom: 2rem;
 }
 
 .HeroSectionHeadingWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    width: 50%;
-    padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  padding-right: 1rem;
 }
 
 .HeroSectionImageWrapper {
-    display: flex;
-    justify-content: flex-end;
-    width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  width: 50%;
 }
 
 .HeroSectionImage {
-    width: 25rem;
-    max-width: 100%;
-    object-fit: cover;
-    box-shadow: 0px 5px 5px #a4a5a6;
-    border-radius: 3px;
+  width: 25rem;
+  max-width: 100%;
+  object-fit: cover;
+  box-shadow: 0px 5px 5px #a4a5a6;
+  border-radius: 3px;
 }
 
 .HeroSectionHeading {
-    font-family: "Comfortaa", cursive;
-    text-transform: capitalize;
-    line-height: 2.5rem;
+  font-family: "Comfortaa", cursive;
+  text-transform: capitalize;
+  line-height: 2.5rem;
 }
 
 .HeroSectionParagraph {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    line-height: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  line-height: 20px;
 }
 
 .HeroSectionButton {
-    font-family: "Comfortaa", cursive;
-    background-color: transparent;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 1rem 2rem 1rem 2rem;
-    margin-top: 3rem;
-    cursor: pointer;
+  font-family: "Comfortaa", cursive;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-top: 3rem;
+  cursor: pointer;
 }
 
-.HeroSectionButton:hover{
-    box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
+.HeroSectionButton:hover {
+  box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
 }
 
 @media screen and (max-width: 800px) {
-    .HeroSectionButton {
-        margin-top: 1rem;
-    }
+  .HeroSectionButton {
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    .HeroSectionWrapper {
-        padding-top: 0.5rem;
-        flex-direction: column;
-        text-align: center;
-    }
-    .HeroSectionHeadingWrapper {
-        width: 100%;
-        align-items: center;
-    }
+  .HeroSectionWrapper {
+    padding-top: 0.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .HeroSectionHeadingWrapper {
+    width: 100%;
+    align-items: center;
+  }
 
-    .HeroSectionParagraph {
-        margin-bottom: 0.3rem;
-    }
+  .HeroSectionParagraph {
+    margin-bottom: 0.3rem;
+  }
 
-    .HeroSectionHeading {
-        margin-bottom: 0.3rem;
-    }
+  .HeroSectionHeading {
+    margin-bottom: 0.3rem;
+  }
 
-    .HeroSectionButton {
-        padding: 0.5rem 1rem 0.5rem 1rem;
-    }
-    
-    
-    
-    .HeroSectionImageWrapper {
-        width: 100%;
-        padding-top: 1rem;
-        justify-content: center;
-    }
+  .HeroSectionButton {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
 
-    .HeroSectionImage{
-        height: 10rem;
-        object-fit: cover;
-        border-radius: 3px;
-    }
-    
+  .HeroSectionImageWrapper {
+    width: 100%;
+    padding-top: 1rem;
+    justify-content: center;
+  }
+
+  .HeroSectionImage {
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 3px;
+  }
 }
-
-

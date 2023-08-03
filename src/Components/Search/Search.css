@@ -37,3 +37,17 @@
     width: 0.9rem;
     right: 10px;
   }
+
+  @media screen and (max-width: 550px) {
+    .SearchWarpper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .SearchInput {
+      width: 100%;
+    }
+    .SearchInput:focus {
+      width: 100%;
+  }
+  }

@@ -1,0 +1,18 @@
+.ProductViewWrapper {
+    
+    width: 100%;
+}
+
+.ProductViewHeadingWrapper {
+    background-color: #c0bbbb37;
+}
+
+.ProductViewHeading {
+    width: 15rem;
+    margin: auto;
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    padding: 2rem 0 0.5rem 0;
+    border-bottom: 2px solid rgb(41, 41, 41);
+}
+
