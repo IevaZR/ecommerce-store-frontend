@@ -1,8 +1,9 @@
 import './ProductCard.css';
 import {Furniture} from '../../types/types';
 // import Button from '../ReusableComponents/Button/Button';
-import ProductPreviewModal from '../ProductPreviewModal/ProductPreviewModal';
+
 import { useState } from 'react';
+import ProductPreviewModal from '../ProductPreviewModal/ProductPreviewModal';
 interface ProductCardProps {
     productList: Furniture;
 }
@@ -20,11 +21,12 @@ const ProductCard = ({productList}: ProductCardProps) => {
    
     return (
     <>
-        <div className='ProductCardWrapper' >
+        <div className='ProductCardWrapper'>
             <div className="ProductImageContainer">
                 <img
                     src={productList.image}
-                    alt="product img" />
+                    alt="product img"
+                    />
             </div>
             <div className="ProductDataContainer">
                 <div className="ProductName">
@@ -42,7 +44,7 @@ const ProductCard = ({productList}: ProductCardProps) => {
                 Quickview
             </button>
         </div>
-            {isModalOpen && (
+        {isModalOpen && (
                 <ProductPreviewModal
                     onClose={closeModal}
                     productList={productList}
