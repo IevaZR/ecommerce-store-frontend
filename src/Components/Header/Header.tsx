@@ -62,17 +62,17 @@ const Header = () => {
             activeMenu ? "HeaderNavbarMobileActive" : "HeaderNavbarMobile"
           }
         >
-          <li className="HeaderNavbarListItem" onClick={showMainPage}>
-          <a href="#MainPage" className="HeaderNavbarAnchor">
+           <li className="HeaderNavbarListItem" onClick={showMainPage}>
+        <Link to="/" className="HeaderNavbarAnchor"><a href="#MainPage" className="HeaderNavbarAnchor">
             Home
+          </a></Link>
+        </li>
+        <li className="HeaderNavbarListItem" onClick={showAllProducts}>
+        <a href="#ProductView" className="HeaderNavbarAnchor" onClick={showAllProducts}>
+            <Link to="/" className="HeaderNavbarAnchor">Shop</Link>
           </a>
         </li>
-        <li className="HeaderNavbarListItem" onClick={showMainPage}>
-          <a href="#ProductView" className="HeaderNavbarAnchor">
-            Shop
-          </a>
-        </li>
-        <li className="HeaderNavbarListItem">About</li>
+        <li className="HeaderNavbarListItem"><Link to="/about-us" className="HeaderNavbarAnchor">About</Link></li>
         <li className="HeaderNavbarListItem">Blog</li>
         <li className="HeaderNavbarListItem">
           <a href="#contacts" className="HeaderNavbarAnchor">
