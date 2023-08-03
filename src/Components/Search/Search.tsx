@@ -4,13 +4,12 @@ import "./Search.css"
 // @ts-ignore
 import SearchIcon from "./../../Assets/search-icon.png";
 // import {useState} from 'react'
-import {useState, useRef} from 'react';
+import {useState} from 'react';
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 
 const Search = () => {
-    const {updateActiveSearch, updateSearchQuery} = useActiveSearchContext()
+    const {updateActiveSearch, updateSearchQuery, updateShowAllProducts} = useActiveSearchContext()
     const [input, setInput] = useState("")
-    const productViewRef = useRef(null)
 
     const handleInputChange = (e) => {
         const newInput = e.target.value;
@@ -25,6 +24,7 @@ const Search = () => {
 
     const showSearchResults = () => {
         updateActiveSearch(true);
+        updateShowAllProducts(false)
         updateSearchQuery(input)
         setInput("")
     }
