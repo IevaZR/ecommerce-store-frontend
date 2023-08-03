@@ -1,0 +1,98 @@
+.AdvertisementSectionWrapper {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem;
+  }
+  
+  .AdvertisementSectionHeadingWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding-right: 1rem;
+  }
+  
+  .AdvertisementSectionImageWrapper {
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+  }
+  
+  .AdvertisementSectionImage {
+    width: 25rem;
+    max-width: 100%;
+    object-fit: cover;
+    box-shadow: 0px 5px 5px #a4a5a6;
+    border-radius: 3px;
+  }
+  
+  .AdvertisementSectionHeading {
+    font-family: "Comfortaa", cursive;
+    text-transform: capitalize;
+    line-height: 2.5rem;
+  }
+  
+  .AdvertisementSectionParagraph {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+  
+  .AdvertisementSectionButton {
+    font-family: "Comfortaa", cursive;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 3rem;
+    cursor: pointer;
+  }
+  
+  .AdvertisementSectionButton:hover {
+    box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
+  }
+  
+  @media screen and (max-width: 800px) {
+    .AdvertisementSectionButton {
+      margin-top: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 550px) {
+    .AdvertisementSectionWrapper {
+      padding: 2rem;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+    .AdvertisementSectionHeadingWrapper {
+      width: 100%;
+      align-items: center;
+    }
+  
+    .AdvertisementSectionParagraph {
+      margin-bottom: 0.3rem;
+    }
+  
+    .AdvertisementSectionHeading {
+      margin-bottom: 0.3rem;
+    }
+  
+    .AdvertisementSectionButton {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
+  
+    .AdvertisementSectionImageWrapper {
+      width: 100%;
+      padding-top: 1rem;
+      justify-content: center;
+    }
+  
+    .AdvertisementSectionImage {
+      height: 10rem;
+      object-fit: cover;
+      border-radius: 3px;
+    }
+  }
+  
