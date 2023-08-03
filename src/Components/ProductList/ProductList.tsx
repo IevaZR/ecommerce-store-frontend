@@ -15,13 +15,17 @@ const ProductList = ({ searchQuery }) => {
 
 
     //---FOR SEARCH BY SEARCH QUERY------
+    useEffect(() => {
+        setProducts(FurnitureData)
+        }, [searchQuery]);
+
     const filterBySearchQuery = (data, query) => {
+        const regex = new RegExp(`\\b${query}\\b`, 'i');
         return data.filter((item) => {
             for (const key in item) {
                 const value = item[key];
                 if (
-                    typeof value === "string" &&
-                    value.toLowerCase().includes(query.toLowerCase())
+                    typeof value === "string" && regex.test(value)
                 ) {
                     return true;
                 } else if (typeof value === "object" && value !== null) {
@@ -44,19 +48,20 @@ const ProductList = ({ searchQuery }) => {
         });
     };
 
-    const filteredProducts = useMemo(
+    const foundProducts = useMemo(
         () => filterBySearchQuery(FurnitureData, searchQuery),
         [FurnitureData, searchQuery]
     );
 
     useEffect(() => {
-        if (filteredProducts.length === 0) {
+        if (foundProducts.length === 0) {
             setProductsFound(false);
           } else {
             setProductsFound(true);
-            setProducts(filteredProducts);
+            setProducts(foundProducts);
           }
-        }, [filteredProducts]);
+        }, [foundProducts]);
+
     //--------END OF SEARCH BY SEARCH QUERY----------
 
     //--------START OF FILTER------------------------
@@ -76,7 +81,7 @@ const ProductList = ({ searchQuery }) => {
             setProductsFound(true);
             setProducts(filteredProducts);
         }
-    }, [selectedFilter, searchQuery]);
+    }, [selectedFilter]);
     //--------END OF FILTER--------------------------
 
 
