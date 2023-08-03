@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <div className="HeaderWrapper">
       <div className="HeaderLogoWrapper">
-        <img src={Logo} alt="Accent logo" className="HeaderLogo" />
+      <a href="#MainPage"><img src={Logo} alt="Accent logo" className="HeaderLogo" /></a>
       </div>
       <ul className="HeaderNavbar">
         <li className="HeaderNavbarListItem" onClick={showMainPageProducts}>
