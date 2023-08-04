@@ -52,9 +52,6 @@
   text-shadow: 0.5px 0.5px 0.5px gray;
 }
 
-.HeaderNavbarListItem:active {
-  font-weight: 800;
-}
 
 .HeaderNavbarMobileWrapper {
   display: none;

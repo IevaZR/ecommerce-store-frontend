@@ -3,7 +3,9 @@
     flex-direction: column;
     align-items: center;
     background-color: white;
-    padding: 3rem;
+    padding: 3rem 0;
+    background-color: #c0bbbb37;
+    width: 100%;
 }
 .Filter {
     display: grid;
@@ -20,6 +22,8 @@
 @media screen and (max-width: 470px) {
     .Filter {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        padding: 1rem;
     }
     .FilterWrapper {
         padding: 0.5rem;
