@@ -17,18 +17,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ORGANIC SHAPES",
-        featureParagraph1:
+        featureTitle: "ORGANIC SHAPES",
+        featureParagraph:
           "Bergamo combines clean, minimal lines with organic shapes to create a visual statement in any space.",
       },
       {
-        featureTitle2: "REFINED STITCHING",
-        featureParagraph2:
+        featureTitle: "REFINED STITCHING",
+        featureParagraph:
           "The unifying stitching design on the base, armrests, and backrest of Bergamo adds a graceful sense of comfort.",
       },
       {
-        featureTitle3: "INVISIBLE LEGS",
-        featureParagraph3:
+        featureTitle: "INVISIBLE LEGS",
+        featureParagraph:
           "The Bergamo sofa is crafted with low, discrete legs that create a light, 'floating' look.",
       },
     ],
@@ -58,18 +58,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ELEGANT DETAILS",
-        featureParagraph1:
+        featureTitle: "ELEGANT DETAILS",
+        featureParagraph:
           "The Modena sofa has an elegant pull in in the back which not only adds character - it helps avoid wrinkles in the fabric.",
       },
       {
-        featureTitle2: "COMFORT IN EVERY SIZE",
-        featureParagraph2:
+        featureTitle: "COMFORT IN EVERY SIZE",
+        featureParagraph:
           "The excellent seating comfort of Modena is available in several modules that allow you to create your perfectly sized comfort zone.",
       },
       {
-        featureTitle3: "MINIMAL DESIGN",
-        featureParagraph3:
+        featureTitle: "MINIMAL DESIGN",
+        featureParagraph:
           "The low back combines with organic shapes for a minimalistic look that invites casual relaxation.",
       },
     ],
@@ -99,18 +99,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ORGANIC SHAPES",
-        featureParagraph1:
+        featureTitle: "ORGANIC SHAPES",
+        featureParagraph:
           "The Bolzano lounge sofa is made up of organic shapes and curved lines, encouraging togetherness and creating a sense of comfort in the home.",
       },
       {
-        featureTitle2: "ELEGANT SILHOUETTE",
-        featureParagraph2:
+        featureTitle: "ELEGANT SILHOUETTE",
+        featureParagraph:
           "With a refined, round silhouette, the lines of the Bolzano chaise longue are clean and minimalistic for a contemporary and streamlined look that will never go out of style.",
       },
       {
-        featureTitle3: "360° CURVE",
-        featureParagraph3:
+        featureTitle: "360° CURVE",
+        featureParagraph:
           "Complemented by a rounded arm that continues through to the backrest, the Bolzano chaise longue is crafted with a curved front panel that offers a 360° curve all the way around.",
       },
     ],
@@ -140,18 +140,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ADJUSTABLE HEADREST",
-        featureParagraph1:
+        featureTitle: "ADJUSTABLE HEADREST",
+        featureParagraph:
           "The manually adjustable headrest not only ensures individual comfort, but also adds a playful visual appearance.",
       },
       {
-        featureTitle2: "COMFORT IN EVERY SIZE",
-        featureParagraph2:
+        featureTitle: "COMFORT IN EVERY SIZE",
+        featureParagraph:
           "The excellent, personal comfort of Zürich is available in several modules that allow you to create your perfectly sized comfort zone.",
       },
       {
-        featureTitle3: "COMFORT IN EVERY POSITION",
-        featureParagraph3:
+        featureTitle: "COMFORT IN EVERY POSITION",
+        featureParagraph:
           "Both the back and the seat cushions are fixed and offer the perfect support whether sitting upright or lounging. A must try in our stores.",
       },
     ],
@@ -181,18 +181,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "MINIMALIST LOOK",
-        featureParagraph1:
+        featureTitle: "MINIMALIST LOOK",
+        featureParagraph:
           "The Berne sofa is supported by a wooden frame and slim tube-shaped metal legs, allowing for a minimalist look and light, floating expression.",
       },
       {
-        featureTitle2: "SUPERIOR BACK SUPPORT",
-        featureParagraph2:
+        featureTitle: "SUPERIOR BACK SUPPORT",
+        featureParagraph:
           "Designed with upright positioning and greater seat depth, the Berne sofa provides superior back support for all-day comfort.",
       },
       {
-        featureTitle3: "DANISH IN THE DETAILS",
-        featureParagraph3:
+        featureTitle: "DANISH IN THE DETAILS",
+        featureParagraph:
           "Berne is finished with stitch detailing on the seat and the back, which not only adds character but is a nice design detail - it helps to prevent wrinkles in the fabric.",
       },
     ],
@@ -222,18 +222,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ATTACHED WITH VELCRO",
-        featureParagraph1:
+        featureTitle: "ATTACHED WITH VELCRO",
+        featureParagraph:
           "The seat cushions are attached with Velcro preventing the cushions from sliding as well as the ends flipping up when seated in the middle. A small, but important detail that ensures a neat look and allows for easy vacuum cleaning underneath.",
       },
       {
-        featureTitle2: "LEG DESIGNS",
-        featureParagraph2:
+        featureTitle: "LEG DESIGNS",
+        featureParagraph:
           "The sofa offers different leg options. The tall legs emphasise the light and elegant expression of the design and as they are available in different colours, shapes and materials allow for harmonious coordination.",
       },
       {
-        featureTitle3: "PERFECTLY FITTED CUSHIONS",
-        featureParagraph3:
+        featureTitle: "PERFECTLY FITTED CUSHIONS",
+        featureParagraph:
           "The cushions are designed to fit perfectly with each other for a uniform and complete look.",
       },
     ],
@@ -263,18 +263,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "A PROGRESSIVE LOOK",
-        featureParagraph1:
+        featureTitle: "A PROGRESSIVE LOOK",
+        featureParagraph:
           "The seat cushion is made of soft foam which allows a firm seating comfort with straight lines. This gives the sofa a formal and progressive look.",
       },
       {
-        featureTitle2: "YOUR LOOK AND COMFORT",
-        featureParagraph2:
+        featureTitle: "YOUR LOOK AND COMFORT",
+        featureParagraph:
           "The Indivi sofa comes with different armrests, allowing you to choose your individual look and comfort.",
       },
       {
-        featureTitle3: "ENDLESS OPPORTUNITIES",
-        featureParagraph3:
+        featureTitle: "ENDLESS OPPORTUNITIES",
+        featureParagraph:
           "Indivi provides endless opportunities. You can choose between different corner units, add chaise lounges in different designs, choose different legs and armrest, not to mention the option of among more than a 100 different fabrics and leathers. With Indivi, you get it exactly like you want it.",
       },
     ],
@@ -304,18 +304,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "TOP COMFORT",
-        featureParagraph1:
+        featureTitle: "TOP COMFORT",
+        featureParagraph:
           "The seat cushions are made of special two-layer cut foam with added feathers. This not only ensures a soft and comfortable look but also ensures that the cushions stay in shape.",
       },
       {
-        featureTitle2: "GREAT DEPTH",
-        featureParagraph2:
+        featureTitle: "GREAT DEPTH",
+        featureParagraph:
           "The total depth of the seat is a 104 cm which is wide enough to sleep on. This could save you a spare bed when guests stay the night over.",
       },
       {
-        featureTitle3: "A LOW, COMFORTABLE LOOK",
-        featureParagraph3:
+        featureTitle: "A LOW, COMFORTABLE LOOK",
+        featureParagraph:
           "With legs of only 3,5 cm in height, the sofa presents a low, comfortable look that invites relaxation.",
       },
     ],
@@ -345,18 +345,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "SOFT ALL AROUND",
-        featureParagraph1:
+        featureTitle: "SOFT ALL AROUND",
+        featureParagraph:
           "The inside frame of the arm and backrest is cut out and covered with soft foam. This makes both the armrest and the backrest very soft and optimizes your comfort.",
       },
       {
-        featureTitle2: "MODULAR",
-        featureParagraph2:
+        featureTitle: "MODULAR",
+        featureParagraph:
           "Carmo is a modular sofa system that can be bought as single modules. When doing so, the modules come fully upholstered with crocodile connectors ensuring easy attachment and detachment.",
       },
       {
-        featureTitle3: "OVERSIZED PIPING",
-        featureParagraph3:
+        featureTitle: "OVERSIZED PIPING",
+        featureParagraph:
           "Designer Anders Nørgaard has used oversized piping to define the unique, squared shapes and give a very soft and cocooning look.",
       },
     ],
@@ -386,18 +386,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "CRAFTSMANSHIP",
-        featureParagraph1:
+        featureTitle: "CRAFTSMANSHIP",
+        featureParagraph:
           "In Chelsea, comfort, durability and aesthetics are united using the latest production methods and high-tech cold-cure foam on steel frames. This guarantees excellent durability and an approval for high traffic use.",
       },
       {
-        featureTitle2: "A LIFTED DESIGN",
-        featureParagraph2:
+        featureTitle: "A LIFTED DESIGN",
+        featureParagraph:
           "Chelsea is on a plinth to provide it with a floating expression. This design feature also protects the upholstery when moving the design across the floor.",
       },
       {
-        featureTitle3: "NO SHARP EDGES",
-        featureParagraph3:
+        featureTitle: "NO SHARP EDGES",
+        featureParagraph:
           "In Chelsea, Karim focused on creating a design that is always pleasing and never in the way.",
       },
     ],
@@ -427,18 +427,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "WHAT KIND OF SEAT SUITS YOU?",
-        featureParagraph1:
+        featureTitle: "WHAT KIND OF SEAT SUITS YOU?",
+        featureParagraph:
           "The seat is available in a partly or fully upholstered version, adding comfort and style to the design. You can also choose a plastic seat for great durability and easy maintenance.",
       },
       {
-        featureTitle2: "WOODEN BASE",
-        featureParagraph2:
+        featureTitle: "WOODEN BASE",
+        featureParagraph:
           "The wooden base radiates warmth for a contemporary yet cosy feel.",
       },
       {
-        featureTitle3: "OPTIONAL SWIVEL FITTING",
-        featureParagraph3:
+        featureTitle: "OPTIONAL SWIVEL FITTING",
+        featureParagraph:
           "As with our Adelaide design, a swivel fitting can be purchased separately for a slightly different seating comfort experience.",
       },
     ],
@@ -468,18 +468,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "WHAT KIND OF SEAT SUITS YOU?",
-        featureParagraph1:
+        featureTitle: "WHAT KIND OF SEAT SUITS YOU?",
+        featureParagraph:
           "The Hamilton dining chair is available in plastic for a minimalist look with greater durability and easy maintenance, or a fully upholstered version finished with stitch detailing for comfort and style.",
       },
       {
-        featureTitle2: "ORGANIC SHAPE",
-        featureParagraph2:
+        featureTitle: "ORGANIC SHAPE",
+        featureParagraph:
           "Timeless and versatile, this dining chair embraces organic shapes for visual softness and superior back support. Finished with a statement slim waist, it will never go out of style.",
       },
       {
-        featureTitle3: "ENDLESS POSSIBILITIES",
-        featureParagraph3:
+        featureTitle: "ENDLESS POSSIBILITIES",
+        featureParagraph:
           "The Hamilton dining chair has two different bases: slim, tubular metal legs for a modern, light look and a swivel base for smart flexibility. This allows you to create your own extraordinary chair for your personal home.",
       },
     ],
@@ -509,18 +509,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "COCOONING COMFORT",
-        featureParagraph1:
+        featureTitle: "COCOONING COMFORT",
+        featureParagraph:
           "The cocooning look of the lounge chair not only adds visual appeal but it is also shaped to follow the curve of your body for great support and comfort.",
       },
       {
-        featureTitle2: "COSY AND WELCOMING",
-        featureParagraph2:
+        featureTitle: "COSY AND WELCOMING",
+        featureParagraph:
           "The soft seat has an ergonomic design that ensures your comfort, making it ideal as an accent chair and part of a matching set for all-day lounging.",
       },
       {
-        featureTitle3: "VARIOUS COLOURS",
-        featureParagraph3:
+        featureTitle: "VARIOUS COLOURS",
+        featureParagraph:
           "The Princeton lounge chair is available with two different leg colourways, allowing you to coordinate the expression with the rest of your home decor.",
       },
     ],
@@ -550,18 +550,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "DANISH DESIGN",
-        featureParagraph1:
+        featureTitle: "DANISH DESIGN",
+        featureParagraph:
           "With clear notes to the Danish design heritage, the Vienna chair is crafted with delicate stitching that follows the contour of the chair and ensure a true design statement.",
       },
       {
-        featureTitle2: "BEAUTIFUL COMFORT",
-        featureParagraph2:
+        featureTitle: "BEAUTIFUL COMFORT",
+        featureParagraph:
           "The sloping form of the armrest follows the shape of your arm and ensures a great seating comfort. The armrest is not only for comfort; it allows you to place the chair close to the table.",
       },
       {
-        featureTitle3: "HIGH TRAFFIC, NO PROBLEM",
-        featureParagraph3:
+        featureTitle: "HIGH TRAFFIC, NO PROBLEM",
+        featureParagraph:
           "Vienna is developed with input from the technological institute of Denmark and is tested and approved for high traffic areas.",
       },
     ],
@@ -591,18 +591,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ERGONOMIC DESIGN",
-        featureParagraph1:
+        featureTitle: "ERGONOMIC DESIGN",
+        featureParagraph:
           "The seat has an ergonomic design that ensures your comfort - even in long dining sessions.",
       },
       {
-        featureTitle2: "STRONG BASE",
-        featureParagraph2:
+        featureTitle: "STRONG BASE",
+        featureParagraph:
           "The strong base of the Adelaide bar stool offers great support for your feet and ensures a stable and comfortable seating position.",
       },
       {
-        featureTitle3: "MORE HEIGHTS AND DESIGNS",
-        featureParagraph3:
+        featureTitle: "MORE HEIGHTS AND DESIGNS",
+        featureParagraph:
           "The base is available in both a wood and steel design. Both bases are available in two heights allowing you to choose just the right option for your home.",
       },
     ],
@@ -632,18 +632,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "LEAF SHAPE",
-        featureParagraph1:
+        featureTitle: "LEAF SHAPE",
+        featureParagraph:
           "The leaf shaped back underlines Karim Rashid´s dedication to nature. This feature makes the chair stand out as an iconic dining chair.",
       },
       {
-        featureTitle2: "MATCHING SEAT PAD",
-        featureParagraph2:
+        featureTitle: "MATCHING SEAT PAD",
+        featureParagraph:
           "The Morgan seat pad is designed to fit the shape of the seat and adds both comfort and softness to the overall design.",
       },
       {
-        featureTitle3: "A COORDINATED EXPRESSION",
-        featureParagraph3:
+        featureTitle: "A COORDINATED EXPRESSION",
+        featureParagraph:
           "The chair fits most dining areas, but works especially great with the Ottawa dining table and sideboard.",
       },
     ],
@@ -673,18 +673,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "BEAUTIFUL ALL AROUND",
-        featureParagraph1:
+        featureTitle: "BEAUTIFUL ALL AROUND",
+        featureParagraph:
           "The Charlotte chair is composed of moulded foam allowing for a strong comfort and a uniform look and feel.",
       },
       {
-        featureTitle2: "DESIGN FEATURES",
-        featureParagraph2:
+        featureTitle: "DESIGN FEATURES",
+        featureParagraph:
           "The wide seat combined with slim conical legs ensure a chair with a contemporary yet classic look.",
       },
       {
-        featureTitle3: "STITCHING DETAILS",
-        featureParagraph3:
+        featureTitle: "STITCHING DETAILS",
+        featureParagraph:
           "Horizontal stitching along the backside of the Charlotte Chair gives an elegant finishing touch while piping along the edges enhance its design features.",
       },
     ],
@@ -714,18 +714,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "COMPLETE THE EXPERIENCE",
-        featureParagraph1:
+        featureTitle: "COMPLETE THE EXPERIENCE",
+        featureParagraph:
           "The matching footstool completes the look and the small slope ensures optimal relaxation. The footstool may even work as a spare seat.",
       },
       {
-        featureTitle2: "BASE OPTIONS",
-        featureParagraph2:
+        featureTitle: "BASE OPTIONS",
+        featureParagraph:
           "The chair has two base options - wire legs and a swivel star base. Choose the swivel base to turn the chair around seamlessly or go with the wire legs for a beautiful completion of the design.",
       },
       {
-        featureTitle3: "INSPIRED BY A TENNIS BALL",
-        featureParagraph3:
+        featureTitle: "INSPIRED BY A TENNIS BALL",
+        featureParagraph:
           "Henrik Pedersen's inspiration for the chair came from a tennis ball. When you look at the side of the seat you clearly see the same shapes and lines as in the tennis ball while the stitching completes the look. Even the footstool maintains the same design expression.",
       },
     ],
@@ -755,16 +755,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "COCOONING COMFORT",
-        featureParagraph1: "Organic with an edge",
+        featureTitle: "COCOONING COMFORT",
+        featureParagraph: "Organic with an edge",
       },
       {
-        featureTitle2: "SOFT ALL NIGHT",
-        featureParagraph2: "Your own version",
+        featureTitle: "SOFT ALL NIGHT",
+        featureParagraph: "Your own version",
       },
       {
-        featureTitle3: "MORE HEIGHTS AND DESIGNS",
-        featureParagraph3:
+        featureTitle: "MORE HEIGHTS AND DESIGNS",
+        featureParagraph:
           "The base is available in both a wood and steel design. Both bases are available in two heights allowing you to choose just the right option for your home.",
       },
     ],
@@ -794,18 +794,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "LUMBAR SUPPORT",
-        featureParagraph1:
+        featureTitle: "LUMBAR SUPPORT",
+        featureParagraph:
           "The lower part of the back cushion is moulded in a curvy design offering great lumbar support. This makes the chair very comfortable.",
       },
       {
-        featureTitle2: "SOFT NECK SUPPORT",
-        featureParagraph2:
+        featureTitle: "SOFT NECK SUPPORT",
+        featureParagraph:
           "The neck support is curved allowing your shoulders to rest naturally on the chair. This ensures a very strong support and comfort.",
       },
       {
-        featureTitle3: "OPTIMIZE EVERY DETAIL",
-        featureParagraph3:
+        featureTitle: "OPTIMIZE EVERY DETAIL",
+        featureParagraph:
           "Specially designed bases are available in different materials allowing you to pick your optimal configuration and coordinate with your choice of fabric or leather.",
       },
     ],
@@ -835,18 +835,18 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "MULTIFUNCTIONAL",
-        featureParagraph1:
+        featureTitle: "MULTIFUNCTIONAL",
+        featureParagraph:
           "A contemporary addition to any space, the Madrid side table has multiple uses and can be styled in any room of the home, from the bedroom to the living room.",
       },
       {
-        featureTitle2: "VISUAL SOFTNESS",
-        featureParagraph2:
+        featureTitle: "VISUAL SOFTNESS",
+        featureParagraph:
           "The streamlined design of Madrid makes it stand out. At the same time, the round shape of the table creates a visual softness that opens up any space.",
       },
       {
-        featureTitle3: "INTEGRATED STORAGE",
-        featureParagraph3:
+        featureTitle: "INTEGRATED STORAGE",
+        featureParagraph:
           "The pipe base with integrated storage highlights the elegance of the design for a contemporary expression that will never go out of style.",
       },
     ],
@@ -875,16 +875,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "METAL FRAME, WOODEN LEGS",
-        featureParagraph1: "The Hauge dining table is supported by a matte black metal frame and slim wooden legs for a timeless yet contemporary look.",
+        featureTitle: "METAL FRAME, WOODEN LEGS",
+        featureParagraph: "The Hauge dining table is supported by a matte black metal frame and slim wooden legs for a timeless yet contemporary look.",
       },
       {
-        featureTitle2: "VARIOUS COLOURS",
-        featureParagraph2: "The Hauge dining table is available in two different colourways, allowing you to coordinate the expression with the rest of your dining room decor.",
+        featureTitle: "VARIOUS COLOURS",
+        featureParagraph: "The Hauge dining table is available in two different colourways, allowing you to coordinate the expression with the rest of your dining room decor.",
       },
       {
-        featureTitle3: "DIFFERENT SIZES",
-        featureParagraph3: "The Hague dining table is available in three different sizes, making it easy to fit into your home, no matter the size of your space.",
+        featureTitle: "DIFFERENT SIZES",
+        featureParagraph: "The Hague dining table is available in three different sizes, making it easy to fit into your home, no matter the size of your space.",
       },
     ],
     keywords: [
@@ -911,16 +911,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "FLEXIBILITY",
-        featureParagraph1: "The modularity and flexibility of Rome makes it possible to move the inside living outside.",
+        featureTitle: "FLEXIBILITY",
+        featureParagraph: "The modularity and flexibility of Rome makes it possible to move the inside living outside.",
       },
       {
-        featureTitle2: "WATER AND SUN RESISTANT",
-        featureParagraph2: "The Rome outdoor fabric is a 100% PP material. The fabric has been heated in the weaving process and the stitches are specially developed to prevent water from penetrating the fabric. This makes the fabric highly water and sunlight resistant.",
+        featureTitle: "WATER AND SUN RESISTANT",
+        featureParagraph: "The Rome outdoor fabric is a 100% PP material. The fabric has been heated in the weaving process and the stitches are specially developed to prevent water from penetrating the fabric. This makes the fabric highly water and sunlight resistant.",
       },
       {
-        featureTitle3: "OPTIMAL DURABILITY",
-        featureParagraph3: "For optimal outdoor durability, the frame is constructed in aluminium with an anthracite powder coated surface.",
+        featureTitle: "OPTIMAL DURABILITY",
+        featureParagraph: "For optimal outdoor durability, the frame is constructed in aluminium with an anthracite powder coated surface.",
       },
     ],
     keywords: [
@@ -947,16 +947,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "MANY USES",
-        featureParagraph1: "The functional design of Venezia allows it to be used as a side table or a small coffee table. The table works very well on its own but is also easily integrated in a cluster of coffee tables.",
+        featureTitle: "MANY USES",
+        featureParagraph: "The functional design of Venezia allows it to be used as a side table or a small coffee table. The table works very well on its own but is also easily integrated in a cluster of coffee tables.",
       },
       {
-        featureTitle2: "PERFECT FOR COMPACT SPACES",
-        featureParagraph2: "The round and petite design is perfect for small spaces and allow you to easily solve your storage and table issues in the living room, dining room and other places throughout the home.",
+        featureTitle: "PERFECT FOR COMPACT SPACES",
+        featureParagraph: "The round and petite design is perfect for small spaces and allow you to easily solve your storage and table issues in the living room, dining room and other places throughout the home.",
       },
       {
-        featureTitle3: "PROTECT IT",
-        featureParagraph3: "Before delivery, the table is given a protective layer of silicone wax. To avoid stains, spilled liquids should be wiped of immediately.",
+        featureTitle: "PROTECT IT",
+        featureParagraph: "Before delivery, the table is given a protective layer of silicone wax. To avoid stains, spilled liquids should be wiped of immediately.",
       },
     ],
     keywords: [
@@ -983,16 +983,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "FLEXIBLE TABLE TOPS",
-        featureParagraph1: "The table top is height adjustable adding extra comfort when you're working on your laptop, having a cup of coffee or are enjoying a quick meal on the sofa.",
+        featureTitle: "FLEXIBLE TABLE TOPS",
+        featureParagraph: "The table top is height adjustable adding extra comfort when you're working on your laptop, having a cup of coffee or are enjoying a quick meal on the sofa.",
       },
       {
-        featureTitle2: "AN ORGANISED LIVING ROOM",
-        featureParagraph2: "The coffee table offers storage space for magazines and remote controls inside the table making it easy for you to have a clean and organised living room.",
+        featureTitle: "AN ORGANISED LIVING ROOM",
+        featureParagraph: "The coffee table offers storage space for magazines and remote controls inside the table making it easy for you to have a clean and organised living room.",
       },
       {
-        featureTitle3: "COORDINATED COLOURS",
-        featureParagraph3: "Both the table and the glass top are available in different colour combinations allowing you to create the perfect table for your home.",
+        featureTitle: "COORDINATED COLOURS",
+        featureParagraph: "Both the table and the glass top are available in different colour combinations allowing you to create the perfect table for your home.",
       },
     ],
     keywords: [
@@ -1019,16 +1019,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ROUNDED SHAPE",
-        featureParagraph1: "The natural inspiration behind the table is visible in its rounded shapes. These shapes work to add a casual but exclusive expression.",
+        featureTitle: "ROUNDED SHAPE",
+        featureParagraph: "The natural inspiration behind the table is visible in its rounded shapes. These shapes work to add a casual but exclusive expression.",
       },
       {
-        featureTitle2: "THREE-LEGGED",
-        featureParagraph2: "The slim, three leg solution of reinforced steel is an untraditional design feature that emphasises the uniqueness of the design.",
+        featureTitle: "THREE-LEGGED",
+        featureParagraph: "The slim, three leg solution of reinforced steel is an untraditional design feature that emphasises the uniqueness of the design.",
       },
       {
-        featureTitle3: "DESIGN",
-        featureParagraph3: "World renowned designer Karim Rashid has designed this iconic table. Drawing on his inspiration from nature, the table is a modern interpretation of the classical dining tables of the 50s & 60s.",
+        featureTitle: "DESIGN",
+        featureParagraph: "World renowned designer Karim Rashid has designed this iconic table. Drawing on his inspiration from nature, the table is a modern interpretation of the classical dining tables of the 50s & 60s.",
       },
     ],
     keywords: [
@@ -1055,16 +1055,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "DROPLET SHAPED WINGS",
-        featureParagraph1: "The contour of the legs bears references to wind mill wings. The table is elegantly constructed as the droplet shaped legs transform into aprons and table in one continuous movement. This creates an organic design with outstanding stability.",
+        featureTitle: "DROPLET SHAPED WINGS",
+        featureParagraph: "The contour of the legs bears references to wind mill wings. The table is elegantly constructed as the droplet shaped legs transform into aprons and table in one continuous movement. This creates an organic design with outstanding stability.",
       },
       {
-        featureTitle2: "THIN TABLE TOP",
-        featureParagraph2: "The table top is in a thin design. This adds a visual lightness that underlines the sharpness of the design.",
+        featureTitle: "THIN TABLE TOP",
+        featureParagraph: "The table top is in a thin design. This adds a visual lightness that underlines the sharpness of the design.",
       },
       {
-        featureTitle3: "GREAT STABILITY",
-        featureParagraph3: "The table is constructed on a steel frame for great stability.",
+        featureTitle: "GREAT STABILITY",
+        featureParagraph: "The table is constructed on a steel frame for great stability.",
       },
     ],
     keywords: [
@@ -1091,16 +1091,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ALL DAY COMFORT",
-        featureParagraph1: "Add the matching cushions to your Elba chairs and be comfortable outside all day.",
+        featureTitle: "ALL DAY COMFORT",
+        featureParagraph: "Add the matching cushions to your Elba chairs and be comfortable outside all day.",
       },
       {
-        featureTitle2: "POLYETHYLENE WICKER",
-        featureParagraph2: "The wicker is made of high density polyethylene, making it both very durable as well as UV resistant.",
+        featureTitle: "POLYETHYLENE WICKER",
+        featureParagraph: "The wicker is made of high density polyethylene, making it both very durable as well as UV resistant.",
       },
       {
-        featureTitle3: "STACKABLE",
-        featureParagraph3: "The Elba chairs are stackable and therefore take up little space when stored.",
+        featureTitle: "STACKABLE",
+        featureParagraph: "The Elba chairs are stackable and therefore take up little space when stored.",
       },
     ],
     keywords: [
@@ -1127,16 +1127,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "MAKE ROOM FOR ALL",
-        featureParagraph1: "The table is available with extension leaves that smoothly makes room for more people around the table without creating awkward seating positions.",
+        featureTitle: "MAKE ROOM FOR ALL",
+        featureParagraph: "The table is available with extension leaves that smoothly makes room for more people around the table without creating awkward seating positions.",
       },
       {
-        featureTitle2: "HIDDEN INSERT",
-        featureParagraph2: "The extension mechanism is in form of a butterfly insert hidden inside the table. This means that you avoid having additional table tops stored elsewhere in your home.",
+        featureTitle: "HIDDEN INSERT",
+        featureParagraph: "The extension mechanism is in form of a butterfly insert hidden inside the table. This means that you avoid having additional table tops stored elsewhere in your home.",
       },
       {
-        featureTitle3: "DIFFERENT SIZES AND COLOURS",
-        featureParagraph3: "Kingston is available in different sizes, materials and colours, making it easy to fit the table to your home.",
+        featureTitle: "DIFFERENT SIZES AND COLOURS",
+        featureParagraph: "Kingston is available in different sizes, materials and colours, making it easy to fit the table to your home.",
       },
     ],
     keywords: [
@@ -1163,16 +1163,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "ROUND TOP AND BASE",
-        featureParagraph1: "The match between the round table top and the base provides a harmonic and spacious look to the design.",
+        featureTitle: "ROUND TOP AND BASE",
+        featureParagraph: "The match between the round table top and the base provides a harmonic and spacious look to the design.",
       },
       {
-        featureTitle2: "EASY EXTENSION",
-        featureParagraph2: "The synchronised extension system allows you to extend the table with just one hand in an easy, smooth pull. Visit us in store and see for yourself just how easy it is.",
+        featureTitle: "EASY EXTENSION",
+        featureParagraph: "The synchronised extension system allows you to extend the table with just one hand in an easy, smooth pull. Visit us in store and see for yourself just how easy it is.",
       },
       {
-        featureTitle3: "ROOM FOR EVERYONE'S LEGS",
-        featureParagraph3: "The centre base offers more space for chairs around the table and ensures that all have great leg space.",
+        featureTitle: "ROOM FOR EVERYONE'S LEGS",
+        featureParagraph: "The centre base offers more space for chairs around the table and ensures that all have great leg space.",
       },
     ],
     keywords: [
@@ -1199,16 +1199,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "MINIMALISTIC YET COMFORTABLE",
-        featureParagraph1: "The lines of the Arlington headboard ensure a streamlined look and you will quickly discover that the headboard is very soft and comfortable.",
+        featureTitle: "MINIMALISTIC YET COMFORTABLE",
+        featureParagraph: "The lines of the Arlington headboard ensure a streamlined look and you will quickly discover that the headboard is very soft and comfortable.",
       },
       {
-        featureTitle2: "MAKE IT YOURS",
-        featureParagraph2: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
+        featureTitle: "MAKE IT YOURS",
+        featureParagraph: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
       },
       {
-        featureTitle3: "READ A BOOK OR WATCH TV",
-        featureParagraph3: "The bed is designed to create perfect support for reading or relaxing in the bed.",
+        featureTitle: "READ A BOOK OR WATCH TV",
+        featureParagraph: "The bed is designed to create perfect support for reading or relaxing in the bed.",
       },
     ],
     keywords: [
@@ -1235,16 +1235,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "HEADBOARD OPTION",
-        featureParagraph1: "Create comfort and complete your bedroom interior with a headboard in your chosen fabric or leather.",
+        featureTitle: "HEADBOARD OPTION",
+        featureParagraph: "Create comfort and complete your bedroom interior with a headboard in your chosen fabric or leather.",
       },
       {
-        featureTitle2: "STORAGE",
-        featureParagraph2: "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
+        featureTitle: "STORAGE",
+        featureParagraph: "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
       },
       {
-        featureTitle3: "MATCHING NIGHT STAND",
-        featureParagraph3: "Lugano offers matching night stands for a practical bed solution with a complete look.",
+        featureTitle: "MATCHING NIGHT STAND",
+        featureParagraph: "Lugano offers matching night stands for a practical bed solution with a complete look.",
       },
     ],
     keywords: [
@@ -1271,16 +1271,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "A WELL-DEFINED SPACE",
-        featureParagraph1: "The wings of the headboard define your space and creates your own personal space for comfort.",
+        featureTitle: "A WELL-DEFINED SPACE",
+        featureParagraph: "The wings of the headboard define your space and creates your own personal space for comfort.",
       },
       {
-        featureTitle2: "ELEGANT LEGS",
-        featureParagraph2: "The slim legs raise the bed of the ground and ensures a light expression in the bedroom.",
+        featureTitle: "ELEGANT LEGS",
+        featureParagraph: "The slim legs raise the bed of the ground and ensures a light expression in the bedroom.",
       },
       {
-        featureTitle3: "MAKE IT YOURS",
-        featureParagraph3: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
+        featureTitle: "MAKE IT YOURS",
+        featureParagraph: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
       },
     ],
     keywords: [
@@ -1307,16 +1307,16 @@ export const FurnitureData: Furniture[] = [
     },
     features: [
       {
-        featureTitle1: "STORAGE",
-        featureParagraph1: "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
+        featureTitle: "STORAGE",
+        featureParagraph: "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
       },
       {
-        featureTitle2: "MAKE IT YOURS",
-        featureParagraph2: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
+        featureTitle: "MAKE IT YOURS",
+        featureParagraph: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
       },
       {
-        featureTitle3: "LEG OR BASE OPTIONS",
-        featureParagraph3: "Different leg and base options are available. Choose the plinth base for a heavy expression or legs for a lighter, sophisticated look.",
+        featureTitle: "LEG OR BASE OPTIONS",
+        featureParagraph: "Different leg and base options are available. Choose the plinth base for a heavy expression or legs for a lighter, sophisticated look.",
       },
     ],
     keywords: [

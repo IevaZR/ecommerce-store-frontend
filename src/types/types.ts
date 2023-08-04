@@ -13,16 +13,16 @@ export type Furniture = {
     };
     features: [
         {
-            featureTitle1: string,
-            featureParagraph1: string,
+            featureTitle: string,
+            featureParagraph: string,
         },
         {
-            featureTitle2: string,
-            featureParagraph2: string,
+            featureTitle: string,
+            featureParagraph: string,
         },
         {
-            featureTitle3: string,
-            featureParagraph3: string,
+            featureTitle: string,
+            featureParagraph: string,
         },
         ];
     keywords: [string, string, string, string, string];

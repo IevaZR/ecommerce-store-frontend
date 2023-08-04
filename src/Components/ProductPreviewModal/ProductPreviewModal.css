@@ -79,38 +79,45 @@
 .ModalProductInfoBlock {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
+    justify-content: space-around;
+    flex: 0.7;
     width: 100%;
+}
+
+.ModalProductInfoBlockHeader {
+    min-height: 25%;
 }
 
 .ModalProductTitle {
     font-size: 0.9rem;
     font-weight: 600;
+    padding-right: 2rem;
     margin-bottom: 1rem;
 }
 
 .ModalProductPrice {
     padding: 1rem 0;
     border-top: 1px solid #32303035;
-    width: 70%;
+    width: 80%;
 }
 
 .ModalProductColor {
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .ModalProductDescription {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 400;
     padding-right: 2rem;
+    line-height: 1.1rem;
 }
 
 .ModalProductDetails {
     display: flex;
     flex-direction: column;
+    min-height: 50%;
 }
 
 .ModalProductTabs {
@@ -120,8 +127,12 @@
 }
 
 .ModalProductTabs div {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: 400;
+    letter-spacing: 0.05rem;
+    min-width: 85px;
+    padding: 0.5rem;
+    text-align: center;
 }
 
 .ModalProductTabs div:last-child {
@@ -132,33 +143,52 @@
     cursor: pointer;
 }
 
+.ModalProductTabs div.active {
+    border-bottom: solid 1px #3230309c;
+}
+
 .ModalProductTabContent {
     border-top: solid 1px #32303035;
-    width: 70%;
+    width: 90%;
 }
 
 .ModalProductFeatures {
-    font-weight: 500;
-    padding-right: 2rem;
-    margin-bottom: 1rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding-top: 1rem;
+    padding-left: 0.5rem;
 }
 
 .ModalProductFeatures h5 {
-    font-size: 0.6rem;
-    margin: 0.2rem 0;
+    margin: 0.6rem 0 0.4rem 0;
+    letter-spacing: 0.05rem;
 }
 
 .ModalProductFeatures p {
-    font-size: 0.5rem;
     margin: 0;
+    line-height: 1.1rem;
 }
 
 .ModalProductDimensions {
-    font-size: 0.5rem;
-    font-weight: 500;
+    font-size: 0.8rem;
+    font-weight: 400;
     list-style: none;
-    padding: 0 0 1rem 0;
-    
+    padding: 1.6rem 0 0 0.5rem;
+    line-height: 1.1rem;
+    letter-spacing: 0.05rem;
+    margin: 0;
+}
+
+.ModalProductDimensions li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0.25rem;
+}
+
+.ModalProductDimensions img {
+    width: 30px;
+    padding-right: 0.8rem;
 }
 
 .ModalProductButton {
