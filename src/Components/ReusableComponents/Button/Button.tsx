@@ -1,9 +1,5 @@
 import './Button.css';
-
-interface ButtonProps {
-    text?: string;
-    // buttonColor?: '#817F77' | '#FFCD2B';
-}
+import {ButtonProps} from '../../../types/types'
 
 const Button = ({text}: ButtonProps) => {
   return (

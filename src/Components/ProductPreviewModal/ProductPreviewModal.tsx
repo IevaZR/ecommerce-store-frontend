@@ -10,11 +10,7 @@ import IconDepth from '../../Assets/depth-icon.png';
 
 import {Furniture} from '../../types/types';
 import { useState, useEffect } from 'react';
-
-interface ProductPreviewModalProps {
-  productList: Furniture;
-  onClose: () => void;
-}
+import { ProductPreviewModalProps } from '../../types/types';
 
 const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) => {
    

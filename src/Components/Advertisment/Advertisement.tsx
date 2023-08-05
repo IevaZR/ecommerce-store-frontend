@@ -26,7 +26,7 @@ const Advertisement = () => {
         </div>
         <div className='AdvertisementSectionHeadingWrapper'>
           <h1 className='AdvertisementSectionHeading'>Beautiful {randomProduct.category}</h1>
-          <p className='AdvertisementSectionParagraph'>{randomProduct.features[1].featureParagraph2}</p>
+          <p className='AdvertisementSectionParagraph'>{randomProduct.features[1].featureParagraph}</p>
           <a href="#ProductView">
             <button className='AdvertisementSectionButton' onClick={showProducts}>
               Shop Now
