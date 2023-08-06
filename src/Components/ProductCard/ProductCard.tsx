@@ -1,6 +1,6 @@
 import './ProductCard.css';
 import {Furniture} from '../../types/types';
-// import Button from '../ReusableComponents/Button/Button';
+import Button from '../ReusableComponents/Button/Button';
 import ProductPreviewModal from '../ProductPreviewModal/ProductPreviewModal';
 import { useState } from 'react';
 interface ProductCardProps {
@@ -35,13 +35,16 @@ const ProductCard = ({productList}: ProductCardProps) => {
                 &euro; {productList.price}
                 </div>
             </div>
-            {/* <Button text='View' /> */}
-            <button 
+            <Button
+                text='Quickview' 
+                onClick={openModal}
+            ></Button>
+            {/* <button 
                 className='ProductCardQuickviewButton'
                 onClick={openModal}
                 >
                 Quickview
-            </button>
+            </button> */}
         </div>
         {isModalOpen && (
                 <ProductPreviewModal
