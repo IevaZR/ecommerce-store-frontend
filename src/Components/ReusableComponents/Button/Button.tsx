@@ -2,15 +2,18 @@ import './Button.css';
 
 interface ButtonProps {
     text?: string;
-    // buttonColor?: '#817F77' | '#FFCD2B';
+    onClick?: () => void;
 }
 
-const Button = ({text}: ButtonProps) => {
+const Button = ({text, onClick}: ButtonProps) => {
   return (
-    <div className='SharedButton'>
-        {text}
+    <button 
+      className='SharedButton'
+      onClick={onClick}
+    >
+      {text}
 
-    </div>
+    </button>
   )
 }
 
