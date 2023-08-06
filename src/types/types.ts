@@ -42,3 +42,8 @@ export interface ButtonProps {
     text?: string;
     // buttonColor?: '#817F77' | '#FFCD2B';
 }
+
+export interface ButtonProps {
+    text?: string;
+    onClick?: () => void;
+}

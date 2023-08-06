@@ -1,5 +1,4 @@
 import './ProductCard.css';
-import {Furniture} from '../../types/types';
 import Button from '../ReusableComponents/Button/Button';
 import ProductPreviewModal from '../ProductPreviewModal/ProductPreviewModal';
 import { useState } from 'react';
