@@ -1,19 +1,19 @@
 .SharedButton {
-    padding: 0.3rem;
-    border-radius: 3px;
-    color: #323030;
-    font-family: 'Roboto', sans-serif;
     font-size: 0.8rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: "Comfortaa", cursive;
+    background-color: transparent;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 1rem 2rem 1rem 2rem;
     white-space: nowrap;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     cursor: pointer;
     transition: 0.2s all;
 }
 
 .SharedButton:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: #010101;
+    box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
 }
 
 .SharedButton:active {

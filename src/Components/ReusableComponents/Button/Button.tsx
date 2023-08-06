@@ -1,12 +1,19 @@
 import './Button.css';
-import {ButtonProps} from '../../../types/types'
 
-const Button = ({text}: ButtonProps) => {
+interface ButtonProps {
+    text?: string;
+    onClick?: () => void;
+}
+
+const Button = ({text, onClick}: ButtonProps) => {
   return (
-    <div className='SharedButton'>
-        {text}
+    <button 
+      className='SharedButton'
+      onClick={onClick}
+    >
+      {text}
 
-    </div>
+    </button>
   )
 }
 

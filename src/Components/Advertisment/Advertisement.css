@@ -40,22 +40,8 @@
     line-height: 20px;
   }
   
-  .AdvertisementSectionButton {
-    font-family: "Comfortaa", cursive;
-    background-color: transparent;
-    border: 1px solid gray;
-    border-radius: 5px;
-    padding: 1rem 2rem 1rem 2rem;
-    margin-top: 3rem;
-    cursor: pointer;
-  }
-  
-  .AdvertisementSectionButton:hover {
-    box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
-  }
-  
   @media screen and (max-width: 800px) {
-    .AdvertisementSectionButton {
+    .AdvertisementSectionImageWrapper .SharedButton {
       margin-top: 1rem;
     }
   }
@@ -79,7 +65,7 @@
       margin-bottom: 0.3rem;
     }
   
-    .AdvertisementSectionButton {
+    .AdvertisementSectionImageWrapper .SharedButton {
       padding: 0.5rem 1rem 0.5rem 1rem;
     }
   

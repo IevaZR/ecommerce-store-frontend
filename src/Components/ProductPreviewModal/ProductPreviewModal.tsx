@@ -7,7 +7,7 @@ import IconWidth from '../../Assets/width-icon.png';
 import IconHeight from '../../Assets/height-icon.png';
 // @ts-ignore
 import IconDepth from '../../Assets/depth-icon.png';
-
+import Button from '../ReusableComponents/Button/Button';
 import {Furniture} from '../../types/types';
 import { useState, useEffect } from 'react';
 import { ProductPreviewModalProps } from '../../types/types';
@@ -115,12 +115,13 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
                 )}
               </div>
             </div>
-            <div className="ModalProductPrice">
-              &euro; {productList.price}
+            <div className="ModalProductInfoBlockFooter">
+              <div className="ModalProductPrice">
+                &euro; {productList.price}
+              </div>
+              <Button text='Add to basket' ></Button>
+
             </div>
-            <button className='ModalProductButton'>
-              Add to basket
-            </button>
           </div>
         </div>
 

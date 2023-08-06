@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../Advertisment/Advertisement.css';
+import Button from '../ReusableComponents/Button/Button';
 import { useActiveSearchContext } from '../../HelperFunctions/ActiveSearchContext';
 import { Furniture } from '../../types/types';
 import { FurnitureData } from '../../data/data'; // Import the furnitureData from data.ts
@@ -28,9 +29,15 @@ const Advertisement = () => {
           <h1 className='AdvertisementSectionHeading'>Beautiful {randomProduct.category}</h1>
           <p className='AdvertisementSectionParagraph'>{randomProduct.features[1].featureParagraph}</p>
           <a href="#ProductView">
-            <button className='AdvertisementSectionButton' onClick={showProducts}>
+            {/* <button 
+              className='AdvertisementSectionButton' 
+              onClick={showProducts}>
               Shop Now
-            </button>
+            </button> */}
+            <Button
+              text='Shop Now'
+              onClick={showProducts}
+            ></Button>
           </a>
         </div>
       </div>

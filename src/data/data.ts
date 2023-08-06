@@ -245,7 +245,7 @@ export const FurnitureData: Furniture[] = [
       "grey sofa",
     ],
     image:
-      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw6f615dca/images/1480000/1481887.jpg?sw=2000&sh=1125",
+      "https://www.boconcept.com/-/boc-media/imagelibrary/hero/2021/1583359-hero-l.ashx?h=1000&la=en-AU&w=2000",
   },
   {
     id: "S07",
