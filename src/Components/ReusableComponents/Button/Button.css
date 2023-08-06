@@ -13,7 +13,7 @@
 }
 
 .SharedButton:hover {
-    box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 5px 10px;
 }
 
 .SharedButton:active {
