@@ -12,9 +12,6 @@
     column-gap: 0.5rem;
     row-gap: 0.5rem;
 }
-@media screen and (max-width: 850px) {
-
-}
 @media screen and (max-width: 470px) {
     .Filter2 {
         flex-direction: column;
