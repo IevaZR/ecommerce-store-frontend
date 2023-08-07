@@ -10,15 +10,10 @@
     row-gap: 0.5rem;
 }
 @media screen and (max-width: 850px) {
-    .Filter {
- 
-    }
+
 }
 @media screen and (max-width: 470px) {
-    .Filter {
-
-    }
-    .FilterWrapper {
-        padding: 0.5rem;
+    .Filter2Wrapper {
+        padding: 1rem;
     }
 }
