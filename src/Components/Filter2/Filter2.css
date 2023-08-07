@@ -1,7 +1,6 @@
 .Filter2Wrapper {
     display: flex;
-    /* padding: 3rem 0 0 5rem; */
-    padding-top: 3rem;
+    padding: 3rem 0 0 5rem;
     width: 100%;
     justify-content: center;
     background-color: #c0bbbb37;
@@ -17,6 +16,10 @@
 
 }
 @media screen and (max-width: 470px) {
+    .Filter2 {
+        flex-direction: column;
+        align-items: center;
+    }
     .Filter2Wrapper {
         padding: 1rem;
     }
