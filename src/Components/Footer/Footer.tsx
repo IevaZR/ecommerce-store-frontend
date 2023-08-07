@@ -19,7 +19,7 @@ import ArrowIcon from "./../../Assets/arrow-icon.png";
 
 const Footer = () => {
   return (
-      <div className="FooterWrapper">
+      <div className="FooterWrapper" id="contact">
         <div className="FooterAboutWrapper">
           <img src={Logo} alt="logo" className="FooterLogo" />
           <p className="FooterAbout">

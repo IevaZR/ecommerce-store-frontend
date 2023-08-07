@@ -18,7 +18,7 @@ const MainPage = () => {
       <Filter />
       <Advertisement />
       <ProductsView />
-      <Footer />
+      <Footer/>
       <ScrollToTopButton/>
     </div>
     </FilterProvider>
