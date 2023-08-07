@@ -20,7 +20,7 @@ const Advertisement = () => {
       // Reset the animation after 2.5 seconds to slide the advertisement out
       setTimeout(() => {
         setSlideIn(false);
-      }, 6000);
+      }, 5000);
     };
 
     getRandomProduct(); // Set random product on initial mount
