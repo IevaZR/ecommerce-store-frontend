@@ -105,7 +105,7 @@
 .ModalProductColor {
     font-size: 0.8rem;
     font-weight: 500;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .ModalProductDescription {
@@ -179,6 +179,18 @@
     line-height: 1.1rem;
     letter-spacing: 0.05rem;
     margin: 0;
+}
+
+.ModalProductDimensions li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 0.25rem;
+}
+
+.ModalProductDimensions img {
+    width: 30px;
+    padding-right: 0.8rem;
 }
 
 .ModalProductDimensions li {
