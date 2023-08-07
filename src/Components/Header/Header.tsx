@@ -7,6 +7,7 @@ import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
@@ -52,9 +53,9 @@ const Header = () => {
           </Link>
         </li>
         <li className="HeaderNavbarListItem">
-        <Link to="/" className="HeaderNavbarAnchor">
+        <HashLink to="/#contact" className="HeaderNavbarAnchor">
             Contact
-            </Link>
+            </HashLink>
         </li>
       </ul>
       <div className="HeaderNavbarMobileWrapper">
