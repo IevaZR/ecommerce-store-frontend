@@ -3,6 +3,7 @@ export type Furniture = {
     title: string;
     category: "sofas" | "chairs" | "tables" | "beds";
     price: number;
+    discount?: number;
     description: string;
     color: string;
     quantity: number;
@@ -13,18 +14,36 @@ export type Furniture = {
     };
     features: [
         {
-            featureTitle1: string,
-            featureParagraph1: string,
+            featureTitle: string,
+            featureParagraph: string,
         },
         {
-            featureTitle2: string,
-            featureParagraph2: string,
+            featureTitle: string,
+            featureParagraph: string,
         },
         {
-            featureTitle3: string,
-            featureParagraph3: string,
+            featureTitle: string,
+            featureParagraph: string,
         },
         ];
     keywords: [string, string, string, string, string];
     image: string;
+};
+
+export interface ProductCardProps {
+    productList: Furniture;
+};
+
+export interface ProductPreviewModalProps {
+    productList: Furniture;
+    onClose: () => void;
+ };
+export interface ButtonProps {
+    text?: string;
+    // buttonColor?: '#817F77' | '#FFCD2B';
+}
+
+export interface ButtonProps {
+    text?: string;
+    onClick?: () => void;
 }

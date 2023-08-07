@@ -1,5 +1,6 @@
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
+import Button from '../ReusableComponents/Button/Button';
 import { FurnitureData } from "../../data/data";
 import { useState, useEffect, useMemo } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
@@ -107,9 +108,10 @@ const ProductList = ({ searchQuery }) => {
               </div>
             )}
             {visibleProducts < products.length && (
-                <button onClick={handleLoadMore} className="LoadMoreButton">
-                    Load More
-                </button>
+                <Button
+                    onClick={handleLoadMore}
+                    text="Load More"
+                ></Button>
             )}
         </div>
     );

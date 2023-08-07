@@ -1,13 +1,16 @@
 import './ProductPreviewModal.css';
 // @ts-ignore
 import IconClose from '../../Assets/close-icon.png';
+// @ts-ignore
+import IconWidth from '../../Assets/width-icon.png';
+// @ts-ignore
+import IconHeight from '../../Assets/height-icon.png';
+// @ts-ignore
+import IconDepth from '../../Assets/depth-icon.png';
+import Button from '../ReusableComponents/Button/Button';
 import {Furniture} from '../../types/types';
 import { useState, useEffect } from 'react';
-
-interface ProductPreviewModalProps {
-  productList: Furniture;
-  onClose: () => void;
-}
+import { ProductPreviewModalProps } from '../../types/types';
 
 const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) => {
    
@@ -45,7 +48,6 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
           <img
             src={IconClose}
             alt="icon-close"
-            
           />
         </div>
         <div className="ModalProductDataSection">
@@ -56,14 +58,16 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
             />
           </div>
           <div className="ModalProductInfoBlock">
-            <div className="ModalProductTitle">
-              {productList.title}
-            </div>
-            <div className="ModalProductColor">
-              Color: {productList.color}
-            </div>
-            <div className="ModalProductDescription">
-              {productList.description}
+            <div className="ModalProductInfoBlockHeader">
+              <div className="ModalProductTitle">
+                {productList.title}
+              </div>
+              <div className="ModalProductColor">
+                Color: {productList.color}
+              </div>
+              <div className="ModalProductDescription">
+                {productList.description}
+              </div>
             </div>
             <div className="ModalProductDetails">
               <div className="ModalProductTabs">
@@ -85,30 +89,39 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
               <div className="ModalProductTabContent">
                 {activeTab === 'dimensions' && (
                   <ul className="ModalProductDimensions">
-                    <h5>Dimensions cm:</h5>
-                    <li>width: 395</li>
-                    <li>height: 83</li>
-                    <li>depth: 255</li>
+                    <li>
+                      <img src={IconWidth} alt="icon-width" />
+                      Width: {productList.dimensionsCm.width} cm
+                    </li>
+                    <li>
+                      <img src={IconHeight} alt="icon-height" />
+                      Height: {productList.dimensionsCm.height} cm
+                    </li>
+                    <li>
+                      <img src={IconDepth} alt="icon-depth" />
+                      Depth: {productList.dimensionsCm.depth} cm
+                    </li>
                   </ul>
                 )}
                 {activeTab === 'features' && (
                   <div className="ModalProductFeatures">
-                    <h5>ORGANIC SHAPES</h5>
-                    <p>Bergamo combines clean, minimal lines with organic shapes to create a visual statement in any space.</p>
-                    <h5>REFINED STITCHING</h5>
-                    <p>The unifying stitching design on the base, armrests, and backrest of Bergamo adds a graceful sense of comfort.</p>
-                    <h5>INVISIBLE LEGS</h5>
-                    <p>The Bergamo sofa is crafted with low, discrete legs that create a light, 'floating' look.</p>
+                    {productList.features.map((feature, index) => (
+                      <div key={index}>
+                        <h5>{feature.featureTitle}</h5>
+                        <p>{feature.featureParagraph}</p>
+                      </div>
+                    ))}
                   </div>
                 )}
               </div>
             </div>
-            <div className="ModalProductPrice">
-              &euro; {productList.price}
+            <div className="ModalProductInfoBlockFooter">
+              <div className="ModalProductPrice">
+                &euro; {productList.price}
+              </div>
+              <Button text='Add to basket' ></Button>
+
             </div>
-            <button className='ModalProductButton'>
-              Add to basket
-            </button>
           </div>
         </div>
 
