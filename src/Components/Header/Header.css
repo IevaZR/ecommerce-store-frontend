@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 90%;
+  width: 100%;
+  max-width: 1280px;
   height: 3rem;
   gap: 1rem;
   position: sticky;
