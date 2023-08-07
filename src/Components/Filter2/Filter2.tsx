@@ -9,18 +9,23 @@ const Filter2: React.FC = () => {
       <div className="Filter2">
       <FilterItem2
           filterName="All products"
+          filterCategory=""
         />
         <FilterItem2
           filterName="Sofas"
+          filterCategory="Sofas"
         />
         <FilterItem2
           filterName="Chairs"
+          filterCategory="Chairs"
         />
         <FilterItem2
           filterName="Tables"
+          filterCategory="Tables"
         />
         <FilterItem2
           filterName="Beds"
+          filterCategory="Beds"
         />
       </div>
     </div>
