@@ -408,8 +408,7 @@ export const FurnitureData: Furniture[] = [
       "stylish sofa",
       "grey sofa",
     ],
-    image:
-      "https://aspiremetro.com/wp-content/uploads/2019/09/unnamed-2.jpg",
+    image: "https://aspiremetro.com/wp-content/uploads/2019/09/unnamed-2.jpg",
   },
   {
     id: "C01",
@@ -696,7 +695,7 @@ export const FurnitureData: Furniture[] = [
       "grey chair",
     ],
     image:
-      "https://scontent.frix5-1.fna.fbcdn.net/v/t39.30808-6/285446501_5411810375518339_5766188421558145356_n.jpg?_nc_cat=100&cb=99be929b-3346023f&ccb=1-7&_nc_sid=730e14&_nc_ohc=xpZq8Vv3oYEAX-6Jw9t&_nc_ht=scontent.frix5-1.fna&oh=00_AfDYWtONmneh7BkZdzf2gLmS67oRhAQhpHwQLcr0IQE6Fg&oe=64CE0C78",
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd2c55eb6/images/1540000/1540501.jpg?sw=2000&sh=1125",
   },
   {
     id: "C08",
@@ -865,7 +864,8 @@ export const FurnitureData: Furniture[] = [
     title: "HAUGE DINING TABLE",
     category: "tables",
     price: 959.65,
-    description: "Beautifully balanced with a thin, elegant and timeless expression, the Hauge dining table masterfully combines Danish functionality and form.",
+    description:
+      "Beautifully balanced with a thin, elegant and timeless expression, the Hauge dining table masterfully combines Danish functionality and form.",
     color: "Natural oak veneer",
     quantity: 2,
     dimensionsCm: {
@@ -876,15 +876,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "METAL FRAME, WOODEN LEGS",
-        featureParagraph: "The Hauge dining table is supported by a matte black metal frame and slim wooden legs for a timeless yet contemporary look.",
+        featureParagraph:
+          "The Hauge dining table is supported by a matte black metal frame and slim wooden legs for a timeless yet contemporary look.",
       },
       {
         featureTitle: "VARIOUS COLOURS",
-        featureParagraph: "The Hauge dining table is available in two different colourways, allowing you to coordinate the expression with the rest of your dining room decor.",
+        featureParagraph:
+          "The Hauge dining table is available in two different colourways, allowing you to coordinate the expression with the rest of your dining room decor.",
       },
       {
         featureTitle: "DIFFERENT SIZES",
-        featureParagraph: "The Hague dining table is available in three different sizes, making it easy to fit into your home, no matter the size of your space.",
+        featureParagraph:
+          "The Hague dining table is available in three different sizes, making it easy to fit into your home, no matter the size of your space.",
       },
     ],
     keywords: [
@@ -894,14 +897,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwe74ed4fe/images/2040000/2048999.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwe74ed4fe/images/2040000/2048999.jpg?sw=2000&sh=1125",
   },
   {
     id: "T03",
     title: "ROME COFFEE TABLE",
     category: "tables",
     price: 449.15,
-    description: "Add an elegant centrepiece to your outdoor setting and keep food and drinks at hand even when you’re outdoors. The classic design with the stylish and durable glass surface ensures a balanced look and a functional setting that endures. Use the table alone or in combination with the other sized Rome table for a dynamic look.",
+    description:
+      "Add an elegant centrepiece to your outdoor setting and keep food and drinks at hand even when you’re outdoors. The classic design with the stylish and durable glass surface ensures a balanced look and a functional setting that endures. Use the table alone or in combination with the other sized Rome table for a dynamic look.",
     color: "Anthracite grey lacquered aluminium",
     quantity: 1,
     dimensionsCm: {
@@ -912,15 +917,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "FLEXIBILITY",
-        featureParagraph: "The modularity and flexibility of Rome makes it possible to move the inside living outside.",
+        featureParagraph:
+          "The modularity and flexibility of Rome makes it possible to move the inside living outside.",
       },
       {
         featureTitle: "WATER AND SUN RESISTANT",
-        featureParagraph: "The Rome outdoor fabric is a 100% PP material. The fabric has been heated in the weaving process and the stitches are specially developed to prevent water from penetrating the fabric. This makes the fabric highly water and sunlight resistant.",
+        featureParagraph:
+          "The Rome outdoor fabric is a 100% PP material. The fabric has been heated in the weaving process and the stitches are specially developed to prevent water from penetrating the fabric. This makes the fabric highly water and sunlight resistant.",
       },
       {
         featureTitle: "OPTIMAL DURABILITY",
-        featureParagraph: "For optimal outdoor durability, the frame is constructed in aluminium with an anthracite powder coated surface.",
+        featureParagraph:
+          "For optimal outdoor durability, the frame is constructed in aluminium with an anthracite powder coated surface.",
       },
     ],
     keywords: [
@@ -930,14 +938,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9301dbeb/images/620000/629619.jpg?sw=2000",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw9301dbeb/images/620000/629619.jpg?sw=2000",
   },
   {
     id: "T04",
     title: "VENEZIA SIDE TABLE",
     category: "tables",
     price: 449.15,
-    description: "Venezia mixes exclusive materials in a simple and practical design that will work to lift your décor wherever you choose to place it. The strong materials ensure a light, yet stable construction that can be used in the living, dining or office space.",
+    description:
+      "Venezia mixes exclusive materials in a simple and practical design that will work to lift your décor wherever you choose to place it. The strong materials ensure a light, yet stable construction that can be used in the living, dining or office space.",
     color: "Smoked colored glass",
     quantity: 5,
     dimensionsCm: {
@@ -948,15 +958,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "MANY USES",
-        featureParagraph: "The functional design of Venezia allows it to be used as a side table or a small coffee table. The table works very well on its own but is also easily integrated in a cluster of coffee tables.",
+        featureParagraph:
+          "The functional design of Venezia allows it to be used as a side table or a small coffee table. The table works very well on its own but is also easily integrated in a cluster of coffee tables.",
       },
       {
         featureTitle: "PERFECT FOR COMPACT SPACES",
-        featureParagraph: "The round and petite design is perfect for small spaces and allow you to easily solve your storage and table issues in the living room, dining room and other places throughout the home.",
+        featureParagraph:
+          "The round and petite design is perfect for small spaces and allow you to easily solve your storage and table issues in the living room, dining room and other places throughout the home.",
       },
       {
         featureTitle: "PROTECT IT",
-        featureParagraph: "Before delivery, the table is given a protective layer of silicone wax. To avoid stains, spilled liquids should be wiped of immediately.",
+        featureParagraph:
+          "Before delivery, the table is given a protective layer of silicone wax. To avoid stains, spilled liquids should be wiped of immediately.",
       },
     ],
     keywords: [
@@ -966,14 +979,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw3d8b69bc/images/1540000/1543779.jpg?sw=2000",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw3d8b69bc/images/1540000/1543779.jpg?sw=2000",
   },
   {
     id: "T05",
     title: "CHIVA FUNCTIONAL COFFEE TABLE WITH STORAGE",
     category: "tables",
     price: 999.15,
-    description: "This modern coffee table is pure functionality wrapped in great design. Hide your remotes, your magazines, your chargers and cables in the heart of the Chiva coffee table, with its clever integrated storage. Or raise the slim table tops to create the perfect height for afternoon tea. Different leg designs offer different heights and functionalities allowing you to get the perfect coffee table for your space.",
+    description:
+      "This modern coffee table is pure functionality wrapped in great design. Hide your remotes, your magazines, your chargers and cables in the heart of the Chiva coffee table, with its clever integrated storage. Or raise the slim table tops to create the perfect height for afternoon tea. Different leg designs offer different heights and functionalities allowing you to get the perfect coffee table for your space.",
     color: "Walnut veneer/dark marble ceramic",
     quantity: 2,
     dimensionsCm: {
@@ -984,15 +999,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "FLEXIBLE TABLE TOPS",
-        featureParagraph: "The table top is height adjustable adding extra comfort when you're working on your laptop, having a cup of coffee or are enjoying a quick meal on the sofa.",
+        featureParagraph:
+          "The table top is height adjustable adding extra comfort when you're working on your laptop, having a cup of coffee or are enjoying a quick meal on the sofa.",
       },
       {
         featureTitle: "AN ORGANISED LIVING ROOM",
-        featureParagraph: "The coffee table offers storage space for magazines and remote controls inside the table making it easy for you to have a clean and organised living room.",
+        featureParagraph:
+          "The coffee table offers storage space for magazines and remote controls inside the table making it easy for you to have a clean and organised living room.",
       },
       {
         featureTitle: "COORDINATED COLOURS",
-        featureParagraph: "Both the table and the glass top are available in different colour combinations allowing you to create the perfect table for your home.",
+        featureParagraph:
+          "Both the table and the glass top are available in different colour combinations allowing you to create the perfect table for your home.",
       },
     ],
     keywords: [
@@ -1002,14 +1020,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://www.beyondfurniture.com.au/wp-content/uploads/2021/01/chiva1.jpg",
+    image:
+      "https://www.beyondfurniture.com.au/wp-content/uploads/2021/01/chiva1.jpg",
   },
   {
     id: "T06",
     title: "OTTAWA DINING TABLE WITH SUPPLEMENTARY TABLETOP",
     category: "tables",
     price: 1750.15,
-    description: "Defined by smooth, rounded edges and a sensual minimalism, the Ottawa dining table creates a serene atmosphere in your dining room. Unique, twig-like legs inspired by nature accentuates the natural beauty of the oval Ottawa dining table. Need extra seats? Just pull out the clever, built-in extension leaf and go from a 4-person family meal to a dinner party seating 14.",
+    description:
+      "Defined by smooth, rounded edges and a sensual minimalism, the Ottawa dining table creates a serene atmosphere in your dining room. Unique, twig-like legs inspired by nature accentuates the natural beauty of the oval Ottawa dining table. Need extra seats? Just pull out the clever, built-in extension leaf and go from a 4-person family meal to a dinner party seating 14.",
     color: "Dark oak veneer",
     quantity: 3,
     dimensionsCm: {
@@ -1020,15 +1040,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "ROUNDED SHAPE",
-        featureParagraph: "The natural inspiration behind the table is visible in its rounded shapes. These shapes work to add a casual but exclusive expression.",
+        featureParagraph:
+          "The natural inspiration behind the table is visible in its rounded shapes. These shapes work to add a casual but exclusive expression.",
       },
       {
         featureTitle: "THREE-LEGGED",
-        featureParagraph: "The slim, three leg solution of reinforced steel is an untraditional design feature that emphasises the uniqueness of the design.",
+        featureParagraph:
+          "The slim, three leg solution of reinforced steel is an untraditional design feature that emphasises the uniqueness of the design.",
       },
       {
         featureTitle: "DESIGN",
-        featureParagraph: "World renowned designer Karim Rashid has designed this iconic table. Drawing on his inspiration from nature, the table is a modern interpretation of the classical dining tables of the 50s & 60s.",
+        featureParagraph:
+          "World renowned designer Karim Rashid has designed this iconic table. Drawing on his inspiration from nature, the table is a modern interpretation of the classical dining tables of the 50s & 60s.",
       },
     ],
     keywords: [
@@ -1038,14 +1061,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw91e8b17e/images/1110000/1112741.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw91e8b17e/images/1110000/1112741.jpg?sw=2000&sh=1125",
   },
   {
     id: "T07",
     title: "TORINO CONFERENCE/DINING TABLE",
     category: "tables",
     price: 551.65,
-    description: "The Torino dining table is the ultimate piece of minimalist furniture and fits right into the Scandinavian style. The monochrome look and clean lines create an elegant frame while the narrow table top is a perfect fit for small homes.",
+    description:
+      "The Torino dining table is the ultimate piece of minimalist furniture and fits right into the Scandinavian style. The monochrome look and clean lines create an elegant frame while the narrow table top is a perfect fit for small homes.",
     color: "Matte white lacquered",
     quantity: 12,
     dimensionsCm: {
@@ -1056,15 +1081,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "DROPLET SHAPED WINGS",
-        featureParagraph: "The contour of the legs bears references to wind mill wings. The table is elegantly constructed as the droplet shaped legs transform into aprons and table in one continuous movement. This creates an organic design with outstanding stability.",
+        featureParagraph:
+          "The contour of the legs bears references to wind mill wings. The table is elegantly constructed as the droplet shaped legs transform into aprons and table in one continuous movement. This creates an organic design with outstanding stability.",
       },
       {
         featureTitle: "THIN TABLE TOP",
-        featureParagraph: "The table top is in a thin design. This adds a visual lightness that underlines the sharpness of the design.",
+        featureParagraph:
+          "The table top is in a thin design. This adds a visual lightness that underlines the sharpness of the design.",
       },
       {
         featureTitle: "GREAT STABILITY",
-        featureParagraph: "The table is constructed on a steel frame for great stability.",
+        featureParagraph:
+          "The table is constructed on a steel frame for great stability.",
       },
     ],
     keywords: [
@@ -1074,14 +1102,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwff2d94a9/images/1410000/1410582.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwff2d94a9/images/1410000/1410582.jpg?sw=2000&sh=1125",
   },
   {
     id: "T08",
     title: "ELBA TABLE (FOR IN AND OUTDOOR USE)",
     category: "tables",
     price: 489.05,
-    description: "Comfortable, close to maintenance-free and with a style punch to accompany it, Elba outdoor furniture is the perfect setting for great outdoor moments. With low legs providing a casual chic look, this outdoor lounge table provides the perfect spot for relaxing in the sun.",
+    description:
+      "Comfortable, close to maintenance-free and with a style punch to accompany it, Elba outdoor furniture is the perfect setting for great outdoor moments. With low legs providing a casual chic look, this outdoor lounge table provides the perfect spot for relaxing in the sun.",
     color: "White high pressure laminate with black inner core",
     quantity: 1,
     dimensionsCm: {
@@ -1092,15 +1122,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "ALL DAY COMFORT",
-        featureParagraph: "Add the matching cushions to your Elba chairs and be comfortable outside all day.",
+        featureParagraph:
+          "Add the matching cushions to your Elba chairs and be comfortable outside all day.",
       },
       {
         featureTitle: "POLYETHYLENE WICKER",
-        featureParagraph: "The wicker is made of high density polyethylene, making it both very durable as well as UV resistant.",
+        featureParagraph:
+          "The wicker is made of high density polyethylene, making it both very durable as well as UV resistant.",
       },
       {
         featureTitle: "STACKABLE",
-        featureParagraph: "The Elba chairs are stackable and therefore take up little space when stored.",
+        featureParagraph:
+          "The Elba chairs are stackable and therefore take up little space when stored.",
       },
     ],
     keywords: [
@@ -1110,14 +1143,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwff2e5745/images/560000/562780.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwff2e5745/images/560000/562780.jpg?sw=2000&sh=1125",
   },
   {
     id: "T09",
     title: "KINGSTON DINING TABLE WITH SUPPLEMENTARY TABLETOP",
     category: "tables",
     price: 891.65,
-    description: "Beauty and functionality come together in the stylish Kingston table. The organic shape radiates softness while the slightly tapered and inclined legs ensure a light, Nordic expression. You can almost feel Kingston call for you to come sit down and enjoy Danish design at its finest.",
+    description:
+      "Beauty and functionality come together in the stylish Kingston table. The organic shape radiates softness while the slightly tapered and inclined legs ensure a light, Nordic expression. You can almost feel Kingston call for you to come sit down and enjoy Danish design at its finest.",
     color: "Matte white laquered",
     quantity: 4,
     dimensionsCm: {
@@ -1128,15 +1163,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "MAKE ROOM FOR ALL",
-        featureParagraph: "The table is available with extension leaves that smoothly makes room for more people around the table without creating awkward seating positions.",
+        featureParagraph:
+          "The table is available with extension leaves that smoothly makes room for more people around the table without creating awkward seating positions.",
       },
       {
         featureTitle: "HIDDEN INSERT",
-        featureParagraph: "The extension mechanism is in form of a butterfly insert hidden inside the table. This means that you avoid having additional table tops stored elsewhere in your home.",
+        featureParagraph:
+          "The extension mechanism is in form of a butterfly insert hidden inside the table. This means that you avoid having additional table tops stored elsewhere in your home.",
       },
       {
         featureTitle: "DIFFERENT SIZES AND COLOURS",
-        featureParagraph: "Kingston is available in different sizes, materials and colours, making it easy to fit the table to your home.",
+        featureParagraph:
+          "Kingston is available in different sizes, materials and colours, making it easy to fit the table to your home.",
       },
     ],
     keywords: [
@@ -1146,14 +1184,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw700cf49f/images/1680000/1685543.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw700cf49f/images/1680000/1685543.jpg?sw=2000&sh=1125",
   },
   {
     id: "T10",
     title: "GRANADA DINING TABLE WITH SUPPLEMENTARY TABLETOP",
     category: "tables",
     price: 1937.15,
-    description: "Create a casual dining setting with the round Granada dining table and watch it bring a sense of style and urban living to your dining room. The sturdy pedestal base allows for more leg space and gives the table a more edgy look. Need extra seats? Just pull up the clever, built-in extension leaf and go from a 4-person family meal to a dinner party seating 8.",
+    description:
+      "Create a casual dining setting with the round Granada dining table and watch it bring a sense of style and urban living to your dining room. The sturdy pedestal base allows for more leg space and gives the table a more edgy look. Need extra seats? Just pull up the clever, built-in extension leaf and go from a 4-person family meal to a dinner party seating 8.",
     color: "Walnut veneer",
     quantity: 8,
     dimensionsCm: {
@@ -1164,15 +1204,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "ROUND TOP AND BASE",
-        featureParagraph: "The match between the round table top and the base provides a harmonic and spacious look to the design.",
+        featureParagraph:
+          "The match between the round table top and the base provides a harmonic and spacious look to the design.",
       },
       {
         featureTitle: "EASY EXTENSION",
-        featureParagraph: "The synchronised extension system allows you to extend the table with just one hand in an easy, smooth pull. Visit us in store and see for yourself just how easy it is.",
+        featureParagraph:
+          "The synchronised extension system allows you to extend the table with just one hand in an easy, smooth pull. Visit us in store and see for yourself just how easy it is.",
       },
       {
         featureTitle: "ROOM FOR EVERYONE'S LEGS",
-        featureParagraph: "The centre base offers more space for chairs around the table and ensures that all have great leg space.",
+        featureParagraph:
+          "The centre base offers more space for chairs around the table and ensures that all have great leg space.",
       },
     ],
     keywords: [
@@ -1182,14 +1225,16 @@ export const FurnitureData: Furniture[] = [
       "stylish chair",
       "side table",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdeaa739d/images/2040000/2048937.jpg?sw=2000",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwdeaa739d/images/2040000/2048937.jpg?sw=2000",
   },
   {
     id: "B01",
     title: "ARLINGTON BED",
     category: "beds",
     price: 1469.15,
-    description: "Great support when sitting against the headboard and a soft landing make the Arlington bed an amazing addition to the bedroom. Just like the extension of a pillow, the soft headboard invites you in for a good night sleep.",
+    description:
+      "Great support when sitting against the headboard and a soft landing make the Arlington bed an amazing addition to the bedroom. Just like the extension of a pillow, the soft headboard invites you in for a good night sleep.",
     color: "Beige Mojave fabric 0300",
     quantity: 12,
     dimensionsCm: {
@@ -1200,15 +1245,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "MINIMALISTIC YET COMFORTABLE",
-        featureParagraph: "The lines of the Arlington headboard ensure a streamlined look and you will quickly discover that the headboard is very soft and comfortable.",
+        featureParagraph:
+          "The lines of the Arlington headboard ensure a streamlined look and you will quickly discover that the headboard is very soft and comfortable.",
       },
       {
         featureTitle: "MAKE IT YOURS",
-        featureParagraph: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
+        featureParagraph:
+          "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
       },
       {
         featureTitle: "READ A BOOK OR WATCH TV",
-        featureParagraph: "The bed is designed to create perfect support for reading or relaxing in the bed.",
+        featureParagraph:
+          "The bed is designed to create perfect support for reading or relaxing in the bed.",
       },
     ],
     keywords: [
@@ -1218,14 +1266,16 @@ export const FurnitureData: Furniture[] = [
       "single bed",
       "double bed",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4000d50f/images/1150000/1154673.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dw4000d50f/images/1150000/1154673.jpg?sw=2000&sh=1125",
   },
   {
     id: "B02",
     title: "LUGANO STORAGE BED WITH LIFT-UP FRAME AND SLATS",
     category: "beds",
     price: 1479.05,
-    description: "Let your body sink down and feel relaxation wash over you. Sleep like an angel in the elegant Lugano bed. Keeping a minimalist look with a clean wooden frame, this modern bed will bring a sense of calm and serenity to your bedroom. Fitted with a plinth base for a more masculine, heavy look this bed invites you into comfort. The tufted headboard adds a traditional touch and creates a soft, welcoming atmosphere. Lift the bed frame and reveal plenty of storage space for extra bedding, thick winter blankets or perhaps even for hiding presents.",
+    description:
+      "Let your body sink down and feel relaxation wash over you. Sleep like an angel in the elegant Lugano bed. Keeping a minimalist look with a clean wooden frame, this modern bed will bring a sense of calm and serenity to your bedroom. Fitted with a plinth base for a more masculine, heavy look this bed invites you into comfort. The tufted headboard adds a traditional touch and creates a soft, welcoming atmosphere. Lift the bed frame and reveal plenty of storage space for extra bedding, thick winter blankets or perhaps even for hiding presents.",
     color: "Dark grey Leeds fabric 3023",
     quantity: 12,
     dimensionsCm: {
@@ -1236,15 +1286,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "HEADBOARD OPTION",
-        featureParagraph: "Create comfort and complete your bedroom interior with a headboard in your chosen fabric or leather.",
+        featureParagraph:
+          "Create comfort and complete your bedroom interior with a headboard in your chosen fabric or leather.",
       },
       {
         featureTitle: "STORAGE",
-        featureParagraph: "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
+        featureParagraph:
+          "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
       },
       {
         featureTitle: "MATCHING NIGHT STAND",
-        featureParagraph: "Lugano offers matching night stands for a practical bed solution with a complete look.",
+        featureParagraph:
+          "Lugano offers matching night stands for a practical bed solution with a complete look.",
       },
     ],
     keywords: [
@@ -1254,14 +1307,16 @@ export const FurnitureData: Furniture[] = [
       "single bed",
       "double bed",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwea8d864e/images/1480000/1481905.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwea8d864e/images/1480000/1481905.jpg?sw=2000&sh=1125",
   },
   {
     id: "B03",
     title: "AUSTIN BED",
     category: "beds",
     price: 2039.15,
-    description: "Be embraced by the cocooning effect of the Austin bed. The headboard not only looks great, it defines your space and offers a comfortable place to rest. Choose your personal upholstery and create your bedroom haven.",
+    description:
+      "Be embraced by the cocooning effect of the Austin bed. The headboard not only looks great, it defines your space and offers a comfortable place to rest. Choose your personal upholstery and create your bedroom haven.",
     color: "Beige Mojave fabric 0300",
     quantity: 6,
     dimensionsCm: {
@@ -1272,15 +1327,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "A WELL-DEFINED SPACE",
-        featureParagraph: "The wings of the headboard define your space and creates your own personal space for comfort.",
+        featureParagraph:
+          "The wings of the headboard define your space and creates your own personal space for comfort.",
       },
       {
         featureTitle: "ELEGANT LEGS",
-        featureParagraph: "The slim legs raise the bed of the ground and ensures a light expression in the bedroom.",
+        featureParagraph:
+          "The slim legs raise the bed of the ground and ensures a light expression in the bedroom.",
       },
       {
         featureTitle: "MAKE IT YOURS",
-        featureParagraph: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
+        featureParagraph:
+          "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
       },
     ],
     keywords: [
@@ -1290,14 +1348,16 @@ export const FurnitureData: Furniture[] = [
       "single bed",
       "double bed",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd536d3ef/images/1410000/1410584.jpg?sw=2000&sh=1125",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd536d3ef/images/1410000/1410584.jpg?sw=2000&sh=1125",
   },
   {
     id: "B04",
     title: "HOUSTON, UPHOLSTERED BED WITH STORAGE",
     category: "beds",
     price: 1689.05,
-    description: "Relax and enjoy the comfort of Houston. The soft headboard with elegant design details ensures a welcoming look to your bed and great support whether sitting up or lounging with a book.",
+    description:
+      "Relax and enjoy the comfort of Houston. The soft headboard with elegant design details ensures a welcoming look to your bed and great support whether sitting up or lounging with a book.",
     color: "Beige Mojave fabric 0300",
     quantity: 7,
     dimensionsCm: {
@@ -1308,15 +1368,18 @@ export const FurnitureData: Furniture[] = [
     features: [
       {
         featureTitle: "STORAGE",
-        featureParagraph: "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
+        featureParagraph:
+          "Choose your bed with storage space to keep your bedroom organised. Fitted with a hydraulic pump, the slats are easily lifted to reveal plenty of storage room.",
       },
       {
         featureTitle: "MAKE IT YOURS",
-        featureParagraph: "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
+        featureParagraph:
+          "The fully upholstered bed is available in more than a 100 different fabrics and leathers, allowing you to create your own personal bedroom expression.",
       },
       {
         featureTitle: "LEG OR BASE OPTIONS",
-        featureParagraph: "Different leg and base options are available. Choose the plinth base for a heavy expression or legs for a lighter, sophisticated look.",
+        featureParagraph:
+          "Different leg and base options are available. Choose the plinth base for a heavy expression or legs for a lighter, sophisticated look.",
       },
     ],
     keywords: [
@@ -1326,6 +1389,7 @@ export const FurnitureData: Furniture[] = [
       "single bed",
       "double bed",
     ],
-    image: "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd9319e46/images/1680000/1685510.jpg?sw=2000",
+    image:
+      "https://images.demandware.net/dw/image/v2/BBBV_PRD/on/demandware.static/-/Sites-master-catalog/default/dwd9319e46/images/1680000/1685510.jpg?sw=2000",
   },
 ];

@@ -11,6 +11,9 @@
     cursor: pointer;
     padding-right: 1.5rem;
 }
+.Filter2ItemName:hover {
+    text-shadow: 0.5px 0.5px 0.5px gray;
+  }
 
 @media screen and (max-width: 470px) {
     .Filter2ItemWrapper {

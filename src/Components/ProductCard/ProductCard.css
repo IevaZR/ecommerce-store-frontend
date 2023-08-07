@@ -15,9 +15,8 @@
 }
 
 .ProductCardWrapper:hover {
-    
     border: 1px solid #323030;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 7px 15px;
 }
 
 .ProductCardWrapper:active {
