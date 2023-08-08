@@ -1,18 +1,21 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .FooterWrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  gap: 1.5rem
+  gap: 1.5rem;
+  padding: 1.5rem 2.5% 1.5rem 2.5%;
 }
 
-.FooterAboutWrapper, .FooterContactsWrapper, .FotterNewsLetterWrapper {
+.FooterAboutWrapper,
+.FooterContactsWrapper,
+.FotterNewsLetterWrapper {
   display: flex;
   flex-direction: column;
 }
@@ -22,9 +25,10 @@ html {
 }
 
 .FooterAbout {
-  font-size: 10px;
-  font-family: "Roboto", sans-serif;
-  max-width: 150px;
+  font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    max-width: 200px;
+    line-height: 1.5;
 }
 
 .FooterSocialIconsWrapper {
@@ -57,7 +61,7 @@ html {
 }
 
 .FooterContactText {
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   margin-left: 0.5rem;
   margin-top: 0;
@@ -72,7 +76,7 @@ html {
 }
 
 .FooterNewsletterAnnouncement {
-  font-size: 10px;
+  font-size: 12px;
   font-family: "Roboto", sans-serif;
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -100,17 +104,18 @@ html {
 }
 
 @media screen and (max-width: 550px) {
-    .FooterWrapper {
-        flex-direction: column;
-        align-items: center;
-      }
+  .FooterWrapper {
+    flex-direction: column;
+    align-items: center;
+  }
 
-      .FooterAboutWrapper, .FooterContactsWrapper, .FotterNewsLetterWrapper {
-        align-items: center;
-      }
-      
-      .FooterAbout {
-        text-align: center;
-      }
+  .FooterAboutWrapper,
+  .FooterContactsWrapper,
+  .FotterNewsLetterWrapper {
+    align-items: center;
+  }
 
+  .FooterAbout {
+    text-align: center;
+  }
 }
