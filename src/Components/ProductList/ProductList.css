@@ -29,6 +29,10 @@
 }
 
 @media screen and (max-width: 470px) {
+    .ProductListWrapper {
+        padding-top: 1rem;
+    }
+
     .ProductListContent {
         margin-bottom: 0.8rem;
     }
