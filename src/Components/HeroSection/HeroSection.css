@@ -1,10 +1,9 @@
 .HeroSectionWrapper {
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
   display: flex;
-  padding-top: 3rem;
   justify-content: space-between;
-  padding-bottom: 2rem;
+  padding: 3rem 5% 2rem 5%
 }
 
 .HeroSectionHeadingWrapper {
@@ -40,6 +39,7 @@
   font-size: 0.8rem;
   letter-spacing: 1px;
   line-height: 20px;
+  padding-bottom: 2rem;
 }
 
 @media screen and (max-width: 800px) {

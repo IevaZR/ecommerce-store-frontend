@@ -1,8 +1,7 @@
 .MainPageWrapper {
-    width: 100%;
+    width: 100vw;
     display: flex;
     align-items: center;
     flex-direction: column;
-    overflow: hidden;
     min-width: 320px;
 }
