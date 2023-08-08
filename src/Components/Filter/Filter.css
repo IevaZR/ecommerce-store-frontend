@@ -3,9 +3,9 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    padding: 3rem 0;
+    padding: 3rem 5% 3rem 5%;
     background-color: #c0bbbb37;
-    width: 100%;
+    width: 90%;
 }
 .Filter {
     width: 100%;

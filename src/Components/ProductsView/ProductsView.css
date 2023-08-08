@@ -1,9 +1,6 @@
 .ProductViewWrapper {
-    
-    width: 100%;
-}
-
-.ProductViewHeadingWrapper {
+    width: 90%;
+    padding: 0 5% 0 5%;
     background-color: #c0bbbb37;
 }
 

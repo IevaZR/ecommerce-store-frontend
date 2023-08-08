@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100%;
+  width: 90%;
   max-width: 1280px;
   height: 3rem;
   gap: 1rem;
@@ -116,7 +116,7 @@
   }
 
   .HeaderNavbarListItem {
-    margin: 0.2rem 0 0.2rem 0;
+    margin: 0.3rem 0 0.3rem 0;
   }
   .HeaderNavbarMobile {
     display: flex;
@@ -127,6 +127,8 @@
     padding-top: 1rem;
     height: 5rem;
     padding-bottom: 1.5rem;
+    width: 90%;
+    position: relative;
   }
   .HeaderLogoWrapper {
     width: 7rem;

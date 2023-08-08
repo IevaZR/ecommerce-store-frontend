@@ -1,9 +1,5 @@
 import './Button.css';
-
-interface ButtonProps {
-    text?: string;
-    onClick?: () => void;
-}
+import { ButtonProps } from '../../../types/types'
 
 const Button = ({text, onClick}: ButtonProps) => {
   return (
