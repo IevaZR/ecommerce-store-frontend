@@ -13,7 +13,7 @@ dotenv.config()
 const connectiontoDB = async() => {
     try {
         await mongoose.connect(
-            process.env.MONGODB_URL
+            process.env.MONGODB_URL + "EcommerceShop"
             );
         console.log('Connection to DB is successful');
     } catch (error) {
