@@ -1,8 +1,12 @@
-import "./AdminPage.css"
+import "./AdminPage.css";
+import AdminProductList from "../../Components/AdminProductList/AdminProductList";
+
 const AdminPage = () => {
   return (
-    <div>AdminPage</div>
-  )
-}
+    <div className="AdminPage">
+      <AdminProductList />
+    </div>
+  );
+};
 
-export default AdminPage
+export default AdminPage;
