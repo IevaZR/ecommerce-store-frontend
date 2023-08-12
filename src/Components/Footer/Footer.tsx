@@ -3,6 +3,8 @@ import "./Footer.css";
 // @ts-ignore
 import Logo from "./../../Assets/logo.png";
 // @ts-ignore
+import Logo2 from "./../../Assets/logo.svg";
+// @ts-ignore
 import FacebookIcon from "./../../Assets/facebook-icon.png";
 // @ts-ignore
 import InstagramIcon from "./../../Assets/instagram-icon.png";
@@ -21,7 +23,7 @@ const Footer = () => {
   return (
       <div className="FooterWrapper" id="contact">
         <div className="FooterAboutWrapper">
-          <img src={Logo} alt="logo" className="FooterLogo" />
+          <img src={Logo2} alt="logo" className="FooterLogo" />
           <p className="FooterAbout">
             Follow us on social media to stay up to date with newest furniture
             fashion

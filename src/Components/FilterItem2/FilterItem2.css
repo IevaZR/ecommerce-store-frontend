@@ -30,4 +30,7 @@
         text-align: center;
         padding: 0 0.3rem 0 0.3rem;
     }
+    .Filter2ItemName {
+        padding-right: 1rem;
+    }
 }
