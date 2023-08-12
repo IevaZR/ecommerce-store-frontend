@@ -8,7 +8,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   width: 25rem;
-  height: 15rem;
+  height: 20rem;
   max-width: 90%;
   min-width: 250px;
   border-radius: 20px;
@@ -26,6 +26,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.AdminLoginFormLogo {
+  width: 8rem;
+  margin-bottom: 0.5rem;
+}
+
+.AdminLoginFormHeading {
+  font-size: 0.7rem;
+  font-family:"Comfortaa", cursive;
+  margin-bottom: 2rem;
 }
 
 .AdminLoginUserNameInput,
