@@ -2,11 +2,13 @@ import mongoose from "mongoose";
 import express from "express";
 import productRoute from "./routes/productRoute.js";
 import dotenv from "dotenv";
+import cors from 'cors'
 
 const app = express();
 const port = 3009;
 
 app.use(express.json())
+app.use(cors())
 
 dotenv.config()
 
