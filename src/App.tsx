@@ -3,6 +3,9 @@ import MainPage from "./Pages/MainPage/MainPage";
 import { ActiveSearchProvider } from "./HelperFunctions/ActiveSearchContext";
 import { Routes, Route } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage/AboutPage";
+import ShopPage from "./Pages/ShopPage/ShopPage";
+import AdminLoginPage from "./Pages/AdminLoginPage/AdminLoginPage";
+import AdminPage from "./Pages/AdminPage/AdminPage";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about-us" element={<AboutPage />} />
+          <Route path="/shop" element={<ShopPage/>} />
+          <Route path="/admin-login" element={<AdminLoginPage/>} />
+          <Route path="/admin-page" element={<AdminPage/>} />
         </Routes>
       </ActiveSearchProvider>
     </div>

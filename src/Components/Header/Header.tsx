@@ -45,7 +45,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="HeaderNavbarListItem" onClick={showAllProducts}>
-          <Link to="/" className="HeaderNavbarAnchor">
+          <Link to="/shop" className="HeaderNavbarAnchor">
             Shop
           </Link>
         </li>
