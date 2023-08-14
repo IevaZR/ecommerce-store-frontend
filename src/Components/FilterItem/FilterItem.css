@@ -2,7 +2,7 @@
     min-width: 150px;
     height: 150px;
     background-color: white;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
     border-radius: 3px;
     border: none;
     color: #ffffff;
@@ -13,7 +13,11 @@
 }
 .FilterItemWrapper:hover {
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.5) 2px 7px 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 4px 8px 15px;
+}
+.FilterItemWrapper:active {
+    transform: scale(0.96);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .FilterItemImage {
     height: 100%;
@@ -32,8 +36,12 @@
 
 @media screen and (max-width: 470px) {
     .FilterItemWrapper {
+        border-radius: 1px;
         min-width: 50px;
-        height: 50px;
+        height: 70px;
         font-size: 0.2rem;
+    }
+    .FilterItemImage {
+        border-radius: 1px;
     }
 }

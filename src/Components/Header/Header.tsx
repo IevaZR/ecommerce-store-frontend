@@ -3,6 +3,8 @@ import "./Header.css";
 // @ts-ignore
 import Logo from "./../../Assets/logo.png";
 // @ts-ignore
+import Logo2 from "./../../Assets/logo.svg";
+// @ts-ignore
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
@@ -32,7 +34,7 @@ const Header = () => {
       <div className="HeaderLogoWrapper">
         <Link to="/">
           <a href="#MainPage" onClick={showMainPage}>
-            <img src={Logo} alt="Accent logo" className="HeaderLogo" />
+            <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
           </a>
         </Link>
       </div>
@@ -43,7 +45,7 @@ const Header = () => {
           </Link>
         </li>
         <li className="HeaderNavbarListItem" onClick={showAllProducts}>
-          <Link to="/" className="HeaderNavbarAnchor">
+          <Link to="/shop" className="HeaderNavbarAnchor">
             Shop
           </Link>
         </li>
