@@ -86,6 +86,7 @@ const Advertisement = () => {
       <div className={`AdvertisementSectionWrapper ${slideIn ? 'slideIn' : ''}`}>
         <div className='AdvertisementSectionImageWrapper'>
           <img src={randomProduct.image} alt='furniture' className='AdvertisementSectionImage' />
+          <p>{randomProduct.discount}</p>
         </div>
         <div className='AdvertisementSectionHeadingWrapper'>
           <h1 className='AdvertisementSectionHeading'>{randomProduct.title}</h1>
