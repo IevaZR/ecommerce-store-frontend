@@ -20,11 +20,11 @@
   display: flex;
   justify-content: flex-start;
   width: 50%;
-  max-height: 250px;
+  max-height: 400px;
 }
 
 .AdvertisementSectionImage {
-  width: 25rem;
+  width: 30rem;
   max-width: 100%;
   object-fit: cover;
   box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
