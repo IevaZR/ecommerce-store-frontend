@@ -1,6 +1,7 @@
 import "./AdminLogin.css";
 // @ts-ignore
 import Logo from './../../Assets/logo.svg'
+import { Link } from "react-router-dom";
 const AdminLogin = () => {
   return (
     <div className="AdminLoginWrapper">
@@ -31,7 +32,7 @@ const AdminLogin = () => {
             id="AdminLoginPasswordInput"
           />
         </form>
-        <button className="AdminLoginButton">Login</button>
+        <button className="AdminLoginButton"><Link to="/admin-page" className="AdminLoginButtonLink">Login</Link></button>
         <p className="AdminLoginForgotPasswordLink">Forgot password?</p>
       </div>
     </div>

@@ -42,6 +42,17 @@ const AdminProductList = () => {
 
   return (
     <div className="AdminProductListWrapper">
+      <div className="AdminProductCardHeaderWrapper">
+        <div className="AdminProductCardHeader">
+          <div className="AdminProductCardImageWrapper"></div>
+          <div className="AdminProductCardTitle">TITLE</div>
+          <div className="AdminProductCardCategory">CATEGORY</div>
+          <div className="AdminProductCardPrice">PRICE</div>
+          <div className="AdminProductCardQuantity">REMAINING</div>
+          <div className="AdminProductCardQuantity"></div>
+        </div>
+      </div>
+
       {products?.data?.data?.map((product) => (
         <AdminProductCard key={product.id} product={product} />
       ))}
