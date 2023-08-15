@@ -7,6 +7,7 @@ import DeletIcon from "./../../Assets/delete-icon.png"
 const AdminProductCard = ({product}) => {
   return (
     <div className="AdminProductCardWrapper">
+      
       <div className="AdminProductCardImageWrapper">
         <img
           src={product.image}
