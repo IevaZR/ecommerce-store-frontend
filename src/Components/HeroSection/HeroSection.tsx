@@ -26,6 +26,7 @@ const HeroSection = () => {
         <div className='HeroSectionImageWrapper'>
             <img src={HeroImage} alt='armchair' className='HeroSectionImage'/>
         </div>
+        
     </div>
   )
 }
