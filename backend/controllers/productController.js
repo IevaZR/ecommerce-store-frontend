@@ -35,9 +35,26 @@ export const getAllProducts = async (req, res) => {
 
 export const getProduct = async (req, res) => {
     try {
-        const product = await productModel.find({ name: req.params.name})
+        const product = await productModel.find({ id: req.params.id})
 
         res.status(201).send(product);
+    } catch (error) {
+        console.log(error);
+        res.status(400).send(error);
+    }
+};
+
+export const getProductByIndex = async (req, res) => {
+    try {
+        const products = await productModel.find();
+        const index = parseInt(req.params.index);
+
+        if (index < 0 || index >= products.length) {
+            return res.status(404).json({ message: "Product index out of range" });
+        }
+
+        const product = products[index];
+        res.status(200).json(product);
     } catch (error) {
         console.log(error);
         res.status(400).send(error);
