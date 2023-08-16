@@ -7,7 +7,7 @@ const AdminPage = () => {
   return (
     <div className="AdminPageWrapper">
       <AdminPageHeading/>
-      {/* <AdminPageAddProduct/> */}
+      <AdminPageAddProduct/>
       <AdminProductList />
     </div>
   );
