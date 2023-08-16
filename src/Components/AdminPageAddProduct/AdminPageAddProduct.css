@@ -25,7 +25,13 @@
     border-radius: 5px;
     overflow: auto;
 }
-
+.AdminPageAddProductHeadingWrapper {
+   max-width: 300px;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
 .AdminPageAddProductHeading {
     font-family:"Comfortaa", cursive;
     text-align: center;
@@ -57,4 +63,27 @@
     border: 0.1px solid rgb(199, 199, 199);
     outline: none ;
     transition: all 0.5s ease;
+}
+
+.AdminPageAddProductsInput::placeholder {
+    color: transparent;
+}
+
+.AdminPageAddProductsButtonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.AdminPageAddProductsDimensionsWrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.AdminPageAddProductsInputDimensions {
+    width: 3rem;
+    margin-left: 1rem;
+    margin-right: 2rem;
 }
