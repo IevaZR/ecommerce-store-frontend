@@ -27,6 +27,7 @@ const Header = () => {
 
   const showAllProducts = () => {
     updateShowAllProducts(true);
+    updateActiveSearch(false)
   };
 
   return (
@@ -55,8 +56,8 @@ const Header = () => {
           </Link>
         </li>
         <li className="HeaderNavbarListItem">
-        <HashLink to="/#contact" className="HeaderNavbarAnchor">
-            Contact
+        <HashLink smooth to="#footer" className="HeaderNavbarAnchor">
+              Contact
             </HashLink>
         </li>
       </ul>
@@ -97,9 +98,9 @@ const Header = () => {
             </Link>
           </li>
           <li className="HeaderNavbarListItem">
-            <a href="#contacts" className="HeaderNavbarAnchor">
+            <HashLink smooth to="#footer" className="HeaderNavbarAnchor">
               Contact
-            </a>
+            </HashLink>
           </li>
         </ul>
       </div>
