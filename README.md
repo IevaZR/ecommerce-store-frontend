@@ -7,9 +7,13 @@ To run project:
 ```bash
 git clone https://github.com/IevaZR/E-commerce-store
 ```
-2) change current working directory to E-commerce-store
+2a) to run frontend part change current working directory to E-commerce-store
 ```bash
-cd E-commerce-store
+cd E-commerce-store/frontend
+```
+2b) to run backend part change current working directory to E-commerce-store
+```bash
+cd E-commerce-store/backend
 ```
 3) install dependencies
 ```
