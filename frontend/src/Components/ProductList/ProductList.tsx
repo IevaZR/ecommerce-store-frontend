@@ -1,16 +1,50 @@
 import ProductCard from "../ProductCard/ProductCard";
 import "./ProductList.css";
+import axios from 'axios';
 import Button from '../ReusableComponents/Button/Button';
 import { FurnitureData } from "../../data/data";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useReducer } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
 
+const initialState = {
+    isLoading: false,
+    data: [],
+    error: '',
+};
+
+const reducer = (action, state) => {
+    switch (action.type) {
+        case "LOADING": return {...state, isLoading: true};
+        case "SUCCESS": return {...state, data: action.payload, isLoading: false};
+        case "ERROR": return {...state, error: action.payload, isLoading: false};
+        default: return state;
+    }
+};
+
 const ProductList = ({ searchQuery }) => {
+
+    const [productList, dispatch] = useReducer(reducer, initialState);
+
+    const handleFetch = async ()=> {
+        dispatch({ type: "LOADING" });
+        try {
+            const data = await axios.get("http://localhost:3009/get-all");
+            dispatch({ type: "SUCCESS", payload: data });
+            console.log(data);
+        } catch (err) {
+            dispatch({ type: "ERROR", payload: err });
+        }   
+    };    
+
+    useEffect(()=> {
+        handleFetch();
+    }, [])
+
     // START Filter
     const { selectedFilter } = useFilterContext();
     // END Filter
     const [products, setProducts] = useState(FurnitureData);
-    // console.log(products);
+    console.log(productList?.data?.data); // <-- this is the data from MongoDB data base 
     const [visibleProducts, setVisibleProducts] = useState(8);
     const [productsFound, setProductsFound] = useState(true); 
 
