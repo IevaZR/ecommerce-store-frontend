@@ -18,11 +18,11 @@
     "http": "^0.0.1-security",
     "mongodb": "^5.7.0",
     "mongoose": "^7.4.2",
-    "mongosh": "^1.10.3",
-    "nodemon": "^3.0.1"
+    "mongosh": "^1.10.3"
   },
   "devDependencies": {
-    "@types/mongoose": "^5.11.97"
+    "@types/mongoose": "^5.11.97",
+    "nodemon": "^3.0.1"
   },
   "type": "module"
 }
