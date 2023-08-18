@@ -7,7 +7,6 @@
     justify-content: center;
     top: 0;
     left: 0;
-    display: flex;
     flex-direction: column;
     background-color: #f3f3f37a;
     z-index: 999;
@@ -74,6 +73,7 @@
     display: flex;
     justify-content: center;
     margin-top: 2rem;
+   
 }
 
 .AdminPageAddProductsDimensionsWrapper {
@@ -83,7 +83,21 @@
 }
 
 .AdminPageAddProductsInputDimensions {
-    width: 3rem;
+    width: 5rem;
     margin-left: 1rem;
     margin-right: 2rem;
+}
+
+.AdminPageAddProductsSelect {
+    position: relative;
+}
+
+.AdminPageAddProductsFeaturesWrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 1rem;
+}
+
+.AdminPageAddProductButtonWrapper {
+    margin: 0 1rem 0 1rem
 }
