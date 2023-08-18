@@ -81,6 +81,11 @@
     box-shadow: 2px 2px 2px 1px rgb(177, 177, 177);
 }
 
+.AdminLoginButtonLink {
+  text-decoration: none;
+  color: inherit;
+}
+
 .AdminLoginButton:active {
     transform: scale(0.96);
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;

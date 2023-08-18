@@ -39,7 +39,7 @@
   list-style-type: none;
   margin: 0 0.2rem 0 0.2rem;
   font-family: "Comfortaa", cursive;
-  font-size: 0.8rem;
+  font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
 }
@@ -71,6 +71,19 @@
 
 .HeaderNavbarMobileButtonImage {
   width: 3rem;
+}
+
+
+.HeaderSecretButton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.3rem;
+  height: 1rem;
+  width: 2rem;
+  border: none;
+  background-color: rgb(245, 244, 244);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 550px) {
@@ -145,6 +158,9 @@
   display: flex;
   justify-content: center;
   
+ }
+ .HeaderSecretButton {
+  display: none;
  }
 }
 
