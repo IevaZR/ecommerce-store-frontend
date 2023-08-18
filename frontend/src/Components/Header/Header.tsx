@@ -33,10 +33,8 @@ const Header = () => {
   return (
     <div className="HeaderWrapper">
       <div className="HeaderLogoWrapper">
-        <Link to="/">
-          <a href="#MainPage" onClick={showMainPage}>
+        <Link to="/" onClick={showMainPage}>
             <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
-          </a>
         </Link>
       </div>
       <ul className="HeaderNavbar">
@@ -76,9 +74,7 @@ const Header = () => {
         >
           <li className="HeaderNavbarListItem" onClick={showMainPage}>
             <Link to="/" className="HeaderNavbarAnchor">
-              <a href="#MainPage" className="HeaderNavbarAnchor">
                 Home
-              </a>
             </Link>
           </li>
           <li className="HeaderNavbarListItem" onClick={showAllProducts}>
