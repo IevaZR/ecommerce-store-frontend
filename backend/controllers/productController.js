@@ -1,25 +1,22 @@
 import productModel from "../models/productModel.js";
 
 export const createProduct = async (req, res) => {
-    {/*try {
-        const product = new productModel({
-            ...req.body
-        });
-    
-        await product.save();
-
-        res.status(201).send(`New product name: ${req.body.name} is created`);
+    try {
+        const product = new productModel(req.body);
+        const data = await product.save();
+        res.status(201).json(data)
     } catch (error) {
         console.log(error);
-    res.status(400).send(error);*/}
-    try {
-        const product = await productModel.create(req.body);
-    
-        res.status(200).json(product);
-      } catch (error) {
-        console.log(error);
-        res.status(400).send(error);
-      }
+        res.status(400).send(error)
+    }
+    // try {
+    //     const product = await productModel.create(req.body);
+
+    //     res.status(200).json(product);
+    //   } catch (error) {
+    //     console.log(error);
+    //     res.status(400).send(error);
+    //   }
 };
 
 export const getAllProducts = async (req, res) => {
@@ -35,7 +32,7 @@ export const getAllProducts = async (req, res) => {
 
 export const getProduct = async (req, res) => {
     try {
-        const product = await productModel.find({ id: req.params.id})
+        const product = await productModel.find({ id: req.params.id })
 
         res.status(201).send(product);
     } catch (error) {
@@ -63,7 +60,7 @@ export const getProductByIndex = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
     try {
-        const product = await productModel.deleteOne({ name: req.params.name})
+        const product = await productModel.deleteOne({ name: req.params.name })
 
         res.status(201).send(product);
     } catch (error) {
@@ -74,7 +71,7 @@ export const deleteProduct = async (req, res) => {
 
 export const updateProduct = async (req, res) => {
     try {
-        const product = await productModel.findOneAndUpdate({ name: req.params.name} , {$set: req.body,}, {new: true})
+        const product = await productModel.findOneAndUpdate({ name: req.params.name }, { $set: req.body, }, { new: true })
 
         res.status(201).send(product);
     } catch (error) {

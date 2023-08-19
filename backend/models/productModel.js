@@ -36,69 +36,69 @@ const productSchema = new mongoose.Schema({
     dimensionsCm: {
         width: {
             type: Number,
-            required: true,
+            required: false,
         },
         height: {
             type: Number,
-            required: true,
+            required: false,
         },
         depth: {
             type: Number,
-            required: true,
+            required: false,
         }
     },
     features: [
         {
             featureTitle: {
                 type: String,
-                required: true,
+                required: false,
             },
             featureParagraph: {
                 type: String,
-                required: true,
+                required: false,
             },
         },
         {
             featureTitle: {
                 type: String,
-                required: true,
+                required: false,
             },
             featureParagraph: {
                 type: String,
-                required: true,
+                required: false,
             }, 
         },
         {
             featureTitle: {
                 type: String,
-                required: true,
+                required: false,
             },
             featureParagraph: {
                 type: String,
-                required: true,
+                required: false,
             },
         }
     ],
     keywords: [
         {
             type: String,
-            required: true,
+            required: false,
         },
         {
             type: String,
-            required: true,
+            required: false,
         },
         {
             type: String,
-            required: true,
+            required: false,
         },
         {
             type: String,
-            required: true,
+            required: false,
         },
         {
             type: String,
-            required: true,
+            required: false,
         }
     ],
     image: {

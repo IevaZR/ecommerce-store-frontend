@@ -1,16 +1,12 @@
-import './Button.css';
-import { ButtonProps } from '../../../types/types'
+import "./Button.css";
+import { ButtonProps } from "../../../types/types";
 
-const Button = ({text, onClick}: ButtonProps) => {
+const Button = ({ text, onClick }: ButtonProps) => {
   return (
-    <button 
-      className='SharedButton'
-      onClick={onClick}
-    >
+    <button type="button" className="SharedButton" onClick={onClick}>
       {text}
-
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;
