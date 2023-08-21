@@ -119,3 +119,17 @@ html {
     text-align: center;
   }
 }
+
+.FooterThankYouMessage {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.FooterInvalidEmailMessage {
+  font-family: "Roboto", sans-serif;
+  font-size: 10px;
+  margin-top: 5px;
+  color: rgba(252, 95, 95, 0.849);
+}
