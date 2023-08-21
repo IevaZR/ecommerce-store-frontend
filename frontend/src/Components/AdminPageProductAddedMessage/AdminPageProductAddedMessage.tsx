@@ -1,6 +1,6 @@
 import "./AdminPageProductAddedMessage.css";
 
-const AdminPageProductAddedMessage = ({ productName, closeMessage }) => {
+const AdminPageProductAddedMessage = ({ closeMessage, message }) => {
 
     
 
@@ -8,7 +8,7 @@ const AdminPageProductAddedMessage = ({ productName, closeMessage }) => {
     <div className="AdminPageProductAddedMessageOuterWrapper">
       <div className="AdminPageProductAddedMessageWrapper">
         <h1 className="AdminPageProductAddedMessage">
-          {productName} successfully added
+          {message}
         </h1>
         <button className="AdminPageProductAddedMessageButton" onClick={closeMessage}>CLOSE</button>
       </div>
