@@ -60,7 +60,7 @@ export const getProductByIndex = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
     try {
-        const product = await productModel.deleteOne({ name: req.params.name })
+        const product = await productModel.deleteOne({ id: req.params.id })
 
         res.status(201).send(product);
     } catch (error) {
@@ -71,7 +71,7 @@ export const deleteProduct = async (req, res) => {
 
 export const updateProduct = async (req, res) => {
     try {
-        const product = await productModel.findOneAndUpdate({ name: req.params.name }, { $set: req.body, }, { new: true })
+        const product = await productModel.findOneAndUpdate({ id: req.params.id }, { $set: req.body, }, { new: true })
 
         res.status(201).send(product);
     } catch (error) {

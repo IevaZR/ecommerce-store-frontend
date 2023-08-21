@@ -2,6 +2,7 @@ import "./AdminProductList.css";
 import { useState, useEffect, useReducer } from "react";
 import AdminProductCard from "../AdminProductCard/AdminProductCard";
 import axios from "axios";
+import { useEditProduct } from "../../HelperFunctions/EditProductContext";
 
 const initialState = {
   isLoading: false,
@@ -24,21 +25,35 @@ const reducer = (state, action) => {
 
 const AdminProductList = () => {
   const [products, dispatch] = useReducer(reducer, initialState);
+  const {productUpdated} = useEditProduct()
 
   const handleFetch = async () => {
     dispatch({ type: "LOADING" });
     try {
       const data = await axios.get("http://localhost:3009/get-all");
       dispatch({ type: "SUCCESS", payload: data });
-      console.log(data);
     } catch (err) {
       dispatch({ type: "ERROR", payload: err });
     }
   };
 
+  const handleProductDelete = async (deletedProductId) => {
+    try {
+      await axios.delete(`http://localhost:3009/delete/${deletedProductId}`);
+      handleFetch();
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+
   useEffect(() => {
     handleFetch();
   }, []);
+
+  useEffect(()=> {
+    handleFetch()
+  }, [productUpdated])
 
   return (
     <div className="AdminProductListWrapper">
@@ -54,7 +69,11 @@ const AdminProductList = () => {
       </div>
 
       {products?.data?.data?.map((product) => (
-        <AdminProductCard key={product.id} product={product} />
+        <AdminProductCard
+          key={product.id}
+          product={product}
+          onDelete={handleProductDelete}
+        />
       ))}
     </div>
   );
