@@ -40,7 +40,7 @@ export interface ProductPreviewModalProps {
  };
 export interface ButtonProps {
     text?: string;
-    // buttonColor?: '#817F77' | '#FFCD2B';
+    backgroundColor?: 'transparent' | 'rgb(209 203 203 / 75%)';
 }
 
 export interface ButtonProps {
