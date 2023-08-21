@@ -119,7 +119,7 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
               <div className="ModalProductPrice">
                 &euro; {productList.price}
               </div>
-              <Button text='Add to basket' ></Button>
+              <Button text='Add to cart' ></Button>
 
             </div>
           </div>
