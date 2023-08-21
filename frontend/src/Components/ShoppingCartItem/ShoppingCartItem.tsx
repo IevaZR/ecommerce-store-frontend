@@ -3,13 +3,13 @@ import Button from '../ReusableComponents/Button/Button';
 import { useReducer } from 'react';
 
 const initialState = {
-    value: 0,
+    value: 1,
 };
 
 const reducer = (state: any, action: any) => {
     switch (action.type) {
         case "DECREMENT":
-            return {...state, value: state.value - action.payload};
+            return {...state, value: Math.max(1, state.value - action.payload) };
         case "INCREMENT":
             return {...state, value: state.value + action.payload};
         default:
