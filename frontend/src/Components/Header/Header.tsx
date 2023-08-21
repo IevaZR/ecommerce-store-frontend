@@ -6,6 +6,8 @@ import Logo from "./../../Assets/logo.png";
 import Logo2 from "./../../Assets/logo.svg";
 // @ts-ignore
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
+// @ts-ignore
+import ShopIcon from "./../../Assets/shop-icon.png";
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import { Link } from "react-router-dom";
@@ -100,9 +102,16 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <button className='HeaderSecretButton'><Link to="/admin-login" className="HeaderNavbarAnchor">ADMIN LOGIN</Link></button>
-      <div className="HeaderSearchWrapper">
-        <Search />
+      <button className='HeaderSecretButton'>
+        <Link to="/admin-login" className="HeaderNavbarAnchor">ADMIN LOGIN</Link>
+      </button>
+      <div className="HeaderUtilityContainer">
+        <div className="HeaderSearchWrapper">
+          <Search />
+        </div>
+        <Link to="/cart" className="HeaderNavbarAnchor cart">
+          <img src={ShopIcon} alt="icon-shop" />
+        </Link>
       </div>
     </div>
   );
