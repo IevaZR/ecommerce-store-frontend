@@ -36,12 +36,6 @@ const ProductCard = ({productList}: ProductCardProps) => {
                 text='Quickview' 
                 onClick={openModal}
             ></Button>
-            {/* <button 
-                className='ProductCardQuickviewButton'
-                onClick={openModal}
-                >
-                Quickview
-            </button> */}
         </div>
         {isModalOpen && (
                 <ProductPreviewModal
