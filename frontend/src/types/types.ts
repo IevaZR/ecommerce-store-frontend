@@ -41,9 +41,6 @@ export interface ProductPreviewModalProps {
 export interface ButtonProps {
     text?: string;
     backgroundColor?: 'transparent' | 'rgb(209 203 203 / 75%)';
-}
-
-export interface ButtonProps {
-    text?: string;
+    icon?:string;
     onClick?: () => void;
 }
