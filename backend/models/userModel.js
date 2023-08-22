@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 
-const customerSchema = new mongoose.Schema({
+
+const userSchema = new mongoose.Schema({
     id: {
         type: Number,
         required: true
@@ -21,8 +22,8 @@ const customerSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    orders: [orderSchema],
-    favourites: [productSchema]
+    orders: [],
+    favourites: []
 })
 
 export default mongoose.model("user", userSchema);

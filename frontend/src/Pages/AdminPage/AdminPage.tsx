@@ -6,6 +6,8 @@ import { AddProductVisibilityProvider } from "../../HelperFunctions/AddProductVi
 import { EditProductProvider } from "../../HelperFunctions/EditProductContext";
 import { EditProductVisibilityProvider } from "../../HelperFunctions/EditProductVisibilityContext";
 import AdminPageEditProduct from "../../Components/AdminPageEditProduct/AdminPageEditProduct";
+import AdminPageSideBar from "../../Components/AdminPageSideBar/AdminPageSideBar";
+import AdminPageOrderList from "../../Components/AdminPageOrderList/AdminPageOrderList";
 
 const AdminPage = () => {
   return (
@@ -13,10 +15,16 @@ const AdminPage = () => {
       <EditProductVisibilityProvider>
         <EditProductProvider>
           <div className="AdminPageWrapper">
-            <AdminPageHeading />
-            <AdminPageAddProduct />
-            <AdminPageEditProduct/>
-            <AdminProductList />
+            <div className="AdminPageSideSectionWrapper">
+              <AdminPageSideBar />
+            </div>
+            <div className="AdminPageMainSectionWrapper">
+              <AdminPageHeading />
+              <AdminPageAddProduct />
+              <AdminPageEditProduct />
+              {/* <AdminProductList /> */}
+              <AdminPageOrderList/>
+            </div>
           </div>
         </EditProductProvider>
       </EditProductVisibilityProvider>

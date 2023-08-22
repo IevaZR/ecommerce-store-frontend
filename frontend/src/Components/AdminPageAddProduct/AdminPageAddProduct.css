@@ -8,6 +8,7 @@
     justify-content: center;
     top: 0;
     left: 0;
+    padding-left: 10%;
     flex-direction: column;
     background-color: #f3f3f37a;
     z-index: 999;
