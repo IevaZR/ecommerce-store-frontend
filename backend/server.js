@@ -2,6 +2,8 @@ import mongoose from "mongoose";
 import express from "express";
 import productRoute from "./routes/productRoute.js";
 import emailRoute from "./routes/emailRoute.js"
+import orderRoute from "./routes/orderRoute.js"
+import userRoute from "./routes/userRoute.js"
 import dotenv from "dotenv";
 import cors from 'cors'
 
@@ -28,6 +30,8 @@ const connectiontoDB = async() => {
 
 app.use('/', productRoute)
 app.use('/email', emailRoute)
+app.use('/order', orderRoute)
+app.use('/user', userRoute)
 
 app.listen(port, () => {
     connectiontoDB()
