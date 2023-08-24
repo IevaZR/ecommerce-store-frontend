@@ -11,8 +11,8 @@
 .AdminProductCardHeaderWrapper {
   width: 100%;
   position: sticky;
-  top: 130px;
-  padding: 1rem 0 0.5rem 0;
+  top: 103px;
+  padding: 0 0 0.5rem 0;
   background-color: white;
   z-index: 99;
 }

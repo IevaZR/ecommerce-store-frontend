@@ -3,6 +3,7 @@ import { useState, useEffect, useReducer } from "react";
 import AdminProductCard from "../AdminProductCard/AdminProductCard";
 import axios from "axios";
 import { useEditProduct } from "../../HelperFunctions/EditProductContext";
+import { useAdminVisibleContentContex } from "../../HelperFunctions/AdminVisibleContentContext";
 
 const initialState = {
   isLoading: false,
@@ -26,6 +27,7 @@ const reducer = (state, action) => {
 const AdminProductList = () => {
   const [products, dispatch] = useReducer(reducer, initialState);
   const {productUpdated} = useEditProduct()
+  const {adminVisibleContent} = useAdminVisibleContentContex()
 
   const handleFetch = async () => {
     dispatch({ type: "LOADING" });
@@ -56,6 +58,7 @@ const AdminProductList = () => {
   }, [productUpdated])
 
   return (
+    adminVisibleContent==="inventory" &&
     <div className="AdminProductListWrapper">
       <div className="AdminProductCardHeaderWrapper">
         <div className="AdminProductCardHeader">

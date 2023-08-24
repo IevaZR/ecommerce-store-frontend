@@ -21,11 +21,11 @@ const AdminProductCard = ({ product, onDelete }) => {
 
   const lowOnStock = () => {
     if (product.quantity <= 3) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
-  }
+  };
 
   return (
     <div className="AdminProductCardWrapper">
@@ -37,11 +37,7 @@ const AdminProductCard = ({ product, onDelete }) => {
       <div className="AdminProductCardPrice">€{product.price}</div>
       <div className="AdminProductCardQuantity">
         <p>{product.quantity}</p>
-        {
-          lowOnStock() && (
-            <div className="AdminProductCardLowOnStock">!</div>
-          )
-        }
+        {lowOnStock() && <div className="AdminProductCardLowOnStock">!</div>}
       </div>
 
       <div>
