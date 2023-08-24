@@ -38,7 +38,7 @@ const orderSchema = new mongoose.Schema({
     },
     orderStatus: {
         type: String,
-        status: ['Active', 'Fulfilled'],
+        status: ['Active', 'Fulfilled', 'Canceled'],
         default: 'Active'
     },
 });

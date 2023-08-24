@@ -20,6 +20,16 @@ const AdminPageSideBar = () => {
     setOrderFilterStatus('All')
   }
 
+  const showActiveOrders = () => {
+    setAdminVisibleContent("orders")
+    setOrderFilterStatus('Active')
+  }
+
+  const showCompletedOrders = () => {
+    setAdminVisibleContent("orders")
+    setOrderFilterStatus('Fulfilled')
+  }
+
   const showInventory = () => {
     setAdminVisibleContent("inventory")
   }
@@ -33,8 +43,8 @@ const AdminPageSideBar = () => {
         <button className='AdminPageSideBarLink' onClick={showInventory}>INVENTORY</button>
         <button className='AdminPageSideBarLinkSecondLevel' onClick={openAddProductForm}>ADD NEW PRODUCT</button>
         <button className='AdminPageSideBarLink' onClick={showOrders}>ORDERS</button>
-        <button className='AdminPageSideBarLinkSecondLevel'onClick={() => setOrderFilterStatus('Active')}>ACTIVE ORDERS</button>
-        <button className='AdminPageSideBarLinkSecondLevel' onClick={() => setOrderFilterStatus('Fulfilled')}>COMPLETED ORDERS</button>
+        <button className='AdminPageSideBarLinkSecondLevel'onClick={showActiveOrders}>ACTIVE ORDERS</button>
+        <button className='AdminPageSideBarLinkSecondLevel' onClick={showCompletedOrders}>COMPLETED ORDERS</button>
       </div>
     </div>
   )

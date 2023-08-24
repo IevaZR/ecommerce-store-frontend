@@ -3,6 +3,7 @@
   border-radius: 5px;
   box-shadow: 0px 0px 10px 0px rgba(211, 211, 211, 0.75);
   margin-top: 1rem;
+  position: relative;
 }
 
 .AdminPageOrderCardOrderNumberWrapper {
@@ -30,13 +31,65 @@
   color: green;
 }
 
+.AdminPageOrderCardOrderNumberCanceled {
+  font-family: "Comfortaa", cursive;
+  font-size: 12px;
+  margin: 0;
+  font-weight: 900;
+  color: grey;
+}
+
 .AdminPageOrderCardCompleteButton {
-    font-family: "Comfortaa", cursive;
-    font-size: 12px;
-    background-color: transparent;
-    border: 1px solid rgb(124, 124, 124);
-    border-radius: 5px;
-    cursor: pointer;
+  font-family: "Comfortaa", cursive;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid rgb(124, 124, 124);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.AdminPageOrderCardActionWrapper {
+  display: flex;
+}
+
+.AdminPageOrderCardMoreButton {
+  height: 20px;
+  width: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.AdminPageOrderCardMoreButtonImage {
+  height: 20px;
+  filter: opacity(70%);
+}
+
+.AdminPageOrderCardActionsMenu {
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
+  gap: 1rem;
+  background-color: rgb(223, 223, 223);
+  padding: 1rem 0.5rem;
+  border-radius: 5px;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.5rem;
+  box-shadow: 0px 0px 10px 0px rgba(88, 88, 88, 0.75);
+}
+
+.AdminPageOrderCardActionsMenuCancelButton,
+.AdminPageOrderCardActionsMenuReactivateButton {
+  font-family: "Comfortaa", cursive;
+  font-size: 12px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .AdminPageOrderCardMainSectionWrapper {
@@ -62,38 +115,38 @@
 }
 
 .AdminPageOrderCardCustomerSum {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .AdminPageOrderCardPurchasedProductsSectionWrapper {
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
-    border-left: 1px solid rgb(179, 177, 177);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  border-left: 1px solid rgb(179, 177, 177);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .AdminPageOrderCardPurchasedProductWrapper {
-    display: flex;
+  display: flex;
 }
 
 .AdminPageOrderCardPurchasedProductsImageWrapper {
-    width: 200px;
-    height: 100px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
 }
 
 .AdminPageOrderCardPurchasedProductsImage {
-    width: 200px;
-    object-fit: contain;
+  width: 200px;
+  object-fit: contain;
 }
 
 .AdminPageOrderCardPurchasedProductsInfoWrapper {
-    margin-left: 1rem;
-    font-size: 12px;
-    font-family: "Roboto", sans-serif;
+  margin-left: 1rem;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
 }
