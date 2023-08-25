@@ -26,8 +26,6 @@ const connectiontoDB = async() => {
     }
 };
 
-//const Student = mongoose.model('Student', studentSchema);
-
 app.use('/', productRoute)
 app.use('/email', emailRoute)
 app.use('/order', orderRoute)

@@ -6,6 +6,15 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    userName: {
+        type: String,
+        required: true,
+        unique: true
+    },
+    password: {
+        type: String,
+        required: true
+    },
     firstName: {
         type: String,
         required: true
@@ -27,7 +36,11 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     orders: [],
-    favourites: []
+    favourites: [],
+    admin: {
+        type: Boolean,
+        default: false
+    }
 })
 
 export default mongoose.model("user", userSchema);

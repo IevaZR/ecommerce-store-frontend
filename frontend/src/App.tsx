@@ -1,15 +1,17 @@
 import "./App.css";
 import MainPage from "./Pages/MainPage/MainPage";
 import { ActiveSearchProvider } from "./HelperFunctions/ActiveSearchContext";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage/AboutPage";
 import ShopPage from "./Pages/ShopPage/ShopPage";
 import CartPage from "./Pages/CartPage/CartPage";
 import AdminLoginPage from "./Pages/AdminLoginPage/AdminLoginPage";
 import AdminPage from "./Pages/AdminPage/AdminPage";
 import ScrollToTopOnNavigate from "./Components/ScrollToTopOnNavigate/ScrollToTopOnNavigate";
+import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
 
 function App() {
+  const { isLoggedIn, loading } = useLoginAuth(document.cookie);
   return (
     <div>
       <ActiveSearchProvider>

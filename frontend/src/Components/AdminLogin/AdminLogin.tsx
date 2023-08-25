@@ -1,8 +1,42 @@
 import "./AdminLogin.css";
 // @ts-ignore
-import Logo from './../../Assets/logo.svg'
-import { Link } from "react-router-dom";
+import Logo from "./../../Assets/logo.svg";
+import { Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
+
 const AdminLogin = () => {
+  const [loginData, setLoginData] = useState({
+    userName: "",
+    password: "",
+  });
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState(false);
+
+  const handleLoginInput = (event) => {
+    setLoginData((prev) => ({
+      ...prev,
+      [event.target.name]: event.target.value,
+    }));
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const { data } = await axios.post(
+        "http://localhost:3009/user/login",
+        loginData
+      );
+
+      if (data === "Authorized") {
+        navigate("/admin-page");
+        console.log(loginData);
+      } 
+    } catch (err) {
+      console.log(err);
+      setErrorMessage(true);
+    }
+  };
+
   return (
     <div className="AdminLoginWrapper">
       <div className="AdminLoginFormWrapper">
@@ -19,6 +53,8 @@ const AdminLogin = () => {
             type="text"
             className="AdminLoginUserNameInput"
             id="AdminLoginUserNameInput"
+            name="userName"
+            onChange={handleLoginInput}
           />
           <label
             htmlFor="AdminLoginPasswordInput"
@@ -30,9 +66,16 @@ const AdminLogin = () => {
             type="password"
             className="AdminLoginPasswordInput"
             id="AdminLoginPasswordInput"
+            name="password"
+            onChange={handleLoginInput}
           />
         </form>
-        <button className="AdminLoginButton"><Link to="/admin-page" className="AdminLoginButtonLink">Login</Link></button>
+        {errorMessage && (
+          <p className="AdminLoginErrorMessage">Invalid username or password</p>
+        )}
+        <button className="AdminLoginButton" onClick={handleSubmit}>
+          Login
+        </button>
         <p className="AdminLoginForgotPasswordLink">Forgot password?</p>
       </div>
     </div>
