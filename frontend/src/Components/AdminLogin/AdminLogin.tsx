@@ -23,7 +23,7 @@ const AdminLogin = () => {
   const handleSubmit = async () => {
     try {
       const { data } = await axios.post(
-        "http://localhost:3009/user/login",
+        "http://localhost:3009/user/login-admin",
         loginData
       );
 

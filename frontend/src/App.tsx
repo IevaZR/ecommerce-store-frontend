@@ -21,7 +21,10 @@ function App() {
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="/admin-login" element={<AdminLoginPage />} />
-          <Route path="/admin-page" element={<AdminPage />} />
+          <Route
+          path="/admin-page"
+          element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
+        />
         </Routes>
         <ScrollToTopOnNavigate />
       </ActiveSearchProvider>

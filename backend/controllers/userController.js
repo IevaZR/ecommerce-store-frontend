@@ -56,7 +56,7 @@ export const updateUser = async (req, res) => {
     }
 }
 
-export const loginUser = async (req, res) => {
+export const loginAdmin = async (req, res) => {
     try {
         const foundUser = await userModel.findOne({ userName: req.body.userName })
         if (!foundUser) {

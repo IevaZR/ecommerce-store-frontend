@@ -5,7 +5,9 @@ import "./AdminPageSideBar.css";
 import { useAddProductVisibility } from "../../HelperFunctions/AddProductVisibilityContext";
 import { useOrderFilterContext } from "../../HelperFunctions/OrderFilterContext";
 import { useAdminVisibleContentContex } from "../../HelperFunctions/AdminVisibleContentContext";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import axios from "axios";
+
 
 const AdminPageSideBar = () => {
   const { toggleAddProductVisible } = useAddProductVisibility();
@@ -36,8 +38,14 @@ const AdminPageSideBar = () => {
     setAdminVisibleContent("inventory");
   };
 
-  const logOut = () => {
-    navigate("/admin-login")
+  const logOut = async () => {
+      try {
+        await axios.post("http://localhost:3009/user/logout");
+        localStorage.removeItem("username");
+        navigate("/admin-login");
+      } catch (error) {
+        console.log(error);
+      }
   }
 
   return (
