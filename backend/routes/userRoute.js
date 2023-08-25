@@ -1,5 +1,6 @@
 import express from "express";
-import { createUser, deleteUser, getAllUsers, getUser, updateUser, loginUser, checkAuth } from "../controllers/userController.js"
+import { createUser, deleteUser, getAllUsers, getUser, updateUser, loginUser, logoutUser, checkAuth } from "../controllers/userController.js"
+import { verifySessionToken } from "../middleweares/authenticationCheck.js";
 
 const router = express.Router()
 
@@ -10,6 +11,8 @@ router.delete('/delete-user/:id', deleteUser)
 router.put('/update-user/:id', updateUser)
 
 router.post('/login', loginUser)
+router.post('/logout', logoutUser)
 router.post('/check-auth', checkAuth)
+
 
 export default router;
