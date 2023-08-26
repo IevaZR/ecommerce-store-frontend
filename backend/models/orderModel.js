@@ -36,6 +36,10 @@ const orderSchema = new mongoose.Schema({
         type: Object,
         required: true
     },
+    shippingAddress: {
+        type: String,
+        required: true
+    },
     orderStatus: {
         type: String,
         status: ['Active', 'Fulfilled', 'Canceled'],

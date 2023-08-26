@@ -66,6 +66,14 @@
   align-items: flex-end;
 }
 
+.HeaderNavbarUserIcon {
+  width: 25px;
+  margin-left: 30px;
+  display: flex;
+  align-items: flex-end;
+  filter: opacity(70%);
+}
+
 .HeaderNavbarMobileWrapper {
   display: none;
   

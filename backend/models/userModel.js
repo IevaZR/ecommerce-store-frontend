@@ -6,28 +6,42 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    firstName: {
+    email: {
+        type: String,
+        required: true,
+        unique: true,
+    },
+    password: {
         type: String,
         required: true
+    },
+    firstName: {
+        type: String,
+        required: false
     },
     lastName: {
         type: String,
-        required: true
+        required: false
     },
     address: {
         type: String,
-        required: true
+        required: false
     },
     phoneNumber: {
         type: Number,
-        required: true
+        required: false
     },
-    email: {
-        type: String,
-        required: true
-    },
+    
     orders: [],
-    favourites: []
+    favourites: [],
+    admin: {
+        type: Boolean,
+        default: false
+    },
+    userName: {
+        type: String,
+        required: false
+    }
 })
 
 export default mongoose.model("user", userSchema);
