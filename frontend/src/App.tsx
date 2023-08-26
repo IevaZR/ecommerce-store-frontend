@@ -12,6 +12,7 @@ import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
 import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
 import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
 import UserPage from "./Pages/UserPage/UserPage";
+import { FilterProvider } from "./HelperFunctions/FilterContext";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
   return (
     <div>
       <ActiveSearchProvider>
+      <FilterProvider>
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/about-us" element={<AboutPage />} />
@@ -34,6 +36,7 @@ function App() {
         />
         </Routes>
         <ScrollToTopOnNavigate />
+      </FilterProvider>
       </ActiveSearchProvider>
     </div>
   );

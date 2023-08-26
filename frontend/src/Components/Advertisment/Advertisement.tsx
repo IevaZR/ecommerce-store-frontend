@@ -1,6 +1,6 @@
 import React, { useEffect, useReducer, useState } from "react";
 import "./Advertisement.css";
-import Button from "../ReusableComponents/Button/Button.tsx";
+import Button from "../ReusableComponents/Button/Button";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 //import { Furniture } from '../../types/types';
 //import { FurnitureData } from '../../data/data'; // Import the furnitureData from data.ts
