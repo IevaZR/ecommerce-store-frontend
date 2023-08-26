@@ -1,0 +1,33 @@
+.UserPageMainSectionWrapper {
+    width: 90%;
+    display: flex;
+    min-height: 100vh;
+    padding: 0 5% 0 5%;
+}
+
+.UserPageSideBar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-top: 5rem;
+}
+
+.UserPageSideBarHeading {
+    font-family: "Comfortaa", cursive;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.UserPageSideBarLink {
+    font-family: "Comfortaa", cursive;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: none;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    cursor: pointer;
+}
+
+.UserPageInfoSection {
+    width: 100%;
+}

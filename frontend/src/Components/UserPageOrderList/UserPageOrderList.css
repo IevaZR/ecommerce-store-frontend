@@ -1,0 +1,11 @@
+.UserPageOrderListWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem 0 0 3rem;
+}
+
+
+.UserPageOrderListHeading {
+    font-family: "Comfortaa", cursive;
+}

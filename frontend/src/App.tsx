@@ -11,6 +11,7 @@ import ScrollToTopOnNavigate from "./Components/ScrollToTopOnNavigate/ScrollToTo
 import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
 import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
 import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
+import UserPage from "./Pages/UserPage/UserPage";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/cart" element={<CartPage />} />
           <Route path="/user-login" element={<UserLoginPage/>}/>
           <Route path="/user-register" element={<UserRegisterPage/>}/>
+          <Route path="/user-page" element={<UserPage/>}/>
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route
           path="/admin-page"
