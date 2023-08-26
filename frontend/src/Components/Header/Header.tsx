@@ -8,6 +8,8 @@ import Logo2 from "./../../Assets/logo.svg";
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
 // @ts-ignore
 import ShopIcon from "./../../Assets/shop-icon.png";
+// @ts-ignore
+import UserIcon from './../../Assets/user-icon.png'
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import { Link } from "react-router-dom";
@@ -112,6 +114,7 @@ const Header = () => {
         <Link to="/cart" className="HeaderNavbarAnchor cart">
           <img src={ShopIcon} alt="icon-shop" />
         </Link>
+        <Link to='/user-login' className="HeaderNavbarAnchor "><img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/></Link>
       </div>
     </div>
   );

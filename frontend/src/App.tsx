@@ -9,6 +9,9 @@ import AdminLoginPage from "./Pages/AdminLoginPage/AdminLoginPage";
 import AdminPage from "./Pages/AdminPage/AdminPage";
 import ScrollToTopOnNavigate from "./Components/ScrollToTopOnNavigate/ScrollToTopOnNavigate";
 import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
+import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
+import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
+
 
 function App() {
   const { isLoggedIn, loading } = useLoginAuth(document.cookie);
@@ -20,6 +23,8 @@ function App() {
           <Route path="/about-us" element={<AboutPage />} />
           <Route path="/shop" element={<ShopPage />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/user-login" element={<UserLoginPage/>}/>
+          <Route path="/user-register" element={<UserRegisterPage/>}/>
           <Route path="/admin-login" element={<AdminLoginPage />} />
           <Route
           path="/admin-page"

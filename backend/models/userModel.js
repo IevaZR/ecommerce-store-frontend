@@ -6,10 +6,10 @@ const userSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    userName: {
+    email: {
         type: String,
         required: true,
-        unique: true
+        unique: true,
     },
     password: {
         type: String,
@@ -17,29 +17,30 @@ const userSchema = new mongoose.Schema({
     },
     firstName: {
         type: String,
-        required: true
+        required: false
     },
     lastName: {
         type: String,
-        required: true
+        required: false
     },
     address: {
         type: String,
-        required: true
+        required: false
     },
     phoneNumber: {
         type: Number,
-        required: true
+        required: false
     },
-    email: {
-        type: String,
-        required: true
-    },
+    
     orders: [],
     favourites: [],
     admin: {
         type: Boolean,
         default: false
+    },
+    userName: {
+        type: String,
+        required: false
     }
 })
 
