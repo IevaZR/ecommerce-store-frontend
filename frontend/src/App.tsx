@@ -1,6 +1,7 @@
 import "./App.css";
 import MainPage from "./Pages/MainPage/MainPage";
 import { ActiveSearchProvider } from "./HelperFunctions/ActiveSearchContext";
+import { CartProvider } from "./HelperFunctions/CartContext";
 import { Routes, Route } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage/AboutPage";
 import ShopPage from "./Pages/ShopPage/ShopPage";
@@ -13,14 +14,16 @@ function App() {
   return (
     <div>
       <ActiveSearchProvider>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about-us" element={<AboutPage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/admin-login" element={<AdminLoginPage />} />
-          <Route path="/admin-page" element={<AdminPage />} />
-        </Routes>
+        <CartProvider>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/admin-login" element={<AdminLoginPage />} />
+            <Route path="/admin-page" element={<AdminPage />} />
+          </Routes>
+        </CartProvider>
         <ScrollToTopOnNavigate />
       </ActiveSearchProvider>
     </div>

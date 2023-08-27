@@ -30,6 +30,32 @@ export type Furniture = {
     image: string;
 };
 
+export interface cartItemProps {
+    cartItemData: cartItemData[];
+    onDelete: () => void;
+};
+
+export type onDelete = {
+    onDelete: () => void;
+};
+
+export type cartItemData = {
+    id: number | string;
+    title: string;
+    category: "sofas" | "chairs" | "tables" | "beds";
+    price: number;
+    quantity: number;
+    discount?: number;
+    description: string;
+    color: string;
+    dimensionsCm: {
+        width: number;
+        height: number;
+        depth: number;
+    };
+    image: string;
+};
+
 export interface ProductCardProps {
     productList: Furniture;
 };
