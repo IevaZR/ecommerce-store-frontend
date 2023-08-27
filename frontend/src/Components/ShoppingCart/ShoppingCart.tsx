@@ -5,6 +5,8 @@ import { useCart } from '../../HelperFunctions/CartContext';
 import {cartItemData} from '../../types/types';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+// @ts-ignore
+import EmptyCart from "./../../Assets/empty-cart-img.png";
 
 const ShoppingCart = () => {
   const {cartState, dispatch} = useCart();
@@ -32,6 +34,7 @@ const ShoppingCart = () => {
   const handleDeleteItem = (itemIndex: number) => {
     const deletedItem = cartState.cartItems[itemIndex];
     const updatedDeletedItem = {...deletedItem, quantity:0};
+
     const updatedCartItems = cartState.cartItems.map(
       (item: cartItemData, index: number) => {
         if (index === itemIndex) {
@@ -114,7 +117,14 @@ const ShoppingCart = () => {
       <h2 className='ShoppingCartHeading'>Your cart</h2>
       <div className="ShoppingCartBody">
         {cartIsEmpty ? 
-        (<p className='EmptyShoppingCartTitle'>Your shopping cart is empty</p>) : 
+        (<div className='EmptyShoppingCartCard'>
+          <p className='EmptyShoppingCartTitle'>
+            Your shopping cart is empty
+          </p> 
+          <div className='EmptyShoppingCartImg'>
+            <img src={EmptyCart} alt="empty-cart" />
+          </div>
+        </div>) : 
         (
           <>
             <table className='ShoppingCartContent'>

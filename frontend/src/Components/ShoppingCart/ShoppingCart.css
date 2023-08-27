@@ -24,10 +24,25 @@
     padding: 1rem 0 3rem 0;
 }
 
+.EmptyShoppingCartCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 3px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
 .EmptyShoppingCartTitle {
     text-align: center;
     font-family: "Comfortaa", cursive;
     padding: 2rem 0;
+}
+
+.EmptyShoppingCartImg img {
+    height: 250px;
 }
 
 .ShoppingCartContent {
@@ -61,4 +76,14 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 550px) {
+    .EmptyShoppingCartImg img {
+        height: 150px;
+    }
+
+    .ShoppingCartButtonsContainer {
+        justify-content: center;
+    }
 }
