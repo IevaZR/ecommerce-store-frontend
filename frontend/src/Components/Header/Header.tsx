@@ -112,9 +112,16 @@ const Header = () => {
           <Search />
         </div>
         <Link to="/cart" className="HeaderNavbarAnchor cart">
-          <img src={ShopIcon} alt="icon-shop" />
+            <img src={ShopIcon} alt="icon-shop" />
+            {/* {!cartIsEmpty && ( */}
+              <div className="CartProductsCount">
+                12
+              </div>
+            {/* )} */}
         </Link>
-        <Link to='/user-login' className="HeaderNavbarAnchor "><img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/></Link>
+        <Link to='/user-login' className="HeaderNavbarAnchor ">
+          <img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/>
+        </Link>
       </div>
     </div>
   );
