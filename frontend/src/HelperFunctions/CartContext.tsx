@@ -42,7 +42,7 @@ const cartReducer = (state: CartInitialStateTypes, action: CartActionTypes) => {
                 ...state,
                 cartItems: action.payload,
                 totalItems: action.payload.length,
-                cartIsEmpty:updatedDeleteCartItems.length === 0,
+                cartIsEmpty:action.payload.length === 0,
             };
         default:
         return state;
