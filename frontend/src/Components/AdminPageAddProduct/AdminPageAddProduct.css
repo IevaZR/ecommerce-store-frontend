@@ -1,13 +1,14 @@
 .AdminPageAddProductWrapper{
     position: fixed;
     width: 100%;
-   
+   transform: none;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     top: 0;
     left: 0;
+    padding-left: 10%;
     flex-direction: column;
     background-color: #f3f3f37a;
     z-index: 999;

@@ -104,3 +104,12 @@
     letter-spacing: 0.8px;
     cursor: pointer;
 }
+
+.AdminLoginErrorMessage {
+  margin-top: 1rem;
+    font-size: 0.7rem;
+    font-family: "Comfortaa", cursive;
+    letter-spacing: 0.8px;
+    color: red;
+    margin-bottom: 0;
+}
