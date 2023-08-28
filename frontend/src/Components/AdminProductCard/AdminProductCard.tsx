@@ -1,7 +1,5 @@
 import "./AdminProductCard.css";
-// @ts-ignore
 import EditIcon from "./../../Assets/edit-icon.png";
-// @ts-ignore
 import DeletIcon from "./../../Assets/delete-icon.png";
 import { useEditProduct } from "../../HelperFunctions/EditProductContext";
 import { useEditProductVisibility } from "../../HelperFunctions/EditProductVisibilityContext";

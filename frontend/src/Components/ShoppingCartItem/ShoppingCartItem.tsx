@@ -1,6 +1,5 @@
 import './ShoppingCartItem.css';
 import Button from '../ReusableComponents/Button/Button';
-// @ts-ignore
 import DeleteIcon from "./../../Assets/delete-icon.png";
 import { useReducer } from 'react';
 import {cartItemData} from '../../types/types';

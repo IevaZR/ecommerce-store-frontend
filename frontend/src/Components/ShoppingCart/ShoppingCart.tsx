@@ -5,7 +5,6 @@ import { useCart } from '../../HelperFunctions/CartContext';
 import {cartItemData} from '../../types/types';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// @ts-ignore
 import EmptyCart from "./../../Assets/empty-cart-img.png";
 
 const ShoppingCart = () => {
@@ -59,7 +58,7 @@ const ShoppingCart = () => {
     const updatedCartItems = cartState.cartItems.map((item: cartItemData, index:number) => {
       if (index === itemIndex) {
         console.log({ ...item, quantity: newQuantity });
-        return { ...item, quantity: newQuantity };
+        return { ...item, cartQuantity: newQuantity };
       }
       console.log(item);
       return item;
@@ -77,9 +76,9 @@ const ShoppingCart = () => {
     let total = 0;
 
     for(const item of items) {
-      total += item.price * item.quantity;
+      total += item.price * item.cartQuantity;
       console.log(item.price);
-      console.log(item.quantity);
+      console.log(item.cartQuantity);
       console.log(total);
     }
     return total;
