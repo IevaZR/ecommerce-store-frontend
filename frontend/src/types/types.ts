@@ -44,7 +44,7 @@ export type cartItemData = {
     title: string;
     category: "sofas" | "chairs" | "tables" | "beds";
     price: number;
-    quantity: number;
+    cartQuantity: number;
     discount?: number;
     description: string;
     color: string;

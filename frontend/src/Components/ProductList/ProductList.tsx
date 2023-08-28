@@ -14,17 +14,13 @@ const initialState = {
   error: "",
 };
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "LOADING":
-      return { ...state, isLoading: true };
-    case "SUCCESS":
-      return { ...state, data: action.payload, isLoading: false };
-    case "ERROR":
-      return { ...state, error: action.payload, isLoading: false };
-    default:
-      return state;
-  }
+const reducer = (action, state) => {
+    switch (action.type) {
+        case "LOADING": return {...state, isLoading: true};
+        case "SUCCESS": return {...state, data: action.payload, isLoading: false};
+        case "ERROR": return {...state, error: action.payload, isLoading: false};
+        default: return state;
+    }
 };
 
 const ProductList = ({ searchQuery }) => {

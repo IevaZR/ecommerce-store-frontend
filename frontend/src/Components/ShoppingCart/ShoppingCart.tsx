@@ -5,11 +5,10 @@ import { useCart } from '../../HelperFunctions/CartContext';
 import {cartItemData} from '../../types/types';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-// @ts-ignore
 import EmptyCart from "./../../Assets/empty-cart-img.png";
 
 const ShoppingCart = () => {
-  const {cartState, dispatch} = useCart();
+  const {cartState, cartDispatch} = useCart();
   const [cartIsEmpty, setCartIsEmpty] = useState(cartState.cartItems.length === 0);
   const navigate = useNavigate();
   const [totalCartPrice, setTotalCartPrice] = useState(0);
@@ -45,7 +44,7 @@ const ShoppingCart = () => {
     );
 
     setCartIsEmpty(cartState.cartItems.length === 0);
-    dispatch({ type: 'DELETE_FROM_CART', payload: itemIndex });
+    cartDispatch({ type: 'DELETE_FROM_CART', payload: itemIndex });
     
     const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
     setTotalCartPrice(calculatedTotalPrice);
@@ -59,7 +58,7 @@ const ShoppingCart = () => {
     const updatedCartItems = cartState.cartItems.map((item: cartItemData, index:number) => {
       if (index === itemIndex) {
         console.log({ ...item, quantity: newQuantity });
-        return { ...item, quantity: newQuantity };
+        return { ...item, cartQuantity: newQuantity };
       }
       console.log(item);
       return item;
@@ -67,7 +66,7 @@ const ShoppingCart = () => {
     console.log(newQuantity);
     setCartIsEmpty(updatedCartItems.length === 0);
     setCartItemQuantity(newQuantity);
-    dispatch({ type: "UPDATE_CART", payload: updatedCartItems });
+    cartDispatch({ type: "UPDATE_CART", payload: updatedCartItems });
 
     const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
     setTotalCartPrice(calculatedTotalPrice);
@@ -77,9 +76,9 @@ const ShoppingCart = () => {
     let total = 0;
 
     for(const item of items) {
-      total += item.price * item.quantity;
+      total += item.price * item.cartQuantity;
       console.log(item.price);
-      console.log(item.quantity);
+      console.log(item.cartQuantity);
       console.log(total);
     }
     return total;
@@ -94,7 +93,7 @@ const ShoppingCart = () => {
     console.log(cartState.cartItems);
     // Update cart and total price
     setCartIsEmpty(true);
-    dispatch({ type: "UPDATE_CART", payload: updatedCartItems });
+    cartDispatch({ type: "UPDATE_CART", payload: updatedCartItems });
   
     const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
     setTotalCartPrice(calculatedTotalPrice);

@@ -1,11 +1,7 @@
 import './ProductPreviewModal.css';
-// @ts-ignore
 import IconClose from '../../Assets/close-icon.png';
-// @ts-ignore
 import IconWidth from '../../Assets/width-icon.png';
-// @ts-ignore
 import IconHeight from '../../Assets/height-icon.png';
-// @ts-ignore
 import IconDepth from '../../Assets/depth-icon.png';
 import Button from '../ReusableComponents/Button/Button';
 import {Furniture} from '../../types/types';

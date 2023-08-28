@@ -1,7 +1,6 @@
 import React from "react";
 import "./AdminPageOrderCard.css";
 import axios from "axios";
-// @ts-ignore
 import Dots from "../../Assets/dots.png";
 import { useState } from "react";
 

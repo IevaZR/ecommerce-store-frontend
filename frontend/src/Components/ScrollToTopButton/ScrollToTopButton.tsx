@@ -1,6 +1,5 @@
 import "./ScrollToTopButton.css"; 
 import React, { useState, useEffect } from "react";
-// @ts-ignore
 import Arrow from "./../../Assets/up-arrow.png"
 
 const ScrollToTopButton = () => {

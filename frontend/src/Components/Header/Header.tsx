@@ -1,15 +1,10 @@
 import { useState } from "react";
 import "./Header.css";
-// @ts-ignore
 import Logo from "./../../Assets/logo.png";
-// @ts-ignore
 import Logo2 from "./../../Assets/logo.svg";
-// @ts-ignore
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
-// @ts-ignore
 import ShopIcon from "./../../Assets/shop-icon.png";
-// @ts-ignore
-import UserIcon from "./../../Assets/user-icon.png";
+import UserIcon from './../../Assets/user-icon.png'
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import { useCart } from "../../HelperFunctions/CartContext";
