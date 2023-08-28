@@ -9,6 +9,8 @@ const ActiveSearchContext = createContext({
     updateShowAllProducts: (value: boolean) => {},
     scrollToContacts: false,
     updateScrollToContacts: (query: boolean) => {},
+    user: null,
+    updateUser: (value: object) => {}
   });
 
 export const useActiveSearchContext = () => {
@@ -20,6 +22,7 @@ export const ActiveSearchProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState("")
   const [showAllProducts, setShowAllProducts] = useState(false)
   const [scrollToContacts, setScrollToContacts] = useState(false)
+  const [user, setUser] = useState(null)
   
 
   const updateActiveSearch = (value: boolean) => {
@@ -36,8 +39,12 @@ export const ActiveSearchProvider = ({ children }) => {
     setSearchQuery(query);
   }
 
+  const updateUser = (value: object) => {
+    setUser(value)
+  }
+
   return (
-    <ActiveSearchContext.Provider value={{ activeSearch, updateActiveSearch, searchQuery, updateSearchQuery, showAllProducts, updateShowAllProducts, scrollToContacts, updateScrollToContacts }}>
+    <ActiveSearchContext.Provider value={{ activeSearch, updateActiveSearch, searchQuery, updateSearchQuery, showAllProducts, updateShowAllProducts, scrollToContacts, updateScrollToContacts, user, updateUser}}>
       {children}
     </ActiveSearchContext.Provider>
   );

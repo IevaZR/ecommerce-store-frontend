@@ -9,18 +9,18 @@ import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
 // @ts-ignore
 import ShopIcon from "./../../Assets/shop-icon.png";
 // @ts-ignore
-import UserIcon from './../../Assets/user-icon.png'
+import UserIcon from "./../../Assets/user-icon.png";
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
-import { useCart } from '../../HelperFunctions/CartContext';
+import { useCart } from "../../HelperFunctions/CartContext";
 import { Link } from "react-router-dom";
-import { HashLink } from 'react-router-hash-link';
+import { HashLink } from "react-router-hash-link";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
-  const {cartState} = useCart();
+  const { cartState } = useCart();
 
-  const { updateActiveSearch, updateShowAllProducts } =
+  const { updateActiveSearch, updateShowAllProducts, user } =
     useActiveSearchContext();
 
   const showMobileNavbar = () => {
@@ -34,7 +34,7 @@ const Header = () => {
 
   const showAllProducts = () => {
     updateShowAllProducts(true);
-    updateActiveSearch(false)
+    updateActiveSearch(false);
   };
 
   const totalItems = cartState.cartItems.length;
@@ -44,7 +44,7 @@ const Header = () => {
     <div className="HeaderWrapper">
       <div className="HeaderLogoWrapper">
         <Link to="/" onClick={showMainPage}>
-            <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
+          <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
         </Link>
       </div>
       <ul className="HeaderNavbar">
@@ -64,9 +64,9 @@ const Header = () => {
           </Link>
         </li>
         <li className="HeaderNavbarListItem">
-        <HashLink smooth to="#footer" className="HeaderNavbarAnchor">
-              Contact
-            </HashLink>
+          <HashLink smooth to="#footer" className="HeaderNavbarAnchor">
+            Contact
+          </HashLink>
         </li>
       </ul>
       <div className="HeaderNavbarMobileWrapper">
@@ -84,7 +84,7 @@ const Header = () => {
         >
           <li className="HeaderNavbarListItem" onClick={showMainPage}>
             <Link to="/" className="HeaderNavbarAnchor">
-                Home
+              Home
             </Link>
           </li>
           <li className="HeaderNavbarListItem" onClick={showAllProducts}>
@@ -110,24 +110,31 @@ const Header = () => {
           </li>
         </ul>
       </div>
-      <button className='HeaderSecretButton'>
-        <Link to="/admin-login" className="HeaderNavbarAnchor">ADMIN LOGIN</Link>
+      <button className="HeaderSecretButton">
+        <Link to="/admin-login" className="HeaderNavbarAnchor">
+          ADMIN LOGIN
+        </Link>
       </button>
       <div className="HeaderUtilityContainer">
         <div className="HeaderSearchWrapper">
           <Search />
         </div>
         <Link to="/cart" className="HeaderNavbarAnchor cart">
-            <img src={ShopIcon} alt="icon-shop" />
-            {!cartIsEmpty && (
-              <div className="CartProductsCount">
-                {totalItems}
-              </div>
-            )}
+          <img src={ShopIcon} alt="icon-shop" />
+          {!cartIsEmpty && (
+            <div className="CartProductsCount">{totalItems}</div>
+          )}
         </Link>
-        <Link to='/user-login' className="HeaderNavbarAnchor ">
-          <img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/>
-        </Link>
+      
+          <Link to={user?"/user-page":"/user-login"} className="HeaderNavbarLoginAnchor">
+            <img
+              src={UserIcon}
+              alt="user-icon"
+              className="HeaderNavbarUserIcon"
+            />
+            {user && <p className="HeaderNavbarLoginName">{user.firstName}</p>}
+          </Link>
+        
       </div>
     </div>
   );
