@@ -8,7 +8,6 @@ const ProductCard = ({productList}: ProductCardProps) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {
-        console.log('click');
         setIsModalOpen(true);
     };
     const closeModal = () => {
