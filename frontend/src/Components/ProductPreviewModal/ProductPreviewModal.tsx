@@ -14,11 +14,14 @@ import { ProductPreviewModalProps } from '../../types/types';
 import { useCart } from '../../HelperFunctions/CartContext';
 
 const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) => {
-  const { dispatch } = useCart();
+  const { cartDispatch } = useCart();
 
   const handleAddToCart = () => {
-    dispatch(
-      {type: 'ADD_TO_CART', payload: productList});
+    cartDispatch(
+      { type: 'ADD_TO_CART', 
+        payload: {...productList, addedToTheCart: true,}
+      }
+    );
     onClose();
   }
 
@@ -52,7 +55,7 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
   return (
     <div className='ProductPreviewModalWrapper'>
       <div className="ProductPreviewModalBody" onClick={(e) => e.stopPropagation()}>
-      <div className="ModalCloseIcon" onClick={handleModalClose}>
+        <div className="ModalCloseIcon" onClick={handleModalClose}>
           <img
             src={IconClose}
             alt="icon-close"
