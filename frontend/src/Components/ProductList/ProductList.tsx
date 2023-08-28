@@ -14,7 +14,7 @@ const initialState = {
     error: '',
 };
 
-const reducer = (action, state) => {
+const reducer = (state, action ) => {
     switch (action.type) {
         case "LOADING": return {...state, isLoading: true};
         case "SUCCESS": return {...state, data: action.payload, isLoading: false};
@@ -75,7 +75,7 @@ const ProductList = ({ searchQuery }) => {
     const { selectedFilter } = useFilterContext();
     // END Filter
     const [products, setProducts] = useState(FurnitureData);
-    // console.log(productList?.data?.data); // <-- this is the data from MongoDB data base 
+    console.log(productList?.data?.data); // <-- this is the data from MongoDB data base 
     const [visibleProducts, setVisibleProducts] = useState(8);
     const [productsFound, setProductsFound] = useState(true); 
 
