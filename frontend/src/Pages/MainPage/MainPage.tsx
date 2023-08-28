@@ -11,14 +11,14 @@ const MainPage = () => {
 
   return (
     <FilterProvider>
-    <div className="MainPageWrapper" id="MainPage">
-      <Header />
-      <HeroSection />
-      <Filter />
-      <Advertisement />
-      <Footer/>
-      <ScrollToTopButton/>
-    </div>
+      <div className="MainPageWrapper" id="MainPage">
+        <Header />
+        <HeroSection />
+        <Filter />
+        <Advertisement />
+        <Footer/>
+        <ScrollToTopButton/>
+      </div>
     </FilterProvider>
   );
 };

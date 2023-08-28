@@ -1,12 +1,15 @@
 .ShoppingCartWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
     padding: 0 5% 0 5%;
     background-color: #c0bbbb37;
+    flex: 1;
 }
 
 .ShoppingCartHeading {
     width: 15rem;
-    margin: auto;
     text-align: center;
     font-family: "Comfortaa", cursive;
     padding: 2rem 0 0.5rem 0;
@@ -17,7 +20,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1280px;
     padding: 1rem 0 3rem 0;
+}
+
+.EmptyShoppingCartCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffff;
+    border-radius: 3px;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.EmptyShoppingCartTitle {
+    text-align: center;
+    font-family: "Comfortaa", cursive;
+    padding: 2rem 0;
+}
+
+.EmptyShoppingCartImg img {
+    height: 250px;
 }
 
 .ShoppingCartContent {
@@ -51,4 +76,14 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
+}
+
+@media screen and (max-width: 550px) {
+    .EmptyShoppingCartImg img {
+        height: 150px;
+    }
+
+    .ShoppingCartButtonsContainer {
+        justify-content: center;
+    }
 }

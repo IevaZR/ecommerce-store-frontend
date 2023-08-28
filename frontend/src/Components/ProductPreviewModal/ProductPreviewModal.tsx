@@ -11,9 +11,20 @@ import Button from '../ReusableComponents/Button/Button';
 import {Furniture} from '../../types/types';
 import { useState, useEffect } from 'react';
 import { ProductPreviewModalProps } from '../../types/types';
+import { useCart } from '../../HelperFunctions/CartContext';
 
 const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) => {
-   
+  const { cartDispatch } = useCart();
+
+  const handleAddToCart = () => {
+    cartDispatch(
+      { type: 'ADD_TO_CART', 
+        payload: {...productList, addedToTheCart: true,}
+      }
+    );
+    onClose();
+  }
+
   const [activeTab, setActiveTab] = useState('dimensions');
 
   const handleTabChange = (tab: string) => {
@@ -44,7 +55,7 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
   return (
     <div className='ProductPreviewModalWrapper'>
       <div className="ProductPreviewModalBody" onClick={(e) => e.stopPropagation()}>
-      <div className="ModalCloseIcon" onClick={handleModalClose}>
+        <div className="ModalCloseIcon" onClick={handleModalClose}>
           <img
             src={IconClose}
             alt="icon-close"
@@ -119,7 +130,7 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
               <div className="ModalProductPrice">
                 &euro; {productList.price}
               </div>
-              <Button text='Add to basket' ></Button>
+              <Button text='Add to cart' onClick={handleAddToCart} ></Button>
 
             </div>
           </div>

@@ -1,7 +1,7 @@
 import "./Button.css";
 import { ButtonProps } from "../../../types/types";
 
-const Button = ({ text, backgroundColor, onClick }: ButtonProps) => {
+const Button = ({ text, backgroundColor, icon, onClick }: ButtonProps) => {
 
   const buttonCustomStyle = {
     backgroundColor: backgroundColor, 
@@ -14,7 +14,7 @@ const Button = ({ text, backgroundColor, onClick }: ButtonProps) => {
       style={buttonCustomStyle}
       
       onClick={onClick}>
-        {text}
+        {text}{icon && <img className="ButtonIcon" src={icon} alt="" />}
     </button>
   );
 };
