@@ -19,25 +19,25 @@ function App() {
   const { isLoggedIn, loading } = useLoginAuth(document.cookie);
   return (
     <div>
-      <ActiveSearchProvider>
       <FilterProvider>
-        <Routes>
-          <Route path="/" element={<MainPage />} />
-          <Route path="/about-us" element={<AboutPage />} />
-          <Route path="/shop" element={<ShopPage />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/user-login" element={<UserLoginPage/>}/>
-          <Route path="/user-register" element={<UserRegisterPage/>}/>
-          <Route path="/user-page" element={<UserPage/>}/>
-          <Route path="/admin-login" element={<AdminLoginPage />} />
-          <Route
-          path="/admin-page"
-          element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
-        />
-        </Routes>
-        <ScrollToTopOnNavigate />
+        <ActiveSearchProvider>
+          <Routes>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/shop" element={<ShopPage />} />
+            <Route path="/cart" element={<CartPage />} />
+            <Route path="/user-login" element={<UserLoginPage />} />
+            <Route path="/user-register" element={<UserRegisterPage />} />
+            <Route path="/user-page" element={<UserPage />} />
+            <Route path="/admin-login" element={<AdminLoginPage />} />
+            <Route
+              path="/admin-page"
+              element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
+            />
+          </Routes>
+          <ScrollToTopOnNavigate />
+        </ActiveSearchProvider>
       </FilterProvider>
-      </ActiveSearchProvider>
     </div>
   );
 }

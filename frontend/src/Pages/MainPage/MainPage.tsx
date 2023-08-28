@@ -5,6 +5,7 @@ import Footer from "../../Components/Footer/Footer";
 import Filter from "../../Components/Filter/Filter";
 import ScrollToTopButton from "../../Components/ScrollToTopButton/ScrollToTopButton";
 import Advertisement from "../../Components/Advertisment/Advertisement";
+import FeaturedProducts from "../../Components/FeaturedProducts/FeaturedProducts";
 
 const MainPage = () => {
 
@@ -14,6 +15,7 @@ const MainPage = () => {
       <HeroSection />
       <Filter />
       <Advertisement />
+      <FeaturedProducts />
       <Footer/>
       <ScrollToTopButton/>
     </div>

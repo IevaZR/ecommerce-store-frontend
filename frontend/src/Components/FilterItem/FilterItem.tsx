@@ -1,27 +1,31 @@
 import React from 'react'
-import "../FilterItem/FilterItem.css"
+import "./FilterItem.css"
 import { useFilterContext } from '../../HelperFunctions/FilterContext';
-import { Link } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import { useActiveSearchContext } from '../../HelperFunctions/ActiveSearchContext';
 
-const FilterItem = ({ filterName, filterBackgroundImage }) => {
+const FilterItem = ({ filterCategory, filterBackgroundImage }) => {
   const { selectedFilter, setSelectedFilter } = useFilterContext();
+  const navigate = useNavigate();
+  const { updateShowAllProducts } =
+    useActiveSearchContext();
 
   const handleClick = () => {
+    updateShowAllProducts(false);
+    navigate("/shop");
     setSelectedFilter((prevSelectedFilter) =>
-    prevSelectedFilter === filterName.toLowerCase() ? '' : filterName.toLowerCase()
+    prevSelectedFilter === filterCategory.toLowerCase() ? '' : filterCategory.toLowerCase()
   );
   };
   
   return (
-    <Link to="/shop" className="HeaderNavbarAnchor">
     <div
-      className={`FilterItemWrapper ${selectedFilter === filterName.toLowerCase() ? 'selected' : ''}`}
+      className={`FilterItemWrapper ${selectedFilter === filterCategory.toLowerCase() ? 'selected' : ''}`}
       onClick={handleClick}
     >
-        <img className="FilterItemImage" src={filterBackgroundImage} alt={filterName} />
-        <h2 className="FilterItemName">{filterName}</h2>
+        <img className="FilterItemImage" src={filterBackgroundImage} alt={filterCategory} />
+        <h2 className="FilterItemName">{filterCategory}</h2>
     </div>
-    </Link>
   );
 };
 

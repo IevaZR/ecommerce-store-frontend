@@ -1,11 +1,11 @@
 .AdvertisementSectionWrapper {
   max-width: 1280px;
-    display: flex;
-    justify-content: space-between;
-    padding: 4rem 5% 4rem 5%;
-    position: relative;
-    overflow: hidden;
-    width: 90%;
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 5% 4rem 5%;
+  position: relative;
+  overflow: hidden;
+  width: 90%;
 }
 
 .AdvertisementSectionHeadingWrapper {
@@ -21,6 +21,7 @@
   justify-content: flex-start;
   width: 50%;
   max-height: 400px;
+  position: relative;
 }
 
 .AdvertisementSectionImage {
@@ -29,6 +30,53 @@
   object-fit: cover;
   box-shadow: 2px 5px 15px rgba(0, 0, 0, 0.4);
   border-radius: 3px;
+  z-index: 0;
+}
+.AdvertisementSectionImageDiscountWrapper {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  display: flex;
+  left: -100px;
+  top: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.AdvertisementSectionImageDiscountLayer {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgba(128, 0, 0, 0.6);;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.AdvertisementSectionImageDiscount {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  position: relative;
+  background-color: #800000;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.AdvertisementSectionImageDiscount p {
+  margin: 0;
+  padding: 0;
 }
 
 .AdvertisementSectionHeading {
@@ -59,7 +107,6 @@
   }
 }
 
-
 @media screen and (max-width: 800px) {
   .AdvertisementSectionImageWrapper .SharedButton {
     margin-top: 1rem;
@@ -71,6 +118,7 @@
     padding: 2rem;
     flex-direction: column-reverse;
     text-align: center;
+    justify-content: center;
   }
   .AdvertisementSectionHeadingWrapper {
     width: 100%;
