@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import EmptyCart from "./../../Assets/empty-cart-img.png";
 
 const ShoppingCart = () => {
-  const {cartState, dispatch} = useCart();
+  const {cartState, cartDispatch} = useCart();
   const [cartIsEmpty, setCartIsEmpty] = useState(cartState.cartItems.length === 0);
   const navigate = useNavigate();
   const [totalCartPrice, setTotalCartPrice] = useState(0);
@@ -45,7 +45,7 @@ const ShoppingCart = () => {
     );
 
     setCartIsEmpty(cartState.cartItems.length === 0);
-    dispatch({ type: 'DELETE_FROM_CART', payload: itemIndex });
+    cartDispatch({ type: 'DELETE_FROM_CART', payload: itemIndex });
     
     const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
     setTotalCartPrice(calculatedTotalPrice);
@@ -67,7 +67,7 @@ const ShoppingCart = () => {
     console.log(newQuantity);
     setCartIsEmpty(updatedCartItems.length === 0);
     setCartItemQuantity(newQuantity);
-    dispatch({ type: "UPDATE_CART", payload: updatedCartItems });
+    cartDispatch({ type: "UPDATE_CART", payload: updatedCartItems });
 
     const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
     setTotalCartPrice(calculatedTotalPrice);
@@ -94,7 +94,7 @@ const ShoppingCart = () => {
     console.log(cartState.cartItems);
     // Update cart and total price
     setCartIsEmpty(true);
-    dispatch({ type: "UPDATE_CART", payload: updatedCartItems });
+    cartDispatch({ type: "UPDATE_CART", payload: updatedCartItems });
   
     const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
     setTotalCartPrice(calculatedTotalPrice);
