@@ -13,6 +13,7 @@ import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
 import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
 import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
 import UserPage from "./Pages/UserPage/UserPage";
+import { FilterProvider } from "./HelperFunctions/FilterContext";
 
 
 function App() {
@@ -20,25 +21,27 @@ function App() {
   
   return (
     <div>
-      <ActiveSearchProvider>
-        <CartProvider>
-          <Routes>
-            <Route path="/" element={<MainPage />} />
-            <Route path="/about-us" element={<AboutPage />} />
-            <Route path="/shop" element={<ShopPage />} />
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/user-login" element={<UserLoginPage/>}/>
-            <Route path="/user-register" element={<UserRegisterPage/>}/>
-            <Route path="/user-page" element={isLoggedIn ? <UserPage /> : <Navigate to="/user-login" />}/>
-            <Route path="/admin-login" element={<AdminLoginPage />} />
-            <Route
-            path="/admin-page"
-            element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
-            />
-          </Routes>
-        </CartProvider>
-        <ScrollToTopOnNavigate />
-      </ActiveSearchProvider>
+      <FilterProvider>
+        <ActiveSearchProvider>
+          <CartProvider>
+            <Routes>
+              <Route path="/" element={<MainPage />} />
+              <Route path="/about-us" element={<AboutPage />} />
+              <Route path="/shop" element={<ShopPage />} />
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/user-login" element={<UserLoginPage />} />
+              <Route path="/user-register" element={<UserRegisterPage />} />
+              <Route path="/user-page" element={isLoggedIn ? <UserPage /> : <Navigate to="/user-login"  />} />
+              <Route path="/admin-login" element={<AdminLoginPage />} />
+              <Route
+                path="/admin-page"
+                element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
+              />
+            </Routes>
+          </CartProvider>
+          <ScrollToTopOnNavigate />
+        </ActiveSearchProvider>
+      </FilterProvider>
     </div>
   );
 }

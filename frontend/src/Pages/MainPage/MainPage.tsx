@@ -5,21 +5,20 @@ import Footer from "../../Components/Footer/Footer";
 import Filter from "../../Components/Filter/Filter";
 import ScrollToTopButton from "../../Components/ScrollToTopButton/ScrollToTopButton";
 import Advertisement from "../../Components/Advertisment/Advertisement";
-import { FilterProvider } from "../../HelperFunctions/FilterContext";
+import FeaturedProducts from "../../Components/FeaturedProducts/FeaturedProducts";
 
 const MainPage = () => {
 
   return (
-    <FilterProvider>
-      <div className="MainPageWrapper" id="MainPage">
-        <Header />
-        <HeroSection />
-        <Filter />
-        <Advertisement />
-        <Footer/>
-        <ScrollToTopButton/>
-      </div>
-    </FilterProvider>
+    <div className="MainPageWrapper" id="MainPage">
+      <Header />
+      <HeroSection />
+      <Filter />
+      <Advertisement />
+      <FeaturedProducts />
+      <Footer/>
+      <ScrollToTopButton/>
+    </div>
   );
 };
 
