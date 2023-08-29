@@ -15,15 +15,20 @@ const initialState = {
 };
 
 const reducer = (action, state) => {
-    switch (action.type) {
-        case "LOADING": return {...state, isLoading: true};
-        case "SUCCESS": return {...state, data: action.payload, isLoading: false};
-        case "ERROR": return {...state, error: action.payload, isLoading: false};
-        default: return state;
-    }
+  switch (action.type) {
+    case "LOADING":
+      return { ...state, isLoading: true };
+    case "SUCCESS":
+      return { ...state, data: action.payload, isLoading: false };
+    case "ERROR":
+      return { ...state, error: action.payload, isLoading: false };
+    default:
+      return state;
+  }
 };
 
 const ProductList = ({ searchQuery }) => {
+  const [loading, setLoading] = useState(false);
   const [productList, dispatch] = useReducer(reducer, initialState);
   const { cartState, cartDispatch } = useCart();
   const [showAddToCartModal, setShowAddToCartModal] = useState(false);
@@ -65,6 +70,7 @@ const ProductList = ({ searchQuery }) => {
 
   const handleFetch = async () => {
     dispatch({ type: "LOADING" });
+    setProductsFound(true);
     try {
       const data = await axios.get("http://localhost:3009/get-all");
       dispatch({ type: "SUCCESS", payload: data });
@@ -106,11 +112,6 @@ const ProductList = ({ searchQuery }) => {
     });
   };
 
-  const foundProducts = useMemo(
-    () => filterBySearchQuery(FurnitureData, searchQuery),
-    [FurnitureData, searchQuery]
-  );
-
   //--------END OF SEARCH BY SEARCH QUERY----------
 
   //--------START OF FILTER------------------------
@@ -122,21 +123,31 @@ const ProductList = ({ searchQuery }) => {
   };
   //--------END OF FILTER--------------------------
   useEffect(() => {
-    const filteredProductsByCategory = filterByCategory(
-      fetchedData,
-      selectedFilter
-    );
-    
-    const filteredProducts = filterBySearchQuery(
-      filteredProductsByCategory,
-      searchQuery
-    );
-    if (filteredProducts.length === 0) {
-      setProductsFound(false);
-    } else {
-      setProductsFound(true);
-      setFilteredData(filteredProducts);
-    }
+    setLoading(true);
+    const timeoutId = setTimeout(() => {
+      
+      const filteredProductsByCategory = filterByCategory(
+        fetchedData,
+        selectedFilter
+      );
+
+      const filteredProducts = filterBySearchQuery(
+        filteredProductsByCategory,
+        searchQuery
+      );
+
+      if (filteredProducts.length === 0) {
+        setProductsFound(false);
+      } else {
+        setProductsFound(true);
+        setFilteredData(filteredProducts);
+      }
+      setLoading(false);
+    }, 600);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [selectedFilter, fetchedData, searchQuery]);
 
   const handleLoadMore = () => {
@@ -145,8 +156,6 @@ const ProductList = ({ searchQuery }) => {
 
   const productsToShow = filteredData.slice(0, visibleProducts);
 
-
-  
   return (
     <div className="ProductListWrapper">
       {productsFound ? (
@@ -164,6 +173,7 @@ const ProductList = ({ searchQuery }) => {
         <Button onClick={handleLoadMore} text="Load More"></Button>
       )}
       {showAddToCartModal && <AddToCartModal></AddToCartModal>}
+      {loading && <div className="ProductsNotFoundWrapper"><p>Loading...</p></div>}
     </div>
   );
 };

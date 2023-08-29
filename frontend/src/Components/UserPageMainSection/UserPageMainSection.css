@@ -34,3 +34,8 @@
 .UserPageInfoSection {
     width: 100%;
 }
+
+.DeleteAccount {
+    margin-top: 3rem;
+    font-size: 0.5rem;
+}

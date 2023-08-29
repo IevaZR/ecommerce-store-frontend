@@ -4,14 +4,15 @@ import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContex
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const UserPageFavouritesList = () => {
+const UserPageFavouritesList = ({ fetchFavourites }) => {
   const { user } = useActiveSearchContext();
   const [favouritedProducts, setFavouritedProducts] = useState([]);
 
   useEffect(() => {
-    getUserFavourites();
-    console.log(getUserFavouritesIds());
-  }, []);
+    if (fetchFavourites) {
+      getUserFavourites();
+    }
+  }, [fetchFavourites]);
 
   const getUserFavouritesIds = () => {
     const favouritesArray = [];
@@ -27,6 +28,7 @@ const UserPageFavouritesList = () => {
       );
       setFavouritedProducts(response.data);
       console.log(array);
+      console.log(response.data);
     } catch (err) {
       console.log(err);
     }
