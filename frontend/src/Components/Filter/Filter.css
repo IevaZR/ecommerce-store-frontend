@@ -2,10 +2,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     padding: 3rem 5% 3rem 5%;
     background-color: #c0bbbb37;
-    width: 90%;
+    width: 100%;
 }
 .Filter {
     width: 100%;

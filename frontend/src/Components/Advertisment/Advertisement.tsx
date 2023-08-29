@@ -86,6 +86,7 @@ const Advertisement = () => {
 
   return (
     randomProduct && (
+      <div className="AdvertisementSectionBlock">
       <div
         className={`AdvertisementSectionWrapper ${slideIn ? "slideIn" : ""}`}
       >
@@ -113,6 +114,7 @@ const Advertisement = () => {
             <Button text="Shop Now" onClick={showAllProducts}></Button>
           </Link>
         </div>
+      </div>
       </div>
     )
   );
