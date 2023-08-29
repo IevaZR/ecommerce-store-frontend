@@ -1,22 +1,20 @@
 import { useState } from "react";
 import "./Header.css";
-// @ts-ignore
 import Logo from "./../../Assets/logo.png";
-// @ts-ignore
 import Logo2 from "./../../Assets/logo.svg";
-// @ts-ignore
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
-// @ts-ignore
 import ShopIcon from "./../../Assets/shop-icon.png";
-// @ts-ignore
 import UserIcon from './../../Assets/user-icon.png'
 import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
+import { useCart } from '../../HelperFunctions/CartContext';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
+  const {cartState} = useCart();
+
   const { updateActiveSearch, updateShowAllProducts } =
     useActiveSearchContext();
 
@@ -33,6 +31,9 @@ const Header = () => {
     updateShowAllProducts(true);
     updateActiveSearch(false)
   };
+
+  const totalItems = cartState.cartItems.length;
+  const cartIsEmpty = totalItems === 0;
 
   return (
     <div className="HeaderWrapper">
@@ -112,9 +113,16 @@ const Header = () => {
           <Search />
         </div>
         <Link to="/cart" className="HeaderNavbarAnchor cart">
-          <img src={ShopIcon} alt="icon-shop" />
+            <img src={ShopIcon} alt="icon-shop" />
+            {!cartIsEmpty && (
+              <div className="CartProductsCount">
+                {totalItems}
+              </div>
+            )}
         </Link>
-        <Link to='/user-login' className="HeaderNavbarAnchor "><img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/></Link>
+        <Link to='/user-login' className="HeaderNavbarAnchor ">
+          <img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/>
+        </Link>
       </div>
     </div>
   );

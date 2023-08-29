@@ -3,8 +3,10 @@ import "./ProductList.css";
 import axios from 'axios';
 import Button from '../ReusableComponents/Button/Button';
 import { FurnitureData } from "../../data/data";
-import { useState, useEffect, useMemo, useReducer } from "react";
+import { useState, useEffect, useMemo, useReducer, useRef } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
+import AddToCartModal from "../AddToCartModal/AddToCartModal";
+import { useCart } from '../../HelperFunctions/CartContext';
 
 const initialState = {
     isLoading: false,
@@ -12,7 +14,7 @@ const initialState = {
     error: '',
 };
 
-const reducer = (action, state) => {
+const reducer = (state, action ) => {
     switch (action.type) {
         case "LOADING": return {...state, isLoading: true};
         case "SUCCESS": return {...state, data: action.payload, isLoading: false};
@@ -24,6 +26,35 @@ const reducer = (action, state) => {
 const ProductList = ({ searchQuery }) => {
 
     const [productList, dispatch] = useReducer(reducer, initialState);
+    const {cartState, cartDispatch} = useCart();
+    const [showAddToCartModal, setShowAddToCartModal] = useState(false);
+    console.log(cartState.addedToTheCart);
+    console.log(showAddToCartModal);
+    const modalTimeoutRef = useRef(null);
+
+    useEffect(() => {
+        if (cartState.addedToTheCart) {
+            setShowAddToCartModal(true);
+
+            // Clear any previous timeout
+            if (modalTimeoutRef.current) {
+                clearTimeout(modalTimeoutRef.current);
+            }
+
+            // Set a timeout to close the modal after 2 seconds
+            modalTimeoutRef.current = setTimeout(() => {
+                setShowAddToCartModal(false);
+                cartDispatch({type: 'RESET_ADDED_TO_CART'})
+            }, 2000);
+        }
+        
+        // Cleanup function
+        return () => {
+            if (modalTimeoutRef.current) {
+                clearTimeout(modalTimeoutRef.current);
+            }
+        };
+    }, [cartState.addedToTheCart, cartDispatch]);
 
     const handleFetch = async ()=> {
         dispatch({ type: "LOADING" });
@@ -146,6 +177,9 @@ const ProductList = ({ searchQuery }) => {
                     onClick={handleLoadMore}
                     text="Load More"
                 ></Button>
+            )}
+            {showAddToCartModal && (
+                <AddToCartModal></AddToCartModal>
             )}
         </div>
     );

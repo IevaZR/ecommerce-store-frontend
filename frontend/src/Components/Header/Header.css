@@ -59,11 +59,36 @@
   align-items: flex-end;
 }
 
+.HeaderNavbarAnchor.cart {
+  position: relative;
+}
+
 .HeaderNavbarAnchor.cart img {
   width: 30px;
   margin-left: 30px;
   display: flex;
   align-items: flex-end;
+}
+
+.CartProductsCount {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  border-radius: 50%;
+  background-color: #e9dabf;
+  border: 1px solid gray;
+  white-space: nowrap;
+  text-align: center;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-family: "Comfortaa", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
 }
 
 .HeaderNavbarUserIcon {

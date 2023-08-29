@@ -8,7 +8,6 @@ const ProductCard = ({productList}: ProductCardProps) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
     const openModal = () => {
-        console.log('click');
         setIsModalOpen(true);
     };
     const closeModal = () => {
@@ -22,7 +21,7 @@ const ProductCard = ({productList}: ProductCardProps) => {
                 <img
                     src={productList.image}
                     alt="product img"
-                    />
+                />
             </div>
             <div className="ProductDataContainer">
                 <div className="ProductName">
@@ -38,11 +37,11 @@ const ProductCard = ({productList}: ProductCardProps) => {
             ></Button>
         </div>
         {isModalOpen && (
-                <ProductPreviewModal
-                    onClose={closeModal}
-                    productList={productList}
-                />
-            )}
+            <ProductPreviewModal
+                onClose={closeModal}
+                productList={productList}
+            />
+        )}
     </>
     );
 }
