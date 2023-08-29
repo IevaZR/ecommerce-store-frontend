@@ -117,7 +117,7 @@ const AdminPageOrderCard = ({ order, updateOrderList }) => {
             {order.customer.address}
           </p>
           <p className="AdminPageOrderCardCustomerSum">
-            Order total: EUR{" "}
+            Order total: EUR
             {calculateOrderTotal(order.orderedProducts).toFixed(2)}
           </p>
         </div>

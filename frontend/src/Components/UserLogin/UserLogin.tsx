@@ -15,6 +15,7 @@ const UserLogin = () => {
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState(false);
   const { updateUser } = useActiveSearchContext();
+  const [userLoaded, setUserLoaded] = useState(false);
 
   const handleLoginInput = (event) => {
     setLoginData((prev) => ({
@@ -32,8 +33,6 @@ const UserLogin = () => {
 
       if (data === "Authorized") {
         fetchUserData();
-        navigate("/user-page");
-        console.log(loginData);
       }
     } catch (err) {
       console.log(err);
@@ -47,6 +46,7 @@ const UserLogin = () => {
         `http://localhost:3009/user/get-user/${loginData.email}`
       );
       updateUser(user.data[0]);
+      navigate("/user-page");
     } catch (error) {
       console.log(error);
     }

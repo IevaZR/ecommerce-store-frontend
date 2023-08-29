@@ -4,6 +4,7 @@ import UserPageOrderList from "../UserPageOrderList/UserPageOrderList";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
+import UserPageFavouritesList from "../UserPageFavouritesList/UserPageFavouritesList";
 
 const UserPageMainSection = () => {
 
@@ -31,7 +32,8 @@ const UserPageMainSection = () => {
         </button>
       </div>
       <div className="UserPageInfoSection">
-        <UserPageOrderList />
+        {/* <UserPageOrderList /> */}
+        <UserPageFavouritesList/>
       </div>
     </div>
   );
