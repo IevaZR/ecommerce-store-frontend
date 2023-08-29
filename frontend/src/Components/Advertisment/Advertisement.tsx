@@ -87,34 +87,32 @@ const Advertisement = () => {
   return (
     randomProduct && (
       <div className="AdvertisementSectionBlock">
-      <div
-        className={`AdvertisementSectionWrapper ${slideIn ? "slideIn" : ""}`}
-      >
-        <div className="AdvertisementSectionImageWrapper">
-          <img
-            src={randomProduct.image}
-            alt="furniture"
-            className="AdvertisementSectionImage"
-          />
-          <div className="AdvertisementSectionImageDiscountWrapper">
-            <div className="AdvertisementSectionImageDiscountLayer">
-              <div className="AdvertisementSectionImageDiscount">
-                <p>SAVE</p>
-                <p>{`${(randomProduct.discount * 100).toFixed(0)}%`}</p>
+        <div className={`AdvertisementSectionWrapper ${slideIn ? "slideIn" : ""}`}>
+          <div className="AdvertisementSectionImageWrapper">
+            <img
+              src={randomProduct.image}
+              alt="furniture"
+              className="AdvertisementSectionImage"
+            />
+            <div className="AdvertisementSectionImageDiscountWrapper">
+              <div className="AdvertisementSectionImageDiscountLayer">
+                <div className="AdvertisementSectionImageDiscount">
+                  <p>SAVE</p>
+                  <p>{`${(randomProduct.discount * 100).toFixed(0)}%`}</p>
+                </div>
               </div>
             </div>
-    </div>
+          </div>
+          <div className="AdvertisementSectionHeadingWrapper">
+            <h1 className="AdvertisementSectionHeading">{randomProduct.title}</h1>
+            <p className="AdvertisementSectionParagraph">
+              {randomProduct.features[1].featureParagraph}
+            </p>
+            <Link to="/shop" className="HeaderNavbarAnchor">
+              <Button text="Shop Now" onClick={showAllProducts}></Button>
+            </Link>
+          </div>
         </div>
-        <div className="AdvertisementSectionHeadingWrapper">
-          <h1 className="AdvertisementSectionHeading">{randomProduct.title}</h1>
-          <p className="AdvertisementSectionParagraph">
-            {randomProduct.features[1].featureParagraph}
-          </p>
-          <Link to="/shop" className="HeaderNavbarAnchor">
-            <Button text="Shop Now" onClick={showAllProducts}></Button>
-          </Link>
-        </div>
-      </div>
       </div>
     )
   );
