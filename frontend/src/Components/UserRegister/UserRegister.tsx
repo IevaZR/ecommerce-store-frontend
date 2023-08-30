@@ -8,9 +8,14 @@ import axios from "axios";
 
 const UserRegister = () => {
   const [registerData, setRegisterData] = useState({
-    userName: "",
+    id: Math.floor(Math.random() * 100000),
+    email: "",
+    firstName: "",
+    lastName: "",
     password: "",
+    userName: `User${Math.floor(Math.random() * 100000)}`,
   });
+  const [welcomeMessage, setWelcomeMessage] = useState(false)
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -27,15 +32,19 @@ const UserRegister = () => {
         "http://localhost:3009/user/create-user",
         registerData
       );
-
-      if (data === "Authorized") {
-        navigate("/user-page");
-        console.log(registerData);
-      }
+        navigate("/user-login");
     } catch (err) {
       console.log(err);
       setErrorMessage(true);
     }
+    setRegisterData({
+      id: Math.floor(Math.random() * 100000),
+      email: "",
+      firstName: "",
+      lastName: "",
+      password: "",
+      userName: `User${Math.floor(Math.random() * 100000)}`,
+    });
   };
 
   return (
@@ -55,6 +64,7 @@ const UserRegister = () => {
             className="UserRegisterEmailInput"
             id="UserRegisterEmailInput"
             name="email"
+            value={registerData.email}
             onChange={handleRegisterInput}
           />
           <label
@@ -68,6 +78,7 @@ const UserRegister = () => {
             className="UserRegisterUserNameInput"
             id="UserRegisterUserNameInput"
             name="firstName"
+            value={registerData.firstName}
             onChange={handleRegisterInput}
           />
           <label
@@ -81,6 +92,7 @@ const UserRegister = () => {
             className="UserRegisterLastNameInput"
             id="UserRegisterLastNameInput"
             name="lastName"
+            value={registerData.lastName}
             onChange={handleRegisterInput}
           />
           <label
@@ -94,17 +106,21 @@ const UserRegister = () => {
             className="UserRegisterPasswordInput"
             id="UserRegisterPasswordInput"
             name="password"
+            value={registerData.password}
             onChange={handleRegisterInput}
           />
         </form>
         {errorMessage && (
           <p className="UserRegisterErrorMessage">
-            Invalid username or password
+            Invalid / already used email
           </p>
         )}
         <div className="UserRegisterCheckboxWraper">
-          <input type="checkbox" id="UserRegisterCheckbox"/>
-          <label htmlFor="UserRegisterCheckbox" className="UserRegisterCheckboxText">
+          <input type="checkbox" id="UserRegisterCheckbox" />
+          <label
+            htmlFor="UserRegisterCheckbox"
+            className="UserRegisterCheckboxText"
+          >
             Sign me up for newsletters and special offers
           </label>
         </div>
@@ -113,7 +129,7 @@ const UserRegister = () => {
         </button>
 
         <p className="UserRegisterNoAccount">
-          Already have an account? Please{" "}
+          Already have an account? Please
           <Link to="/user-login">login here</Link>
         </p>
       </div>

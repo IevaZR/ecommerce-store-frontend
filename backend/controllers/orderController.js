@@ -25,8 +25,19 @@ export const getAllOrders = async (req, res) => {
 export const getOrder = async (req, res) => {
     try {
         const order = await orderModel.find({ id: req.params.id })
-
+        console.log(req.params.id)
         res.status(201).send(order);
+    } catch (error) {
+        console.log(error);
+        console.log(req.params.id)
+        res.status(400).send(error);
+    }
+};
+
+export const getUserOrders = async (req, res) => {
+    try {
+        const orders = await orderModel.find({ "customer.id":req.params.userId})
+        res.status(201).send(orders);
     } catch (error) {
         console.log(error);
         res.status(400).send(error);
