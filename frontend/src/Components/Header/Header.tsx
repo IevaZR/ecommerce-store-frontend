@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
-import Logo from "./../../Assets/logo.png";
 import Logo2 from "./../../Assets/logo.svg";
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
 import ShopIcon from "./../../Assets/shop-icon.png";
@@ -10,10 +9,12 @@ import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContex
 import { useCart } from '../../HelperFunctions/CartContext';
 import { Link } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
+import { cartItemData } from "../../types/types";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const {cartState} = useCart();
+  const [totalCartItems, setTotalCartItems] = useState(cartState.cartItems.length);
 
   const { updateActiveSearch, updateShowAllProducts } =
     useActiveSearchContext();
@@ -32,6 +33,19 @@ const Header = () => {
     updateActiveSearch(false)
   };
 
+  const updateTotalItemQuantity = (items: cartItemData[]) => {
+    return items.reduce((total: number, item: cartItemData) => total + item.cartQuantity, 0);
+  };
+
+  const updatedCartItemQuantity = updateTotalItemQuantity(cartState.cartItems);
+  console.log(updatedCartItemQuantity);
+
+  useEffect(() => {
+    setTotalCartItems(updateTotalItemQuantity(cartState.cartItems));
+  }, [cartState.cartItems]);
+
+  console.log(cartState.cartItems);
+  console.log(cartState.cartItems.length);
   const totalItems = cartState.cartItems.length;
   const cartIsEmpty = totalItems === 0;
 
@@ -39,7 +53,7 @@ const Header = () => {
     <div className="HeaderWrapper">
       <div className="HeaderLogoWrapper">
         <Link to="/" onClick={showMainPage}>
-            <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
+          <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
         </Link>
       </div>
       <ul className="HeaderNavbar">
@@ -116,7 +130,7 @@ const Header = () => {
             <img src={ShopIcon} alt="icon-shop" />
             {!cartIsEmpty && (
               <div className="CartProductsCount">
-                {totalItems}
+                {totalCartItems}
               </div>
             )}
         </Link>
