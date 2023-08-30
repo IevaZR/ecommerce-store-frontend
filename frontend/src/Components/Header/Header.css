@@ -59,6 +59,10 @@
   align-items: flex-end;
 }
 
+.HeaderNavbarAnchor.cart {
+  position: relative;
+}
+
 .HeaderNavbarAnchor.cart img {
   width: 30px;
   margin-left: 30px;
@@ -66,17 +70,53 @@
   align-items: flex-end;
 }
 
-.HeaderNavbarUserIcon {
-  width: 25px;
+.CartProductsCount {
+  position: absolute;
+  bottom: -7px;
+  right: -7px;
+  border-radius: 50%;
+  background-color: #e9dabf;
+  border: 1px solid gray;
+  white-space: nowrap;
+  text-align: center;
+  margin: auto;
+  width: 16px;
+  height: 16px;
+  font-size: 10px;
+  font-family: "Comfortaa", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-weight: bold;
+}
+
+.HeaderNavbarLoginAnchor {
+  text-decoration: none;
+  color: black;
   margin-left: 30px;
   display: flex;
-  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+.HeaderNavbarUserIcon {
+  width: 25px;
+  display: flex;
   filter: opacity(70%);
+}
+
+.HeaderNavbarLoginName {
+  font-family: "Comfortaa", cursive;
+  font-size: 0.5rem;
+  margin: 0;
+  position: absolute;
+  top: 1.7rem;
 }
 
 .HeaderNavbarMobileWrapper {
   display: none;
-  
+
   width: 5rem;
   background-color: white;
   width: 3rem;
@@ -92,7 +132,6 @@
 .HeaderNavbarMobileButtonImage {
   width: 3rem;
 }
-
 
 .HeaderSecretButton {
   position: absolute;
@@ -131,7 +170,7 @@
     z-index: 999;
     padding-bottom: 1rem;
   }
-  
+
   .HeaderNavbarMobileActive {
     display: flex;
     flex-direction: column;
@@ -168,20 +207,19 @@
     display: flex;
     align-items: center;
   }
-  
+
   .HeaderLogo {
     width: 7rem;
     object-fit: cover;
   }
- .HeaderSearchWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  
- }
- .HeaderSecretButton {
-  display: none;
- }
+  .HeaderSearchWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .HeaderSecretButton {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px) {

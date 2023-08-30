@@ -1,7 +1,6 @@
 import React from "react";
 import "./AdminPageOrderCard.css";
 import axios from "axios";
-// @ts-ignore
 import Dots from "../../Assets/dots.png";
 import { useState } from "react";
 
@@ -118,7 +117,7 @@ const AdminPageOrderCard = ({ order, updateOrderList }) => {
             {order.customer.address}
           </p>
           <p className="AdminPageOrderCardCustomerSum">
-            Order total: EUR{" "}
+            Order total: EUR
             {calculateOrderTotal(order.orderedProducts).toFixed(2)}
           </p>
         </div>

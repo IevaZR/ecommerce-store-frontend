@@ -34,6 +34,7 @@ const userSchema = new mongoose.Schema({
     
     orders: [],
     favourites: [],
+    cart: [],
     admin: {
         type: Boolean,
         default: false

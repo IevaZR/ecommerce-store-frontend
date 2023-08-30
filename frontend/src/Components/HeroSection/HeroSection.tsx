@@ -1,7 +1,6 @@
 import React from "react";
 import "./HeroSection.css";
 import Button from "../ReusableComponents/Button/Button";
-// @ts-ignore
 import HeroImage from "./../../Assets/heroImage.png";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import { Link } from "react-router-dom";

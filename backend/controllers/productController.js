@@ -41,6 +41,19 @@ export const getProduct = async (req, res) => {
     }
 };
 
+export const getMultipleProducts = async (req, res) => {
+    try {
+        const array=JSON.parse(req.params.userFavourites)
+        const products = await productModel.find({ id: { $in: array } });
+        console.log(array)
+        res.status(200).send(products);
+    } catch (error) {
+        console.log(error);
+        console.log(array)
+        res.status(400).send(error);
+    }
+};
+
 export const getProductByIndex = async (req, res) => {
     try {
         const products = await productModel.find();

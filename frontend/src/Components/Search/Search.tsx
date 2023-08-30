@@ -1,6 +1,5 @@
 import "./Search.css";
 // import { FurnitureData } from '../../data/data'
-// @ts-ignore
 import SearchIcon from "./../../Assets/search-icon.png";
 // import {useState} from 'react'
 import { useState } from "react";
