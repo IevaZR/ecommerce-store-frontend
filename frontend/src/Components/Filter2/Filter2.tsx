@@ -4,12 +4,13 @@ import FilterItem2 from '../FilterItem2/FilterItem2'
 
 
 const Filter2: React.FC = () => {
+  const category = ["Sofas", "Chairs", "Tables", "Beds"]
   return (
     <div className="Filter2Wrapper">
       <div className="Filter2">
       <FilterItem2
           filterName="All products"
-          filterCategory=""
+          filterCategory="111"
         />
         <FilterItem2
           filterName="Sofas"
