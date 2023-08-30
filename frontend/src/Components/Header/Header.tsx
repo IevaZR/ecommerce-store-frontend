@@ -14,6 +14,11 @@ import { HashLink } from "react-router-hash-link";
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
   const { cartState } = useCart();
+  const [mobileMenuActive, setMobileMenuActive] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setMobileMenuActive(!mobileMenuActive);
+  };
 
   const { updateActiveSearch, updateShowAllProducts, user } =
     useActiveSearchContext();
@@ -42,7 +47,7 @@ const Header = () => {
           <img src={Logo2} alt="Accent logo" className="HeaderLogo" />
         </Link>
       </div>
-      <ul className="HeaderNavbar">
+      <ul className={`HeaderNavbar ${mobileMenuActive ? 'active' : ''}`}>
         <li className="HeaderNavbarListItem" onClick={showMainPage}>
           <Link to="/" className="HeaderNavbarAnchor">
             Home
@@ -65,45 +70,14 @@ const Header = () => {
         </li>
       </ul>
       <div className="HeaderNavbarMobileWrapper">
-        <button className="HeaderNavbarMobileButton" onClick={showMobileNavbar}>
+      <button className="HeaderNavbarMobileButton" onClick={toggleMobileMenu}>
           <img
             src={MobileMenuIcon}
             alt="menu"
             className="HeaderNavbarMobileButtonImage"
           />
         </button>
-        <ul
-          className={
-            activeMenu ? "HeaderNavbarMobileActive" : "HeaderNavbarMobile"
-          }
-        >
-          <li className="HeaderNavbarListItem" onClick={showMainPage}>
-            <Link to="/" className="HeaderNavbarAnchor">
-              Home
-            </Link>
-          </li>
-          <li className="HeaderNavbarListItem" onClick={showAllProducts}>
-            <a
-              href="#ProductView"
-              className="HeaderNavbarAnchor"
-              onClick={showAllProducts}
-            >
-              <Link to="/" className="HeaderNavbarAnchor">
-                Shop
-              </Link>
-            </a>
-          </li>
-          <li className="HeaderNavbarListItem">
-            <Link to="/about-us" className="HeaderNavbarAnchor">
-              About
-            </Link>
-          </li>
-          <li className="HeaderNavbarListItem">
-            <HashLink smooth to="#footer" className="HeaderNavbarAnchor">
-              Contact
-            </HashLink>
-          </li>
-        </ul>
+        
       </div>
       <button className="HeaderSecretButton">
         <Link to="/admin-login" className="HeaderNavbarAnchor">

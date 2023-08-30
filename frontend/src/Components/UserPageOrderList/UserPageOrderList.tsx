@@ -11,6 +11,7 @@ const UserPageOrderList = () => {
 
   useEffect(() => {
     getUserOrders();
+    console.log(user)
   }, []);
 
   const getUserOrders = async () => {
@@ -20,6 +21,7 @@ const UserPageOrderList = () => {
         `http://localhost:3009/order/get-user-orders/${user.id}`
       );
       setOrders(response.data);
+      console.log(response.data)
     } catch (err) {
       console.log(err);
     }
