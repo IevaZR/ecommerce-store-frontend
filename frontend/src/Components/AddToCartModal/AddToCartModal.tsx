@@ -1,5 +1,7 @@
 import './AddToCartModal.css';
+//@ts-ignore
 import IconClose from '../../Assets/close-icon.png';
+//@ts-ignore
 import DoneImg from '../../Assets/check-done-img.png';
 import { useCart } from '../../HelperFunctions/CartContext';
 
