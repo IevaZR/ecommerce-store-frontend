@@ -143,7 +143,7 @@ export const logoutUser = async (req, res) => {
 export const checkAuth = async (req, res) => {
     try {
         const user = await userModel.findOne({
-            userName: req.body.userName,
+            email: req.body.email,
             password: 0
         })
         res.status(200).json(!!user)
