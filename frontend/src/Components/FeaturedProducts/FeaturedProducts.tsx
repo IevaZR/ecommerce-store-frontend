@@ -39,11 +39,11 @@ const FeaturedProducts = () => {
         <h2 className="FeaturedProductViewHeading">Featured Products</h2>
       </div>
       <div className="FeaturedProductListContentWrapper">
-      <div className="FeaturedProductListContent">
-        {randomProducts.map((product) => (
-          <ProductCard key={product.id} productList={product} />
-        ))}
-      </div>
+        <div className="FeaturedProductListContent">
+          {randomProducts.map((product) => (
+            <ProductCard key={product.id} productList={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
