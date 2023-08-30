@@ -17,19 +17,19 @@ const Filter: React.FC = () => {
         <div className="Filter">
           <FilterItem
             filterBackgroundImage={FilterSofas}
-            filterCategory="Sofas"
+            filterName="Sofas"
           />
           <FilterItem
             filterBackgroundImage={FilterChairs}
-            filterCategory="Chairs"
+            filterName="Chairs"
           />
           <FilterItem
             filterBackgroundImage={FilterTables}
-            filterCategory="Tables"
+            filterName="Tables"
           />
           <FilterItem
             filterBackgroundImage={FilterBeds}
-            filterCategory="Beds"
+            filterName="Beds"
           />
         </div>
       </div>
