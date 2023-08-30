@@ -7,6 +7,7 @@ import { useState, useEffect, useMemo, useReducer, useRef } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
 import AddToCartModal from "../AddToCartModal/AddToCartModal";
 import { useCart } from '../../HelperFunctions/CartContext';
+import { useLocation } from "react-router-dom";
 
 const initialState = {
     isLoading: false,
@@ -83,7 +84,8 @@ const ProductList = ({ searchQuery }) => {
     //---FOR SEARCH BY SEARCH QUERY------
     useEffect(() => {
         setProducts(FurnitureData)
-        }, [searchQuery]);
+        }, [searchQuery]
+    );
 
     const filterBySearchQuery = (data, query) => {
         const regex = new RegExp(`\\b${query}\\b`, 'i');
@@ -157,7 +159,9 @@ const ProductList = ({ searchQuery }) => {
 
     const productsToShow = products.slice(0, visibleProducts);
 
-
+    const closeModal = () => {
+        setShowAddToCartModal(false);
+    }
 
     return (
         <div className="ProductListWrapper">
@@ -179,7 +183,9 @@ const ProductList = ({ searchQuery }) => {
                 ></Button>
             )}
             {showAddToCartModal && (
-                <AddToCartModal></AddToCartModal>
+                <AddToCartModal
+                onClose={closeModal}
+                ></AddToCartModal>
             )}
         </div>
     );
