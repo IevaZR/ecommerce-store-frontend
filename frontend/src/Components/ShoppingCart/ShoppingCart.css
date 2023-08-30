@@ -51,6 +51,12 @@
     padding: 3rem 0;
 }
 
+.ShoppingCartItemWrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .ShoppingCartSummaryContainer {
     display: flex;
     flex-direction: row;
@@ -79,11 +85,28 @@
 }
 
 @media screen and (max-width: 550px) {
+    .ShoppingCartItemWrapper {
+        align-items: center;
+    }
+
+    .ShoppingCartItemData.CartItemImage {
+        width: 100%;
+    }
+
+    .ShoppingCartItemData.EmptyShoppingCartCard {
+        width: 80%;
+    }
+
     .EmptyShoppingCartImg img {
         height: 150px;
     }
 
     .ShoppingCartButtonsContainer {
+        flex-direction: column;
         justify-content: center;
+    }
+
+    .ShoppingCartButtonsContainer .SharedButton{
+        margin: 1rem 5rem 0 5rem;
     }
 }

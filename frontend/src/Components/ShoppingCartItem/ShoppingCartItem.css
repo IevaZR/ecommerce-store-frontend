@@ -8,26 +8,22 @@
     padding-bottom: 0.5rem;
     border-bottom: solid 1px #32303035;
     max-height: 200px;
-    position: relative;
 }
 
 .ShoppingCartItemData {
     display: flex;
-    flex: 0.1 1;
+    flex: 0.2 1;
     width: 100%;
     padding: 0.5rem;
-}
-
-.ShoppingCartItemData:first-child {
-    padding: 0;
 }
 
 .ShoppingCartItemData.CartItemImage {
     flex: 0.4;
     min-height: 70%;
-    max-height: 80%;
+    max-height: 100%;
     overflow: hidden;
     box-shadow: 2px 5px 7px #dbdbdb;
+    padding: 0;
 }
 
 .ShoppingCartItemData.CartItemImage img {
@@ -37,11 +33,19 @@
     border-radius: 3px;
 }
 
+.ShoppingCartItemData.CartItemDescriptionWrapper{
+    display:flex;
+    flex-direction:row;
+    flex: 0.6;
+    position: relative;
+}
+
 .ShoppingCartItemData.CartItemDescription {
     display: flex;
-    flex: 0.3;
+    flex: 0.4;
     flex-direction: column;
     justify-content: flex-start;
+    padding-left: 0;
 }
 
 .CartItemDescriptionTitle {
@@ -83,8 +87,46 @@
     width: 30px;
 }
 
-.ShoppingCartItem td:last-child {
+.CartItemDeleteButton {
     position: absolute;
     bottom: 1rem;
-    right: 0;
+    right: 1rem;
+}
+
+@media screen and (max-width: 900px) {
+    .ShoppingCartItem {
+        flex-direction: column;
+        max-height: 600px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .ShoppingCartItem {
+       max-height: 800px;
+    }
+
+    .ShoppingCartItemData.CartItemImage {
+        height: 100%;
+    }
+
+    .ShoppingCartItemData.CartItemImage img {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .ShoppingCartItem {
+        max-height: 100%;
+        padding-bottom: 2rem;
+        width: 80%;
+    }
+
+    .ShoppingCartItemData.CartItemDescriptionWrapper{
+        flex-direction:column;
+    }
+
+    .ShoppingCartItemData.CartItemPriceSubtotal {
+        justify-content: center;
+    }
 }

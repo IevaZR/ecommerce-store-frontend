@@ -27,6 +27,8 @@
     display: inline-block;
 }
 
+
+
 .ProductImageContainer {
     display: flex;
     justify-content: center;
@@ -78,4 +80,14 @@
     background-color: rgba(255, 255, 255, 0.749);
 }
 
+@media screen and (max-width: 1420px) {
+    .ProductCardWrapper .SharedButton {
+        padding: 1rem;
+    }
+}
 
+@media screen and (max-width: 1000px) {
+    .ProductCardWrapper .SharedButton {
+        padding: 1rem 0.5rem;
+    }
+}
