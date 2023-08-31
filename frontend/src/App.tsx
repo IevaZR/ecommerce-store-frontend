@@ -1,6 +1,6 @@
 import "./App.css";
 import MainPage from "./Pages/MainPage/MainPage";
-import { ActiveSearchProvider } from "./HelperFunctions/ActiveSearchContext";
+import { ActiveSearchProvider, useActiveSearchContext } from "./HelperFunctions/ActiveSearchContext";
 import { CartProvider } from "./HelperFunctions/CartContext";
 import { Routes, Route, Navigate } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage/AboutPage";
@@ -18,6 +18,7 @@ import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 
 function App() {
   const { isLoggedIn, loading } = useLoginAuth(document.cookie);
+  
   return (
     <div>
       <ActiveSearchProvider>
