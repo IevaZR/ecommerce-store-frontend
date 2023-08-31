@@ -27,6 +27,8 @@
     display: inline-block;
 }
 
+
+
 .ProductImageContainer {
     display: flex;
     justify-content: center;
@@ -95,3 +97,13 @@
     width: 1rem;
 }
 
+@media screen and (max-width: 1420px) {
+    .ProductCardWrapper .SharedButton {
+        padding: 1rem;
+    }
+  
+@media screen and (max-width: 1000px) {
+    .ProductCardWrapper .SharedButton {
+        padding: 1rem 0.5rem;
+    }
+}

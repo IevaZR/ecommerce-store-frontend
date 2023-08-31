@@ -1,56 +1,53 @@
-import './ShoppingCart.css';
-import Button from '../ReusableComponents/Button/Button';
-import ShoppingCartItem from '../ShoppingCartItem/ShoppingCartItem';
-import { useCart } from '../../HelperFunctions/CartContext';
-import {cartItemData} from '../../types/types';
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import EmptyCart from "./../../Assets/empty-cart-img.png";
+import "./ShoppingCart.css";
+import Button from "../ReusableComponents/Button/Button";
+import ShoppingCartItem from "../ShoppingCartItem/ShoppingCartItem";
+import { useCart } from "../../HelperFunctions/CartContext";
+import {cartItemData} from "../../types/types";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import EmptyCartImg from "./../../Assets/empty-cart-img.png";
+
+// const calculateInitialTotalPrice = (items: cartItemData[]) => {
+//   return items.reduce((total: number, item: cartItemData) => total + item.price, 0);
+// };
+
+const calculateTotalPrice = (items: cartItemData[]) => {
+  return items.reduce((total: number, item: cartItemData) => total + item.price * item.cartQuantity, 0);
+};
 
 const ShoppingCart = () => {
+
   const {cartState, cartDispatch} = useCart();
-  const [cartIsEmpty, setCartIsEmpty] = useState(cartState.cartItems.length === 0);
+  console.log(cartState);
+
+  const [cartIsEmpty, setCartIsEmpty] = useState(
+    cartState.cartItems.length === 0
+  );
   const navigate = useNavigate();
-  const [totalCartPrice, setTotalCartPrice] = useState(0);
+  // const initialTotalPrice = calculateInitialTotalPrice(cartState.cartItems)
+  const [totalCartPrice, setTotalCartPrice] = useState(calculateTotalPrice(cartState.cartItems));
+  console.log('calculateTotalPrice', calculateTotalPrice(cartState.cartItems));
   const [cartItemQuantity, setCartItemQuantity] = useState(0);
-
-  
-
-  // useEffect( ()=> {
-  //   const calculatedTotalPrice = cartState.cartItems.reduce(
-  //     (total: number, item: cartItemData) => total + (item.price * item.quantity), 0
-  //   );
-  //   console.log(calculatedTotalPrice);
-  //   setTotalCartPrice(calculatedTotalPrice);
-  //   setCartIsEmpty(cartState.cartItems.length === 0);
-  //   if (cartIsEmpty) {
-  //     setTotalCartPrice(0);
-  //   }
-  // }, [cartIsEmpty, cartState.cartItems])
-
-  
-  
+    
   const handleDeleteItem = (itemIndex: number) => {
-    const deletedItem = cartState.cartItems[itemIndex];
-    const updatedDeletedItem = {...deletedItem, quantity:0};
-
-    const updatedCartItems = cartState.cartItems.map(
+    
+    cartState.cartItems.map(
       (item: cartItemData, index: number) => {
         if (index === itemIndex) {
-          return updatedDeletedItem;
+          return {...item, cartQuantity: 0 };
         }
         return item;
       }
     );
-
-    setCartIsEmpty(cartState.cartItems.length === 0);
-    cartDispatch({ type: 'DELETE_FROM_CART', payload: itemIndex });
-    
-    const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
-    setTotalCartPrice(calculatedTotalPrice);
-    
-    // setCartItemQuantity(0);
-    // handleQuantityChange(itemIndex, 0);
+    const updatedCartAfterDelete = cartState.cartItems.filter(
+      (_, index) => index !== itemIndex
+      );
+      
+      console.log(updatedCartAfterDelete);
+    setCartIsEmpty(updatedCartAfterDelete.length === 0);
+    setTotalCartPrice(calculateTotalPrice(updatedCartAfterDelete));
+    cartDispatch({ type: "DELETE_FROM_CART", payload: itemIndex });
+    cartDispatch({ type: "UPDATE_TOTAL", payload: totalCartPrice });
   };
 
   const handleQuantityChange  = (itemIndex: number, newQuantity: number) => {
@@ -64,70 +61,45 @@ const ShoppingCart = () => {
       return item;
     });
     console.log(newQuantity);
+    console.log(updatedCartItems);
+    setTotalCartPrice(calculateTotalPrice(updatedCartItems));
     setCartIsEmpty(updatedCartItems.length === 0);
     setCartItemQuantity(newQuantity);
     cartDispatch({ type: "UPDATE_CART", payload: updatedCartItems });
 
-    const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
-    setTotalCartPrice(calculatedTotalPrice);
-  };
-
-  const calculateTotalPrice = (items: cartItemData[]) => {
-    let total = 0;
-
-    for(const item of items) {
-      total += item.price * item.cartQuantity;
-      console.log(item.price);
-      console.log(item.cartQuantity);
-      console.log(total);
-    }
-    return total;
   };
 
   const handleClearCart = () => {
-    // Create an array of updated cart items with quantity set to 0 for all items
-    const updatedCartItems = cartState.cartItems.map((item: cartItemData) => ({
-      ...item,
-      quantity: 0,
-    }));
-    console.log(cartState.cartItems);
-    // Update cart and total price
+    cartDispatch({ type: "CLEAR_CART"});
+    setTotalCartPrice(0);
     setCartIsEmpty(true);
-    cartDispatch({ type: "UPDATE_CART", payload: updatedCartItems });
-  
-    const calculatedTotalPrice = calculateTotalPrice(updatedCartItems);
-    setTotalCartPrice(calculatedTotalPrice);
   };
 
-  useEffect( ()=> {
-    const calculatedTotalPrice = calculateTotalPrice(cartState.cartItems);
-    setTotalCartPrice(calculatedTotalPrice);
-
-  }, [cartState.cartItems])
-  
   const handleContinueShopping = () => {
-    navigate('/shop');
+    navigate("/shop");
   }
-
-  console.log(totalCartPrice);
+  
+  const handleGoToCheckout = () => {
+    navigate("/checkout");
+  }
 
   return (
     <div className="ShoppingCartWrapper">
-      <h2 className='ShoppingCartHeading'>Your cart</h2>
+      <h2 className="ShoppingCartHeading">Your cart</h2>
       <div className="ShoppingCartBody">
         {cartIsEmpty ? 
-        (<div className='EmptyShoppingCartCard'>
-          <p className='EmptyShoppingCartTitle'>
+        (<div className="EmptyShoppingCartCard">
+          <p className="EmptyShoppingCartTitle">
             Your shopping cart is empty
           </p> 
-          <div className='EmptyShoppingCartImg'>
-            <img src={EmptyCart} alt="empty-cart" />
+          <div className="EmptyShoppingCartImg">
+            <img src={EmptyCartImg} alt="empty-cart" />
           </div>
         </div>) : 
         (
           <>
-            <table className='ShoppingCartContent'>
-              <tbody>
+            <div className="ShoppingCartContent">
+              <div className="ShoppingCartItemWrapper">
                 {cartState.cartItems?.map((item: cartItemData, index: number) => (
                   <ShoppingCartItem
                     key={index}
@@ -138,12 +110,12 @@ const ShoppingCart = () => {
                     }
                   />
                 ))}
-              </tbody>
-            </table>
+              </div>
+            </div>
             <div className="ShoppingCartSummaryContainer">
               <div className="ShoppingCartSummaryContainerTitle">Total:</div>
               <div className="ShoppingCartSummaryContainerValue">
-                &euro; {parseFloat(totalCartPrice.toFixed(2))}
+                &euro; {totalCartPrice.toFixed(2)}
               </div>
             </div>
           </>
@@ -151,20 +123,20 @@ const ShoppingCart = () => {
         
         <div className="ShoppingCartButtonsContainer">
           <Button
-            text='Continue Shopping' 
+            text="Continue Shopping" 
             onClick={handleContinueShopping}
           ></Button>
           {!cartIsEmpty && (
             <Button
-              text='Clear Cart' 
+              text="Clear Cart" 
               onClick={handleClearCart}
             ></Button>
           )}
           {!cartIsEmpty && (
             <Button
-              text='Checkout' 
-              backgroundColor='rgb(209 203 203 / 75%)'
-              // onClick={}
+              text="Checkout" 
+              backgroundColor="rgb(209 203 203 / 75%)"
+              onClick={handleGoToCheckout}
             ></Button>
           )}
         </div>

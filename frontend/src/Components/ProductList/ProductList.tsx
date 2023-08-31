@@ -6,8 +6,7 @@ import { FurnitureData } from "../../data/data";
 import { useState, useEffect, useMemo, useReducer, useRef } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
 import AddToCartModal from "../AddToCartModal/AddToCartModal";
-import { useCart } from "../../HelperFunctions/CartContext";
-import { useLocation } from "react-router-dom";
+import { useCart } from '../../HelperFunctions/CartContext';
 
 const initialState = {
   isLoading: false,
@@ -62,6 +61,95 @@ const ProductList = ({ searchQuery }) => {
       }, 2000);
     }
 
+    const [productList, dispatch] = useReducer(reducer, initialState);
+    const {cartState, cartDispatch} = useCart();
+    const [showAddToCartModal, setShowAddToCartModal] = useState(false);
+    console.log(cartState.addedToTheCart);
+    console.log(showAddToCartModal);
+    const modalTimeoutRef = useRef(null);
+
+    useEffect(() => {
+        if (cartState.addedToTheCart) {
+            setShowAddToCartModal(true);
+
+            // Clear any previous timeout
+            if (modalTimeoutRef.current) {
+                clearTimeout(modalTimeoutRef.current);
+            }
+
+            // Set a timeout to close the modal after 2 seconds
+            modalTimeoutRef.current = setTimeout(() => {
+                setShowAddToCartModal(false);
+                cartDispatch({type: 'RESET_ADDED_TO_CART'})
+            }, 2000);
+        }
+        
+        // Cleanup function
+        return () => {
+            if (modalTimeoutRef.current) {
+                clearTimeout(modalTimeoutRef.current);
+            }
+        };
+    }, [cartState.addedToTheCart, cartDispatch]);
+
+    const handleFetch = async ()=> {
+        dispatch({ type: "LOADING" });
+        try {
+            const data = await axios.get("http://localhost:3009/get-all");
+            dispatch({ type: "SUCCESS", payload: data });
+            console.log(data);
+        } catch (err) {
+            dispatch({ type: "ERROR", payload: err });
+        }   
+    };    
+
+    useEffect(()=> {
+        handleFetch();
+    }, [])
+
+    // START Filter
+    const { selectedFilter } = useFilterContext();
+    // END Filter
+    const [products, setProducts] = useState(FurnitureData);
+    console.log(productList?.data?.data); // <-- this is the data from MongoDB data base 
+    const [visibleProducts, setVisibleProducts] = useState(8);
+    const [productsFound, setProductsFound] = useState(true); 
+
+
+    //---FOR SEARCH BY SEARCH QUERY------
+    useEffect(() => {
+        setProducts(FurnitureData)
+        }, [searchQuery]
+    );
+
+    const filterBySearchQuery = (data, query) => {
+        const regex = new RegExp(`\\b${query}\\b`, 'i');
+        return data.filter((item) => {
+            for (const key in item) {
+                const value = item[key];
+                if (
+                    typeof value === "string" && regex.test(value)
+                ) {
+                    return true;
+                } else if (typeof value === "object" && value !== null) {
+                    if (Array.isArray(value)) {
+                        if (
+                            value.some(
+                                (element) => filterBySearchQuery([element], query).length > 0
+                            )
+                        ) {
+                            return true;
+                        }
+                    } else {
+                        if (filterBySearchQuery([value], query).length > 0) {
+                            return true;
+                        }
+                    }
+                }
+            }
+            return false;
+        });
+        
     // Cleanup function
     return () => {
       if (modalTimeoutRef.current) {
@@ -162,23 +250,34 @@ const ProductList = ({ searchQuery }) => {
 
   const productsToShow = filteredData.slice(0, visibleProducts);
 
-  return (
-    <div className="ProductListWrapper">
-      {productsFound ? (
-        <div className="ProductListContent">
-          {productsToShow.map((product) => (
-            <ProductCard key={product.id} productList={product} />
-          ))}
-        </div>
-      ) : (
-        <div className="ProductsNotFoundWrapper">
-          <p>Sorry, nothing was found</p>
-        </div>
-      )}
-      {visibleProducts < filteredData.length && (
-        <Button onClick={handleLoadMore} text="Load More"></Button>
-      )}
-      {showAddToCartModal && <AddToCartModal></AddToCartModal>}
+  const closeModal = () => {
+        setShowAddToCartModal(false);
+    }
+
+    return (
+        <div className="ProductListWrapper">
+             {productsFound ? (
+            <div className="ProductListContent">
+                {productsToShow.map((product) => (
+                    <ProductCard key={product.id} productList={product} />
+                ))}
+            </div>
+            ) : (
+                <div className="ProductsNotFoundWrapper">
+                <p>Sorry, nothing was found</p>
+              </div>
+            )}
+            {visibleProducts < filteredData.length && (
+                <Button
+                    onClick={handleLoadMore}
+                    text="Load More"
+                ></Button>
+            )}
+            {showAddToCartModal && (
+                <AddToCartModal
+                onClose={closeModal}
+                ></AddToCartModal>
+            )}
       {loading && <div className="ProductsNotFoundWrapper"><p>Loading...</p></div>}
     </div>
   );

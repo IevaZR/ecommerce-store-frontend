@@ -64,6 +64,9 @@ export interface ProductPreviewModalProps {
     productList: Furniture;
     onClose: () => void;
  };
+export interface AddToCartModalProps {
+    onClose: () => void;
+ };
 export interface ButtonProps {
     text?: string;
     backgroundColor?: 'transparent' | 'rgb(209 203 203 / 75%)';

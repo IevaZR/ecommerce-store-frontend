@@ -4,22 +4,19 @@ import IconClose from '../../Assets/close-icon.png';
 //@ts-ignore
 import DoneImg from '../../Assets/check-done-img.png';
 import { useCart } from '../../HelperFunctions/CartContext';
+import { AddToCartModalProps } from '../../types/types';
 
-
-
-const handleModalClose = (event: React.MouseEvent) => {
-    event.stopPropagation(); // Prevent event propagation
-    console.log('click close modal');
-    // onClose(); // <--- I have to give props from parent
-};
-
-
-
-const AddToCartModal = () => {
+const AddToCartModal = ({onClose}: AddToCartModalProps) => {
     const {cartState} = useCart();
 
     const lastAddedItemIndex = cartState.cartItems.length - 1;
     const addedItem = cartState.cartItems[lastAddedItemIndex];
+
+    const handleModalClose = (event: React.MouseEvent) => {
+        event.stopPropagation(); // Prevent event propagation
+        console.log('click close modal');
+        onClose(); 
+    };
    
     return (
         <div className='AddToCartModalWrapper'>
@@ -35,7 +32,7 @@ const AddToCartModal = () => {
                     <div className="AddToCartModalProductName">
                         {addedItem.title}
                     </div>
-                has been added to the shopping cart!
+                    has been added to the shopping cart!
 
                 </div>
 
