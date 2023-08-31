@@ -68,7 +68,7 @@ const AdminPageOrderCard = ({ order, updateOrderList }) => {
     <div className="AdminPageOrderCardWrapper">
       <div className="AdminPageOrderCardOrderNumberWrapper">
         <h5 className={toggleClass()}>
-          Order no. {order.orderNumber} | {order.orderStatus}
+          Order no. {order.id} | {order.orderStatus}
         </h5>
         <div className="AdminPageOrderCardActionWrapper">
           {order.orderStatus === "Active" ? (<button
