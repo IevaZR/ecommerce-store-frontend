@@ -56,6 +56,7 @@
     justify-content: space-around;
     align-items: center;
     height: 100%;
+    text-align: center;
 }
 
 .AddToCartModalContent img {
@@ -64,4 +65,22 @@
 
 .AddToCartModalProductName {
     font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+    .AddToCartModalBody {
+        height: 40%;
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .AddToCartModalBody {
+        height: 30%;
+        width: 40%;
+    }
+
+    .AddToCartModalContent img {
+        height: 30px;
+    }
 }

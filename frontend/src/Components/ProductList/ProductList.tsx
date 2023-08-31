@@ -7,6 +7,7 @@ import { useState, useEffect, useMemo, useReducer, useRef } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
 import AddToCartModal from "../AddToCartModal/AddToCartModal";
 import { useCart } from "../../HelperFunctions/CartContext";
+import { useLocation } from "react-router-dom";
 
 const initialState = {
   isLoading: false,
@@ -28,17 +29,19 @@ const ProductList = ({ searchQuery }) => {
   const [productList, dispatch] = useReducer(reducer, initialState);
   const { cartState, cartDispatch } = useCart();
   const [showAddToCartModal, setShowAddToCartModal] = useState(false);
-  // console.log(cartState.addedToTheCart);
-  // console.log(showAddToCartModal);
   const modalTimeoutRef = useRef(null);
   // START Filter
   const { selectedFilter } = useFilterContext();
   // END Filter
   const [fetchedData, setFetchedData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  // console.log(productList?.data?.data); // <-- this is the data from MongoDB data base
   const [visibleProducts, setVisibleProducts] = useState(8);
   const [productsFound, setProductsFound] = useState(true);
+  function useQuery() {
+    const { search } = useLocation();
+    return useMemo(() => new URLSearchParams(search), [search]);
+  }
+  const query = useQuery();
 
   useEffect(() => {
     if (cartState.addedToTheCart) {
@@ -152,6 +155,10 @@ const ProductList = ({ searchQuery }) => {
 
   const productsToShow = filteredData.slice(0, visibleProducts);
 
+  const closeModal = () => {
+    setShowAddToCartModal(false);
+  }
+
   return (
     <div className="ProductListWrapper">
       {productsFound ? (
@@ -168,11 +175,10 @@ const ProductList = ({ searchQuery }) => {
       {visibleProducts < filteredData.length && (
         <Button onClick={handleLoadMore} text="Load More"></Button>
       )}
-      {showAddToCartModal && <AddToCartModal></AddToCartModal>}
+      {showAddToCartModal && <AddToCartModal onClose={closeModal}/>}
       {loading && <div className="ProductsNotFoundWrapper"><p>Loading...</p></div>}
     </div>
   );
 };
 
 export default ProductList;
-

@@ -1,6 +1,6 @@
 .ProductPreviewModalWrapper {
     position: fixed;
-    z-index: 99;
+    z-index: 9999;
     top: 0;
     right: 0;
     bottom: 0;
@@ -214,3 +214,91 @@
     align-self: flex-end;
 }
 
+@media screen and (max-width: 1300px) {
+    .ModalProductImageBlock, 
+    .ModalProductInfoBlock {
+        flex:0.5;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ProductPreviewModalBody {
+        height: 90%;
+    }
+    .ModalProductImageBlock {
+        flex:0.4;
+        width: 95%;
+    } 
+    .ModalProductInfoBlock {
+        flex:0.6;
+        max-height: 400px;
+        width: 95%;
+        justify-content: unset;
+        padding-top: 2rem;
+    }
+
+    .ModalProductDataSection {
+        flex-direction: column;
+        margin: 2rem 0;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        align-items: center;
+    }
+
+    .ModalProductInfoBlockHeader {
+        min-height: auto;
+    }
+
+    .ModalProductFeatures {
+        padding-bottom: 1rem;
+    }
+
+    .ModalProductDetails {
+        min-height: fit-content;
+    }
+
+    .ModalProductPrice {
+        padding-bottom: 0;
+    }
+
+    .ModalProductInfoBlockFooter {
+        padding-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .ProductPreviewModalWrapper {
+        padding: 5rem 0 3rem 0;
+    }
+
+    .ProductPreviewModalBody {
+        height: 100%;
+    }
+
+    .ModalProductDataSection {
+        justify-content: flex-start;
+        overflow-y: scroll;
+    }
+
+    .ModalProductImageBlock {
+        flex: 0.4;
+        padding: 0;
+        min-height: 200px;
+    }
+
+    .ModalProductInfoBlock {
+        flex: 0.6;
+    }
+
+    .ModalProductImageBlock img {
+        height: 90%;
+    }
+
+    .ModalProductDetails {
+        min-height: fit-content;
+    }
+
+    .ModalProductInfoBlockFooter {
+        padding-right: 1rem;
+    }
+}

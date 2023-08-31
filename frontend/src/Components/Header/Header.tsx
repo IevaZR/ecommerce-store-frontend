@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Header.css";
-import Logo from "./../../Assets/logo.png";
 import Logo2 from "./../../Assets/logo.svg";
 import MobileMenuIcon from "./../../Assets/hamburger-menu.png";
 import ShopIcon from "./../../Assets/shop-icon.png";
@@ -9,11 +8,13 @@ import Search from "../Search/Search";
 import { useActiveSearchContext } from "../../HelperFunctions/ActiveSearchContext";
 import { useCart } from "../../HelperFunctions/CartContext";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+import { HashLink } from 'react-router-hash-link';
+import { cartItemData } from "../../types/types";
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(false);
-  const { cartState } = useCart();
+  const {cartState} = useCart();
+  const [totalCartItems, setTotalCartItems] = useState(cartState.cartItems.length);
   const [mobileMenuActive, setMobileMenuActive] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -37,6 +38,19 @@ const Header = () => {
     updateActiveSearch(false);
   };
 
+  const updateTotalItemQuantity = (items: cartItemData[]) => {
+    return items.reduce((total: number, item: cartItemData) => total + item.cartQuantity, 0);
+  };
+
+  const updatedCartItemQuantity = updateTotalItemQuantity(cartState.cartItems);
+  console.log(updatedCartItemQuantity);
+
+  useEffect(() => {
+    setTotalCartItems(updateTotalItemQuantity(cartState.cartItems));
+  }, [cartState.cartItems]);
+
+  console.log(cartState.cartItems);
+  console.log(cartState.cartItems.length);
   const totalItems = cartState.cartItems.length;
   const cartIsEmpty = totalItems === 0;
 
@@ -89,12 +103,13 @@ const Header = () => {
           <Search />
         </div>
         <Link to="/cart" className="HeaderNavbarAnchor cart">
-          <img src={ShopIcon} alt="icon-shop" />
-          {!cartIsEmpty && (
-            <div className="CartProductsCount">{totalItems}</div>
-          )}
-        </Link>
-      
+            <img src={ShopIcon} alt="icon-shop" />
+            {!cartIsEmpty && (
+              <div className="CartProductsCount">
+                {totalCartItems}
+              </div>
+            )}
+        </Link>      
           <Link to={user?"/user-page":"/user-login"} className="HeaderNavbarLoginAnchor">
             <img
               src={UserIcon}

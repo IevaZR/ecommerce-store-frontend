@@ -95,6 +95,7 @@
     width: 1rem;
 }
 
+
 .ProductCardPleaseLogIn {
     display: flex;
     flex-direction: column;
@@ -127,3 +128,14 @@
     right: 10px;
 }
 
+@media screen and (max-width: 1420px) {
+    .ProductCardWrapper .SharedButton {
+        padding: 1rem;
+    }
+  
+@media screen and (max-width: 1000px) {
+    .ProductCardWrapper .SharedButton {
+        padding: 1rem 0.5rem;
+    }
+}
+}

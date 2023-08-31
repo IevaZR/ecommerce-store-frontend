@@ -15,7 +15,7 @@ const ProductPreviewModal = ({productList, onClose}: ProductPreviewModalProps) =
   const handleAddToCart = () => {
     cartDispatch(
       { type: 'ADD_TO_CART', 
-        payload: {...productList, addedToTheCart: true,}
+        payload: {...productList, addedToTheCart: true, cartQuantity: 1}
       }
     );
     onClose();
