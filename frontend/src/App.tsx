@@ -1,6 +1,6 @@
 import "./App.css";
 import MainPage from "./Pages/MainPage/MainPage";
-import { ActiveSearchProvider, useActiveSearchContext } from "./HelperFunctions/ActiveSearchContext";
+import { ActiveSearchProvider } from "./HelperFunctions/ActiveSearchContext";
 import { CartProvider } from "./HelperFunctions/CartContext";
 import { Routes, Route, Navigate } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage/AboutPage";
@@ -15,10 +15,9 @@ import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import { FilterProvider } from "./HelperFunctions/FilterContext";
 
-
 function App() {
   const { isLoggedIn, loading } = useLoginAuth(document.cookie);
-  
+
   return (
     <div>
       <FilterProvider>
@@ -31,11 +30,18 @@ function App() {
               <Route path="/cart" element={<CartPage />} />
               <Route path="/user-login" element={<UserLoginPage />} />
               <Route path="/user-register" element={<UserRegisterPage />} />
-              <Route path="/user-page" element={isLoggedIn ? <UserPage /> : <Navigate to="/user-login"  />} />
+              <Route
+                path="/user-page"
+                element={
+                  isLoggedIn ? <UserPage /> : <Navigate to="/user-login" />
+                }
+              />
               <Route path="/admin-login" element={<AdminLoginPage />} />
               <Route
                 path="/admin-page"
-                element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
+                element={
+                  isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />
+                }
               />
             </Routes>
           </CartProvider>
