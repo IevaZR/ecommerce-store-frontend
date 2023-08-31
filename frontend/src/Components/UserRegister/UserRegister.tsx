@@ -15,7 +15,6 @@ const UserRegister = () => {
     password: "",
     userName: `User${Math.floor(Math.random() * 100000)}`,
   });
-  const [welcomeMessage, setWelcomeMessage] = useState(false)
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState(false);
 
