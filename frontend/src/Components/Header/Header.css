@@ -198,18 +198,6 @@
   .HeaderSecretButton {
     display: none;
   }
-
-  .HeaderNavbarAnchor.cart {
-    position: absolute;
-    top: 1.5rem;
-    left: 9rem
-  }
-
-  .HeaderNavbarLoginAnchor {
-    position: absolute;
-    top: 1.7rem;
-    left: 13rem
-  }
 }
 
 @media screen and (max-width: 400px) {
