@@ -7,7 +7,6 @@ import { useState, useEffect, useMemo, useReducer, useRef } from "react";
 import { useFilterContext } from "../../HelperFunctions/FilterContext";
 import AddToCartModal from "../AddToCartModal/AddToCartModal";
 import { useCart } from '../../HelperFunctions/CartContext';
-import { useLocation } from "react-router-dom";
 
 const initialState = {
   isLoading: false,
@@ -40,6 +39,11 @@ const ProductList = ({ searchQuery }) => {
   // console.log(productList?.data?.data); // <-- this is the data from MongoDB data base
   const [visibleProducts, setVisibleProducts] = useState(8);
   const [productsFound, setProductsFound] = useState(true);
+  function useQuery() {
+    const { search } = useLocation();
+    return useMemo(() => new URLSearchParams(search), [search]);
+  }
+  const query = useQuery();
 
   useEffect(() => {
     if (cartState.addedToTheCart) {
@@ -203,7 +207,11 @@ const ProductList = ({ searchQuery }) => {
   //--------START OF FILTER------------------------
   const filterByCategory = (data, category) => {
     if (!category) {
-      return data;
+      const category2 = query.get("category");
+      if (category2) {
+        console.log("🚀 ~ item.category:", data);
+        return data.filter((item) => item.category.toLowerCase() === category2);
+      }
     }
     return data.filter((item) => item.category.toLowerCase() === category);
   };

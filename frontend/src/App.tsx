@@ -39,7 +39,6 @@ function App() {
               />
             </Routes>
           </CartProvider>
-          <ScrollToTopOnNavigate />
         </ActiveSearchProvider>
       </FilterProvider>
     </div>
