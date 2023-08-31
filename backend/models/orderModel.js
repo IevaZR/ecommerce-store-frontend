@@ -6,10 +6,6 @@ const orderSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    orderNumber: {
-        type: Number,
-        required: true
-    },
     orderedProducts: [
         {
             product: {
@@ -33,12 +29,26 @@ const orderSchema = new mongoose.Schema({
         }
     ],
     customer: {
-        type: Object,
-        required: true
+        id: {
+            type: Number,
+            required:false
+        },
+        name: {
+            type: String,
+            required:false
+        },
+        address: {
+            type: String,
+            required:false
+        },
+        phoneNumber: {
+            type: Number,
+            required:false
+        },
     },
     shippingAddress: {
         type: String,
-        required: true
+        required: false
     },
     orderStatus: {
         type: String,

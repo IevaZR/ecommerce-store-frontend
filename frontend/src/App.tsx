@@ -13,6 +13,7 @@ import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
 import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
 import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
 import UserPage from "./Pages/UserPage/UserPage";
+import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 
 
 function App() {
@@ -26,13 +27,14 @@ function App() {
             <Route path="/about-us" element={<AboutPage />} />
             <Route path="/shop" element={<ShopPage />} />
             <Route path="/cart" element={<CartPage />} />
+            <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/user-login" element={<UserLoginPage/>}/>
             <Route path="/user-register" element={<UserRegisterPage/>}/>
             <Route path="/user-page" element={<UserPage/>}/>
             <Route path="/admin-login" element={<AdminLoginPage />} />
             <Route
-            path="/admin-page"
-            element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
+              path="/admin-page"
+              element={isLoggedIn ? <AdminPage /> : <Navigate to="/admin-login" />}
             />
           </Routes>
         </CartProvider>
