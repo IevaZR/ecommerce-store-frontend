@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./UserRegister.css";
 // @ts-ignore
 import Logo from "./../../Assets/logo.svg";
@@ -27,7 +27,7 @@ const UserRegister = () => {
 
   const handleSubmit = async () => {
     try {
-      const { data } = await axios.post(
+      await axios.post(
         "http://localhost:3009/user/create-user",
         registerData
       );
