@@ -135,11 +135,7 @@ const Header = () => {
                 {totalCartItems}
               </div>
             )}
-        </Link>
-        <Link to='/user-login' className="HeaderNavbarAnchor ">
-          <img src={UserIcon} alt="user-icon" className="HeaderNavbarUserIcon"/>
-        </Link>
-      
+        </Link>      
           <Link to={user?"/user-page":"/user-login"} className="HeaderNavbarLoginAnchor">
             <img
               src={UserIcon}
