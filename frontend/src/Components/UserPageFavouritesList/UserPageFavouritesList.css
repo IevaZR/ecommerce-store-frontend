@@ -24,3 +24,9 @@
     height: 100%;
     margin-top: 5rem;
 }
+
+@media screen and (max-width: 550px) {
+    .UserPageFavouritesListWrapper {
+        margin: 1rem 0 0 0;
+    }
+}
