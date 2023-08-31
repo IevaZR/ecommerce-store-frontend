@@ -18,3 +18,9 @@
     margin-bottom: 1.5rem;
     max-width: 1280px;
 }
+
+.UserPageFavouritesListNoFavourites {
+    font-family: "Comfortaa", cursive;
+    height: 100%;
+    margin-top: 5rem;
+}
