@@ -67,9 +67,14 @@ export interface ProductPreviewModalProps {
 export interface AddToCartModalProps {
     onClose: () => void;
  };
+export interface OrderDoneModalProps {
+    onClose: () => void;
+ };
 export interface ButtonProps {
     text?: string;
     backgroundColor?: 'transparent' | 'rgb(209 203 203 / 75%)';
+    color?: '#000000' | '#FFFFFF';
+    cursorAction?: 'cursor: pointer' | 'cursor:not-allowed';
     icon?:string;
     onClick?: () => void;
 }

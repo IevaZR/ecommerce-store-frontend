@@ -4,7 +4,6 @@ import DeleteIcon from "./../../Assets/delete-icon.png";
 import { useEffect, useReducer, useState } from "react";
 import {cartItemData} from "../../types/types";
 import { useCart } from "../../HelperFunctions/CartContext";
-
 interface CartItemQuantityInitialStateTypes {
   value: number,
 }
@@ -51,15 +50,10 @@ const ShoppingCartItem = (
     //<--- 
     
     const calculateTotalPrice = (items: cartItemData[], state: number) => {
-      console.log("🚀 ~ state:", state);
-      console.log("🚀 ~ items:", items);
       let total = 0;
   
       for (const item of items) {
         total += item.price * state;
-        console.log(item.price);
-        console.log(state);
-        console.log(total);
       }
       return total;
     };
@@ -93,7 +87,7 @@ const ShoppingCartItem = (
       <div className="ShoppingCartItemData CartItemDescriptionWrapper">
         <div className="ShoppingCartItemData CartItemDescription">
           <div className="CartItemDescriptionTitle">
-            {cartItemData.title}
+              {cartItemData.title}
           </div> 
           <div className="CartItemDescriptionColor">
             Color: {cartItemData.color}
