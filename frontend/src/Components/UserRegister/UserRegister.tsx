@@ -1,4 +1,4 @@
-import React from "react";
+
 import "./UserRegister.css";
 // @ts-ignore
 import Logo from "./../../Assets/logo.svg";
@@ -15,7 +15,6 @@ const UserRegister = () => {
     password: "",
     userName: `User${Math.floor(Math.random() * 100000)}`,
   });
-  const [welcomeMessage, setWelcomeMessage] = useState(false)
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState(false);
 
@@ -28,7 +27,7 @@ const UserRegister = () => {
 
   const handleSubmit = async () => {
     try {
-      const { data } = await axios.post(
+      await axios.post(
         "http://localhost:3009/user/create-user",
         registerData
       );

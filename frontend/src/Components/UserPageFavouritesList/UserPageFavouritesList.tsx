@@ -9,9 +9,7 @@ const UserPageFavouritesList = ({ fetchFavourites }) => {
   const [favouritedProducts, setFavouritedProducts] = useState([]);
 
   useEffect(() => {
-    if (fetchFavourites) {
       getUserFavourites();
-    }
   }, [fetchFavourites]);
 
   const getUserFavouritesIds = () => {

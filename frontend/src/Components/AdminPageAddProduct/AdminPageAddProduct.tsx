@@ -3,14 +3,12 @@ import "./AdminPageAddProduct.css";
 import Button from "../ReusableComponents/Button/Button";
 import { useAddProductVisibility } from "../../HelperFunctions/AddProductVisibilityContext";
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import AdminPageProductAddedMessage from "../AdminPageProductAddedMessage/AdminPageProductAddedMessage";
-import { useEditProduct } from "../../HelperFunctions/EditProductContext";
 
 const AdminPageAddProduct = () => {
   const { isAddProductVisible, toggleAddProductVisible, productAdded, toggleProductAdded } =
     useAddProductVisibility();
-  const { editingProduct, setEditingProduct } = useEditProduct();
   const [emptyFields, setEmptyFields] = useState(false);
 
   const closeAddProductForm = () => {

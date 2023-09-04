@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import "./UserPageOrderList.css";
 import UserPageOrderCard from "../UserPageOrderCard/UserPageOrderCard";
 import { useState } from "react";
