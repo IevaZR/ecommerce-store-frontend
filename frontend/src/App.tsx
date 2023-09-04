@@ -13,7 +13,7 @@ import useLoginAuth from "./Components/UseLoginAuth/useLoginAuth";
 import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
 import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
 import UserPage from "./Pages/UserPage/UserPage";
-import { FilterProvider } from "./HelperFunctions/FilterContext";
+import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
 
 function App() {
   const { isLoggedIn, loading } = useLoginAuth(document.cookie);

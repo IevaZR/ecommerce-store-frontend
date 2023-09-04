@@ -6,10 +6,6 @@ const orderSchema = new mongoose.Schema({
         required: true,
         unique: true,
     },
-    orderNumber: {
-        type: Number,
-        required: true
-    },
     orderedProducts: [
         {
             product: {
@@ -35,7 +31,7 @@ const orderSchema = new mongoose.Schema({
     customer: {
         id: {
             type: Number,
-            required:true
+            required:false
         },
         name: {
             type: String,
@@ -52,7 +48,7 @@ const orderSchema = new mongoose.Schema({
     },
     shippingAddress: {
         type: String,
-        required: true
+        required: false
     },
     orderStatus: {
         type: String,
