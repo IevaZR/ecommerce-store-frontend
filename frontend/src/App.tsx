@@ -14,6 +14,7 @@ import UserLoginPage from "./Pages/UserLoginPage/UserLoginPage";
 import UserRegisterPage from "./Pages/UserRegisterPage/UserRegisterPage";
 import UserPage from "./Pages/UserPage/UserPage";
 import CheckoutPage from "./Pages/CheckoutPage/CheckoutPage";
+import { FilterProvider } from "./HelperFunctions/FilterContext";
 
 function App() {
   const { isLoggedIn, loading } = useLoginAuth(document.cookie);
