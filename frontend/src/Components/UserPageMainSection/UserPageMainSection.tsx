@@ -17,8 +17,9 @@ const UserPageMainSection = () => {
   const [showAccountInfo, setShowAccountInfo] = useState(false)
 
   const logOutUser = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
-      await axios.post("http://localhost:3009/user/logout");
+      await axios.post(`${backendUrl}/user/logout`);
       localStorage.removeItem("username");
       updateUser(null)
       navigate("/user-login");

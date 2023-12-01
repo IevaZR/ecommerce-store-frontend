@@ -35,8 +35,9 @@ const Footer = () => {
 
   const submitEmail = async () => {
     if (emailCheck()) {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL
       try {
-        await axios.post("http://localhost:3009/email/create-email", {
+        await axios.post(`${backendUrl}/email/create-email`, {
           email: emailInput,
         });
         setEmailInput("");

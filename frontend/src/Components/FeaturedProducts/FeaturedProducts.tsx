@@ -10,8 +10,9 @@ const FeaturedProducts = () => {
 
   useEffect(() => {
     const handleFetch = async () => {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL
       try {
-        const response = await axios.get('http://localhost:3009/get-all');
+        const response = await axios.get(`${backendUrl}/get-all`);
         setProducts(response.data);
       } catch (err) {
         console.error('Error fetching data:', err);

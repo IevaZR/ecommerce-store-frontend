@@ -7,10 +7,11 @@ const useLoginAuth = (token) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     const checkLoginAuth = async () => {
       try {
         await axios.post(
-          "http://localhost:3009/user/check-auth",
+          `${backendUrl}/user/check-auth`,
           {
             session_token: token,
             userName: localStorage.getItem("email"),

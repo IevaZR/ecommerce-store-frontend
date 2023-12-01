@@ -19,10 +19,11 @@ const UserPageFavouritesList = ({ fetchFavourites }) => {
   };
 
   const getUserFavourites = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       const array = JSON.stringify(getUserFavouritesIds());
       const response = await axios.get(
-        `http://localhost:3009/get-multiple-products/${array}`
+        `${backendUrl}/get-multiple-products/${array}`
       );
       setFavouritedProducts(response.data);
       console.log(array);

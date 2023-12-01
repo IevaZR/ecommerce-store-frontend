@@ -113,9 +113,10 @@ const AdminPageEditProduct = () => {
   };
 
   const updateProductInDatabase = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       await axios.put(
-        `http://localhost:3009/update/${editingProduct.id}`,
+        `${backendUrl}/update/${editingProduct.id}`,
         editProductInputFields
       );
       setProductAdded(true);

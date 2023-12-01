@@ -38,9 +38,10 @@ const Advertisement = () => {
 
   useEffect(() => {
     const handleFetch = async () => {
+      const backendUrl = process.env.REACT_APP_BACKEND_URL
       dispatch({ type: "LOADING" });
       try {
-        const response = await axios.get(`http://localhost:3009/get-all`);
+        const response = await axios.get(`${backendUrl}/get-all`);
         dispatch({ type: "SUCCESS", payload: response.data });
 
         const filteredProducts = response.data.filter(

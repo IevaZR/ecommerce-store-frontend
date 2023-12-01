@@ -101,9 +101,10 @@ const AdminPageAddProduct = () => {
   };
 
   const addProductToDatabase = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       await axios.post(
-        "http://localhost:3009/create",
+        `${backendUrl}/create`,
         inputFields
       );
       toggleProductAdded(true);

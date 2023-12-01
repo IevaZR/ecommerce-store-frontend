@@ -28,9 +28,10 @@ const UserPageAccountInfo = () => {
   };
 
   const fetchUser = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       const user = await axios.get(
-        `http://localhost:3009/user/get-user/${inputData.email}`
+        `${backendUrl}/user/get-user/${inputData.email}`
       );
       console.log(user);
       //   updateUser(user.data[0]);
@@ -40,9 +41,10 @@ const UserPageAccountInfo = () => {
   };
 
   const updateUserInfo = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       await axios.put(
-        `http://localhost:3009/user/update-user/${user.id}`,
+        `${backendUrl}/user/update-user/${user.id}`,
         inputData
       );
       setUserUpdated(true);
@@ -57,8 +59,9 @@ const UserPageAccountInfo = () => {
   }
 
   const deleteUserAccount = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
-      await axios.delete(`http://localhost:3009/user/delete-user/${user.id}`)
+      await axios.delete(`${backendUrl}/user/delete-user/${user.id}`)
       localStorage.removeItem("username");
       updateUser(null)
       navigate("/user-login")

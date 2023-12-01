@@ -39,6 +39,7 @@ const ProductCard = ({ productList }: ProductCardProps) => {
   }, [user, productList.id]);
 
   const toggleFavourites = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     if (user) {
       if (favourite === false) {
         const updatedFavourites = [...user.favourites, { id: productList.id }];
@@ -46,7 +47,7 @@ const ProductCard = ({ productList }: ProductCardProps) => {
         updateUser(updatedUser);
         try {
           await axios.put(
-            `http://localhost:3009/user/update-user/${user.id}`,
+            `${backendUrl}/user/update-user/${user.id}`,
             updatedUser
           );
           setFavourite(true);
@@ -63,7 +64,7 @@ const ProductCard = ({ productList }: ProductCardProps) => {
 
         try {
           await axios.put(
-            `http://localhost:3009/user/update-user/${user.id}`,
+            `${backendUrl}/user/update-user/${user.id}`,
             updatedUser
           );
           setFavourite(false);

@@ -22,9 +22,10 @@ const UserLogin = () => {
   };
 
   const handleSubmit = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       const { data } = await axios.post(
-        "http://localhost:3009/user/login-user",
+        `${backendUrl}/user/login-user`,
         loginData
       );
 
@@ -40,9 +41,10 @@ const UserLogin = () => {
   };
 
   const fetchUserData = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       const user = await axios.get(
-        `http://localhost:3009/user/get-user/${loginData.email}`
+        `${backendUrl}/user/get-user/${loginData.email}`
       );
       updateUser(user.data[0]);
       navigate("/user-page");

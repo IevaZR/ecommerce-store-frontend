@@ -15,10 +15,11 @@ const UserPageOrderList = () => {
   }, []);
 
   const getUserOrders = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       console.log(user);
       const response = await axios.get(
-        `http://localhost:3009/order/get-user-orders/${user.id}`
+        `${backendUrl}/order/get-user-orders/${user.id}`
       );
       setOrders(response.data);
       console.log(response.data);

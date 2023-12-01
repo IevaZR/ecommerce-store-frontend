@@ -12,9 +12,10 @@ const AdminPageOrderList = () => {
   const { adminVisibleContent } = useAdminVisibleContentContex();
 
   const fetchOrders = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       const response = await axios.get(
-        "http://localhost:3009/order/get-all-orders"
+        `${backendUrl}/order/get-all-orders`
       );
       setOrders(response.data);
       console.log(orders);

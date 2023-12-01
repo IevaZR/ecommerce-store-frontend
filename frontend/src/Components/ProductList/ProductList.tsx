@@ -68,10 +68,11 @@ const ProductList = ({ searchQuery }) => {
   }, [cartState.addedToTheCart, cartDispatch]);
 
   const handleFetch = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     dispatch({ type: "LOADING" });
     setProductsFound(true);
     try {
-      const data = await axios.get("http://localhost:3009/get-all");
+      const data = await axios.get(`${backendUrl}/get-all`);
       dispatch({ type: "SUCCESS", payload: data });
       setFetchedData(data.data);
     } catch (err) {

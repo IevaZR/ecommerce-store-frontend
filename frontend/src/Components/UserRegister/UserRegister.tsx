@@ -26,9 +26,10 @@ const UserRegister = () => {
   };
 
   const handleSubmit = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       await axios.post(
-        "http://localhost:3009/user/create-user",
+        `${backendUrl}/user/create-user`,
         registerData
       );
         navigate("/user-login");

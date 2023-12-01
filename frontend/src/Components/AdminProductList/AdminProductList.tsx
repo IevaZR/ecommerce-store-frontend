@@ -32,9 +32,10 @@ const AdminProductList = () => {
   const {productAdded} = useAddProductVisibility()
 
   const handleFetch = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     dispatch({ type: "LOADING" });
     try {
-      const data = await axios.get("http://localhost:3009/get-all");
+      const data = await axios.get(`${backendUrl}/get-all`);
       dispatch({ type: "SUCCESS", payload: data });
     } catch (err) {
       dispatch({ type: "ERROR", payload: err });
@@ -42,8 +43,9 @@ const AdminProductList = () => {
   };
 
   const handleProductDelete = async (deletedProductId) => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
-      await axios.delete(`http://localhost:3009/delete/${deletedProductId}`);
+      await axios.delete(`${backendUrl}/delete/${deletedProductId}`);
       handleFetch();
     } catch (err) {
       console.log(err);

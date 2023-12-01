@@ -20,9 +20,10 @@ const AdminLogin = () => {
   };
 
   const handleSubmit = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
       const { data } = await axios.post(
-        "http://localhost:3009/user/login-admin",
+        `${backendUrl}/user/login-admin`,
         loginData
       );
 

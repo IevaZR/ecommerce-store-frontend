@@ -38,8 +38,9 @@ const AdminPageSideBar = () => {
   };
 
   const logOut = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
       try {
-        await axios.post("http://localhost:3009/user/logout");
+        await axios.post(`${backendUrl}/user/logout`);
         localStorage.removeItem("username");
         navigate("/admin-login");
       } catch (error) {

@@ -20,8 +20,9 @@ const AdminPageOrderCard = ({ order, updateOrderList }) => {
   };
 
   const completeOrder = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
-      await axios.put(`http://localhost:3009/order/update-order/${order.id}`, {
+      await axios.put(`${backendUrl}/order/update-order/${order.id}`, {
         orderStatus: "Fulfilled",
       });
       updateOrderList();
@@ -31,8 +32,9 @@ const AdminPageOrderCard = ({ order, updateOrderList }) => {
   };
 
   const cancelOrder = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
-      await axios.put(`http://localhost:3009/order/update-order/${order.id}`, {
+      await axios.put(`${backendUrl}/order/update-order/${order.id}`, {
         orderStatus: "Canceled",
       });
       updateOrderList();
@@ -42,8 +44,9 @@ const AdminPageOrderCard = ({ order, updateOrderList }) => {
   };
 
   const reactivateOrder = async () => {
+    const backendUrl = process.env.REACT_APP_BACKEND_URL
     try {
-      await axios.put(`http://localhost:3009/order/update-order/${order.id}`, {
+      await axios.put(`${backendUrl}/order/update-order/${order.id}`, {
         orderStatus: "Active",
       });
       updateOrderList();
